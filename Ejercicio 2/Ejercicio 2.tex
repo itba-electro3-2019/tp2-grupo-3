@@ -1,5 +1,7 @@
 \input{../Informe/Header.tex}
 
+\usepackage{tikz}
+
 \begin{document}
 \subsection{Análisis de tecnologías}
 
@@ -12,11 +14,11 @@ Analizando las respectivas hojas de dato, se recopila información sobre los  va
 \cline{2-8}
                                & $\mathbf{V_{CC}}$ \textbf{[V]} & \multicolumn{2}{c|}{\textbf{74HC02}}  & \multicolumn{2}{c|}{\textbf{74HCT02}} & \multicolumn{2}{c|}{\textbf{74LS02}} \\ \cline{3-8} 
                                &              & \textbf{Min. [V]} & \textbf{Max. [V]} & \textbf{Min. [V]} & \textbf{Max. [V]} & \textbf{Min. [V]} & \textbf{Max. [V]}	\\ \hline
-\multicolumn{1}{|c|}{}         & 2            & 1.9           & -            & -             & -            & 2.7          & -            \\  
-\multicolumn{1}{|c|}{$\mathbf{V_{OH}}$} & 4.5          & 4.4           & -            & 3.98          & -            & -            & -            \\  
+\multicolumn{1}{|c|}{}         & 2            & 1.9           & -            & -             & -            & -          & -            \\  
+\multicolumn{1}{|c|}{$\mathbf{V_{OH}}$} & 4.5          & 4.4           & -            & 3.98          & -            & 2.7            & -            \\  
 \multicolumn{1}{|c|}{}         & 6            & 5.9           & -            & -             & -            & -            & -            \\ \hline
-\multicolumn{1}{|c|}{}         & 2            & -             & 0.1          & -             & -            & -            & 0.5          \\
-\multicolumn{1}{|c|}{$\mathbf{V_{OL}}$} & 4.5          & -             & 0.1          & -             & 0.26         & -            & -            \\
+\multicolumn{1}{|c|}{}         & 2            & -             & 0.1          & -             & -            & -            & -          \\
+\multicolumn{1}{|c|}{$\mathbf{V_{OL}}$} & 4.5          & -             & 0.1          & -             & 0.26         & -            & 0.5            \\
 \multicolumn{1}{|c|}{}         & 6            & -             & 0.1          & -             & -            & -            & -            \\ \hline
 \multicolumn{1}{|c|}{}         & 2            & 1.5           & -            & -             & -            & -            & -            \\ 
 \multicolumn{1}{|c|}{$\mathbf{V_{IH}}$}  & 4.5          & 3.15          & -            & 2             & -            & 2            & -            \\ 
@@ -47,14 +49,125 @@ Nuevamente se decide plasmar los resultados en una tabla:
 \hline
 \textbf{In} & \textbf{Out} & $\mathbf{V_{CC}}$ \textbf{[V]} & $\mathbf{NM_{High}}$ \textbf{[V]} & $\mathbf{NM_{Low}} $\textbf{[V]} \\ \hline
 74LS02      & 74HC02       & 4.5                            & 2.4                               & 0.7                              \\ 
-74HC02      & 74LS02       & 2                              & 1.2                               & 0                                \\ \hline
+74HC02      & 74LS02       & 4.5                              & -0.45                               & 0.85                                \\ \hline
 \end{tabular}
 \caption{Margen de ruido para combinaciones de tecnologías HC y LS.}
 \label{tabla:nm}
 \end{table}
 
+Además, se busca plasmar de una forma más clara los datos obtenidos en la Tabla (\ref{tabla:vinout}). Esto se logra mediante los siguientes gráficos.  
 
+\begin{figure}[H]
+\begin{center}
+\begin{tikzpicture}[yscale=1]
+	\node [below] at (0,0) {Out: 74HC02};
+	
+	\draw[-][draw=gray, line width=2mm] (0,4.4) -- (0,4.5);
+	\draw[-][draw=gray, line width=2mm] (0,0) -- (0,0.1);	
+	\draw[-][draw=black, very thick] (-0.2,4.4) -- (0.2,4.4);
+	\draw[-][draw=black, very thick] (-0.2,0.1) -- (0.2,0.1) node[label=right:0.1 V](){};
 
+	\draw[-][draw=black, very thick] (0,0) -- (0,4.5);
+	\draw[-][draw=black, very thick] (-0.1,2.25) -- (0.1,2.25) node[label=left:2.25 V](){};
+	\draw[-][draw=black, very thick] (-0.2,0) -- (0.2,0);
+	\draw[-][draw=black, very thick] (-0.2,4.5) -- (0.2,4.5);
+	
+	\draw[-][draw=black, very thick] (-0.4,4.5) -- (-0.6,4.5);
+	\draw[-][draw=black, very thick] (-0.6,4.5) -- (-0.6,4.4);
+	\draw[-][draw=black, very thick] (-0.4,4.4) -- (-0.6,4.4);
+	\node [left] at (-0.6,4.45) {High};
+	\node [above] at (0.2,4.5) {4.5 V};
+	\node [right] at (0.2,4.4) {4.4 V};
+	
+	\draw[-][draw=black, very thick]	 (-0.4,0) -- (-0.6,0);
+	\draw[-][draw=black, very thick]	 (-0.4,0.1) -- (-0.6,0.1);
+	\draw[-][draw=black, very thick]	 (-0.6,0) -- (-0.6,0.1);
+	\node [left] at (-0.6,0.05) {Low};
+	
+	
+	\node [below] at (5,0) {In: 74LS02};
+	\draw[-][draw=gray, line width=2mm] (5,0) -- (5,0.8);
+	\draw[-][draw=gray, line width=2mm] (5,2) -- (5,4.5);
+	\draw[-][draw=black, very thick] (5.2,0.8) -- (4.8,0.8) node[label=left:0.8 V](){};
+	\node [above] at (5.2,4.5) {4.5 V};
+	
+	\draw[-][draw=black, very thick] (5,0) -- (5,4.5);
+	\draw[-][draw=black, very thick] (4.9,2.25) -- (5.1,2.25);
+	\draw[-][draw=black, very thick] (4.8,0) -- (5.2,0);
+	\draw[-][draw=black, very thick] (4.8,4.5) -- (5.2,4.5);
+	\draw[-][draw=black, very thick] (5.4,0) -- (5.6,0);
+	\draw[-][draw=black, very thick] (4.8,2) -- (5.2,2);
+	\draw[-][draw=black, very thick] (5.4,0.8) -- (5.6,0.8);
+	\draw[-][draw=black, very thick] (5.6,0) -- (5.6,0.8);
+	\node [right] at (5.6,0.4) {Low};
+
+	\draw[-][draw=black, very thick] (5.4,2) -- (5.6,2);
+	\node [left] at (4.8,2) {2 V};	
+	\draw[-][draw=black, very thick] (5.4,4.5) -- (5.6,4.5);
+	\draw[-][draw=black, very thick] (5.6,2) -- (5.6,4.5);
+	\node [right] at (5.6,3.25) {High};	
+\end{tikzpicture}
+\end{center}
+\caption{Comparación de tecnologías con HC a la salida y LS a la entrada.}
+\label{fig:hcls}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\begin{tikzpicture}[yscale=1]
+	\node [below] at (0,0) {Out: 74LS02};
+	
+	\draw[-][draw=gray, line width=2mm] (0,2.7) -- (0,4.5);
+	\draw[-][draw=gray, line width=2mm] (0,0) -- (0,0.5);	
+	\draw[-][draw=black, very thick] (-0.2,2.7) -- (0.2,2.7);
+	\draw[-][draw=black, very thick] (-0.2,0.5) -- (0.2,0.5) node[label=right:0.5 V](){};
+
+	\draw[-][draw=black, very thick] (0,0) -- (0,4.5);
+	\draw[-][draw=black, very thick] (-0.1,2.25) -- (0.1,2.25) node[label=left:2.25 V](){};
+	\draw[-][draw=black, very thick] (-0.2,0) -- (0.2,0);
+	\draw[-][draw=black, very thick] (-0.2,4.5) -- (0.2,4.5);
+	
+	\draw[-][draw=black, very thick] (-0.4,4.5) -- (-0.6,4.5);
+	\draw[-][draw=black, very thick] (-0.6,4.5) -- (-0.6,2.7);
+	\draw[-][draw=black, very thick] (-0.4,2.7) -- (-0.6,2.7);
+	\node [left] at (-0.6,3.6) {High};
+	\node [above] at (0.2,4.5) {4.5 V};
+	\node [right] at (0.2,2.7) {2.7 V};
+	
+	\draw[-][draw=black, very thick]	 (-0.4,0) -- (-0.6,0);
+	\draw[-][draw=black, very thick]	 (-0.4,0.5) -- (-0.6,0.5);
+	\draw[-][draw=black, very thick]	 (-0.6,0) -- (-0.6,0.5);
+	\node [left] at (-0.6,0.25) {Low};
+	
+	
+	\node [below] at (5,0) {In: 74HC02};
+	\draw[-][draw=gray, line width=2mm] (5,0) -- (5,1.35);
+	\draw[-][draw=gray, line width=2mm] (5,3.15) -- (5,4.5);
+	\draw[-][draw=black, very thick] (5.2,1.35) -- (4.8,1.35) node[label=left:1.35 V](){};
+	\node [above] at (5.2,4.5) {4.5 V};
+	
+	\draw[-][draw=black, very thick] (5,0) -- (5,4.5);
+	\draw[-][draw=black, very thick] (4.9,2.25) -- (5.1,2.25) node[label=right:2.25 V](){};
+	\draw[-][draw=black, very thick] (4.8,0) -- (5.2,0);
+	\draw[-][draw=black, very thick] (4.8,4.5) -- (5.2,4.5);
+	\draw[-][draw=black, very thick] (5.4,0) -- (5.6,0);
+	\draw[-][draw=black, very thick] (5.2,3.15) -- (4.8,3.15);
+	\draw[-][draw=black, very thick] (5.4,1.35) -- (5.6,1.35);
+	\draw[-][draw=black, very thick] (5.6,0) -- (5.6,1.35);
+	\node [right] at (5.6,0.675) {Low};
+
+	\draw[-][draw=black, very thick] (5.4,3.15) -- (5.6,3.15);
+	\node [left] at (4.8,3.15) {3.15 V};	
+	\draw[-][draw=black, very thick] (5.4,4.5) -- (5.6,4.5);
+	\draw[-][draw=black, very thick] (5.6,3.15) -- (5.6,4.5);
+	\node [right] at (5.6,3.825) {High};	
+\end{tikzpicture}
+\end{center}
+\caption{Comparación de tecnologías con LS a la salida y HC a la entrada.}
+\label{fig:lshc}
+\end{figure}
+
+De la Tabla (\ref{tabla:nm}) se destaca el valor negativo de $NM_{High}$ al colocar las compuertas de tecnología HC a la salida de una LS, detalle que se vuelve a observar en la Figura (\ref{fig:lshc}). Al conectar los dispositivos como se mencionó anteriormente, se observa que existe la posibilidad de que tensiones de salida que se consideran altas caigan en un margen en el cual la siguiente compuerta no las considere como valores activos, es decir, que actúe frente a estos.
 
 \subsection{Desarrollo del circuito}
 

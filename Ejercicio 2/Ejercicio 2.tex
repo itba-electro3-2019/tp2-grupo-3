@@ -1,0 +1,63 @@
+\input{../Informe/Header.tex}
+
+\begin{document}
+\subsection{Análisis de tecnologías}
+
+En esta instancia del informe, se procede a comparar compuertas lógicas del tipo NOR de diversas tecnologías. Para ello se vale de las hojas de datos de las compuertas \href{http://www.ti.com/product/SN74HC02}{74HC02}\footnote{Texas Instruments, ``SNx4HC02 Quadruple 2-Input Positive-NOR Gates'', 74HC02 datasheet, Diciembre 1982 [Revisado Abril 2015].}, \href{http://www.ti.com/product/SN74HCT02}{74HCT02}\footnote{Texas Instruments, ``SN54HCT02, SN74HCT02 QUADRUPLE 2-INPUT POSITIVE-NOR GATES'', 74HCT02 datasheet, Noviembre 1988 [Revisado Julio 2003].} y \href{http://www.ti.com/product/SN74LS02}{74LS02}\footnote{Texas Instruments, ``Quadruple 2-Input Positive-NOR Gates'', 74LS02 datasheet, Diciembre 1983 [Revisado Marzo 1988].}. Previo a dicho análisis, cabe detallar cada una de las tecnologías. Primero, se encuentra el 74HC02, siendo este, como su nombre lo indica, del tipo HC, cuyas siglas significan ``High-speed CMOS'', tecnología caracterizada por ser de baja potencia y alta velocidad. Luego se encuentra el 74HCT02, siendo HCT una variación de la tecnología HC. Esta denominación proviene de las mismas siglas que HC, solo que ademas posee lo que se conoce como ``logica transistor–transistor'' (TTL). En otras palabras, este tipo de compuertas puede operar bajo dicho estándar de tensiones, tanto de alimentación como de input.\footnote{``Logic family'', En.wikipedia.org, 2019. [Online]. Available: \url{https://en.wikipedia.org/wiki/Logic\_family\#HC\_logic}. [Accessed: 21- Sep- 2019].} Finalmente se encuentra el 74LS02, cuyas siglas provienen de ``Low-power Schottky''. Los integrados de esta familia se caracterizan por estar hechos con tecnología TTL.\footnote{``Serie 7400'', Es.wikipedia.org, 2019. [Online]. Available: \url{https://es.wikipedia.org/wiki/Serie\_7400}. [Accessed: 21- Sep- 2019].} Se destaca que este último, a diferencia de los dos primeros, se caracteriza por ser fabricado mediante el uso de tecnología BJT.
+
+Analizando las respectivas hojas de dato, se recopila información sobre los  valores aceptables de señal, tanto de entrada como de salida. Es así que se realiza la siguiente tabla:
+\begin{table}[H]
+\hspace*{-1.5cm}
+\begin{tabular}{c|c|c|c|c|c|c|c|}
+\cline{2-8}
+                               & $\mathbf{V_{CC}}$ \textbf{[V]} & \multicolumn{2}{c|}{\textbf{74HC02}}  & \multicolumn{2}{c|}{\textbf{74HCT02}} & \multicolumn{2}{c|}{\textbf{74LS02}} \\ \cline{3-8} 
+                               &              & \textbf{Min. [V]} & \textbf{Max. [V]} & \textbf{Min. [V]} & \textbf{Max. [V]} & \textbf{Min. [V]} & \textbf{Max. [V]}	\\ \hline
+\multicolumn{1}{|c|}{}         & 2            & 1.9           & -            & -             & -            & 2.7          & -            \\  
+\multicolumn{1}{|c|}{$\mathbf{V_{OH}}$} & 4.5          & 4.4           & -            & 3.98          & -            & -            & -            \\  
+\multicolumn{1}{|c|}{}         & 6            & 5.9           & -            & -             & -            & -            & -            \\ \hline
+\multicolumn{1}{|c|}{}         & 2            & -             & 0.1          & -             & -            & -            & 0.5          \\
+\multicolumn{1}{|c|}{$\mathbf{V_{OL}}$} & 4.5          & -             & 0.1          & -             & 0.26         & -            & -            \\
+\multicolumn{1}{|c|}{}         & 6            & -             & 0.1          & -             & -            & -            & -            \\ \hline
+\multicolumn{1}{|c|}{}         & 2            & 1.5           & -            & -             & -            & -            & -            \\ 
+\multicolumn{1}{|c|}{$\mathbf{V_{IH}}$}  & 4.5          & 3.15          & -            & 2             & -            & 2            & -            \\ 
+\multicolumn{1}{|c|}{}         & 6            & 4.2           & -            & -             & -            & -            & -            \\ \hline
+\multicolumn{1}{|c|}{}         & 2            & -             & 0.5          & -             & -            & -            & -            \\ 
+\multicolumn{1}{|c|}{$\mathbf{V_{IL}}$} & 4.5          & -             & 1.35         & -             & 0.8          & -            & 0.8          \\ 
+\multicolumn{1}{|c|}{}         & 6            & -             & 1.8          & -             & -            & -            & -            \\ \hline
+\end{tabular}
+\centering
+\caption{Tabla de valores de entrada y salida.}
+\label{tabla:vinout}
+\end{table}
+
+Con la información que se ha detallado, se procede a analizar el margen de ruido, tanto para los niveles altos (high), como para los bajos (low), al combinar tecnologías HC y LS, siendo este calculado de la forma
+\begin{equation*}
+\left\{
+\begin{aligned}
+		& NM_{High}= V_{OH} - V_{IH} \\
+		& NM_{Low}= V_{IL} - V_{OL} 
+\end{aligned}
+\right.
+\end{equation*}
+
+Nuevamente se decide plasmar los resultados en una tabla:
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{In} & \textbf{Out} & $\mathbf{V_{CC}}$ \textbf{[V]} & $\mathbf{NM_{High}}$ \textbf{[V]} & $\mathbf{NM_{Low}} $\textbf{[V]} \\ \hline
+74LS02      & 74HC02       & 4.5                            & 2.4                               & 0.7                              \\ 
+74HC02      & 74LS02       & 2                              & 1.2                               & 0                                \\ \hline
+\end{tabular}
+\caption{Margen de ruido para combinaciones de tecnologías HC y LS.}
+\label{tabla:nm}
+\end{table}
+
+
+
+
+\subsection{Desarrollo del circuito}
+
+\subsection{Mediciones}
+
+\end{document}

@@ -1,11 +1,10 @@
 \input{../Informe/Header.tex}
-
-\usepackage{tikz}
+\input{../Informe/fillarea.tex}
 
 \begin{document}
 \subsection{Análisis de tecnologías}
 
-En esta instancia del informe, se procede a comparar compuertas lógicas del tipo NOR de diversas tecnologías. Para ello se vale de las hojas de datos de las compuertas \href{http://www.ti.com/product/SN74HC02}{74HC02}\footnote{Texas Instruments, ``SNx4HC02 Quadruple 2-Input Positive-NOR Gates'', 74HC02 datasheet, Diciembre 1982 [Revisado Abril 2015].}, \href{http://www.ti.com/product/SN74HCT02}{74HCT02}\footnote{Texas Instruments, ``SN54HCT02, SN74HCT02 QUADRUPLE 2-INPUT POSITIVE-NOR GATES'', 74HCT02 datasheet, Noviembre 1988 [Revisado Julio 2003].} y \href{http://www.ti.com/product/SN74LS02}{74LS02}\footnote{Texas Instruments, ``Quadruple 2-Input Positive-NOR Gates'', 74LS02 datasheet, Diciembre 1983 [Revisado Marzo 1988].}. Previo a dicho análisis, cabe detallar cada una de las tecnologías. Primero, se encuentra el 74HC02, siendo este, como su nombre lo indica, del tipo HC, cuyas siglas significan ``High-speed CMOS'', tecnología caracterizada por ser de baja potencia y alta velocidad. Luego se encuentra el 74HCT02, siendo HCT una variación de la tecnología HC. Esta denominación proviene de las mismas siglas que HC, solo que ademas posee lo que se conoce como ``logica transistor–transistor'' (TTL). En otras palabras, este tipo de compuertas puede operar bajo dicho estándar de tensiones, tanto de alimentación como de input.\footnote{``Logic family'', En.wikipedia.org, 2019. [Online]. Available: \url{https://en.wikipedia.org/wiki/Logic\_family\#HC\_logic}. [Accessed: 21- Sep- 2019].} Finalmente se encuentra el 74LS02, cuyas siglas provienen de ``Low-power Schottky''. Los integrados de esta familia se caracterizan por estar hechos con tecnología TTL.\footnote{``Serie 7400'', Es.wikipedia.org, 2019. [Online]. Available: \url{https://es.wikipedia.org/wiki/Serie\_7400}. [Accessed: 21- Sep- 2019].} Se destaca que este último, a diferencia de los dos primeros, se caracteriza por ser fabricado mediante el uso de tecnología BJT.
+En esta instancia del informe, se procede a comparar compuertas lógicas del tipo NOR de diversas tecnologías. Para ello se vale de las hojas de datos de las compuertas \href{http://www.ti.com/lit/ds/symlink/sn74hc02.pdf}{74HC02}, \href{http://www.ti.com/lit/ds/symlink/sn74hct02.pdf}{74HCT02} y \href{http://www.ti.com/lit/ds/symlink/sn74ls02.pdf}{74LS02}. Previo a dicho análisis, cabe detallar cada una de las tecnologías. Primero, se encuentra el 74HC02, siendo este, como su nombre lo indica, del tipo HC, cuyas siglas significan ``High-speed CMOS'', tecnología caracterizada por ser de baja potencia y alta velocidad. Luego se encuentra el 74HCT02, siendo HCT una variación de la tecnología HC. Esta denominación proviene de las mismas siglas que HC, solo que ademas posee lo que se conoce como ``logica transistor–transistor'' (TTL). En otras palabras, este tipo de compuertas puede operar bajo dicho estándar de tensiones, tanto de alimentación como de input.\footnote{``Logic family'', En.wikipedia.org, 2019. [Online]. Available: \url{https://en.wikipedia.org/wiki/Logic\_family\#HC\_logic}. [Accessed: 21- Sep- 2019].} Finalmente se encuentra el 74LS02, cuyas siglas provienen de ``Low-power Schottky''. Los integrados de esta familia se caracterizan por estar hechos con tecnología TTL.\footnote{``Serie 7400'', Es.wikipedia.org, 2019. [Online]. Available: \url{https://es.wikipedia.org/wiki/Serie\_7400}. [Accessed: 21- Sep- 2019].} Se destaca que este último, a diferencia de los dos primeros, se caracteriza por ser fabricado mediante el uso de tecnología BJT.
 
 Analizando las respectivas hojas de dato, se recopila información sobre los  valores aceptables de señal, tanto de entrada como de salida. Es así que se realiza la siguiente tabla:
 \begin{table}[H]
@@ -15,10 +14,10 @@ Analizando las respectivas hojas de dato, se recopila información sobre los  va
                                & $\mathbf{V_{CC}}$ \textbf{[V]} & \multicolumn{2}{c|}{\textbf{74HC02}}  & \multicolumn{2}{c|}{\textbf{74HCT02}} & \multicolumn{2}{c|}{\textbf{74LS02}} \\ \cline{3-8} 
                                &              & \textbf{Min. [V]} & \textbf{Max. [V]} & \textbf{Min. [V]} & \textbf{Max. [V]} & \textbf{Min. [V]} & \textbf{Max. [V]}	\\ \hline
 \multicolumn{1}{|c|}{}         & 2            & 1.9           & -            & -             & -            & -          & -            \\  
-\multicolumn{1}{|c|}{$\mathbf{V_{OH}}$} & 4.5          & 4.4           & -            & 3.98          & -            & 2.7            & -            \\  
+\multicolumn{1}{|c|}{$\mathbf{V_{OH}}$} & 4.5          & 4.4           & -            & 3.84          & -            & 2.7            & -            \\  
 \multicolumn{1}{|c|}{}         & 6            & 5.9           & -            & -             & -            & -            & -            \\ \hline
 \multicolumn{1}{|c|}{}         & 2            & -             & 0.1          & -             & -            & -            & -          \\
-\multicolumn{1}{|c|}{$\mathbf{V_{OL}}$} & 4.5          & -             & 0.1          & -             & 0.26         & -            & 0.5            \\
+\multicolumn{1}{|c|}{$\mathbf{V_{OL}}$} & 4.5          & -             & 0.1          & -             & 0.33         & -            & 0.5            \\
 \multicolumn{1}{|c|}{}         & 6            & -             & 0.1          & -             & -            & -            & -            \\ \hline
 \multicolumn{1}{|c|}{}         & 2            & 1.5           & -            & -             & -            & -            & -            \\ 
 \multicolumn{1}{|c|}{$\mathbf{V_{IH}}$}  & 4.5          & 3.15          & -            & 2             & -            & 2            & -            \\ 
@@ -132,7 +131,8 @@ Además, se busca plasmar de una forma más clara los datos obtenidos en la Tabl
 	\draw[-][draw=black, very thick] (-0.4,2.7) -- (-0.6,2.7);
 	\node [left] at (-0.6,3.6) {High};
 	\node [above] at (0.2,4.5) {4.5 V};
-	\node [right] at (0.2,2.7) {2.7 V};
+	
+	\node [right] at (0.2,2.5) {2.7 V};
 	
 	\draw[-][draw=black, very thick]	 (-0.4,0) -- (-0.6,0);
 	\draw[-][draw=black, very thick]	 (-0.4,0.5) -- (-0.6,0.5);
@@ -157,17 +157,21 @@ Además, se busca plasmar de una forma más clara los datos obtenidos en la Tabl
 	\node [right] at (5.6,0.675) {Low};
 
 	\draw[-][draw=black, very thick] (5.4,3.15) -- (5.6,3.15);
-	\node [left] at (4.8,3.15) {3.15 V};	
-	\draw[-][draw=black, very thick] (5.4,4.5) -- (5.6,4.5);
+		\draw[-][draw=black, very thick] (5.4,4.5) -- (5.6,4.5);
 	\draw[-][draw=black, very thick] (5.6,3.15) -- (5.6,4.5);
-	\node [right] at (5.6,3.825) {High};	
+	\node [right] at (5.6,3.825) {High};
+	
+	\node [left] at (4.8,3.35) {3.15 V};	
+	
+	\draw[pattern=custom north west lines, hatchcolor=red, hatchspread=6pt] (0,2.7) rectangle (5,3.15);	
+	
 \end{tikzpicture}
 \end{center}
 \caption{Comparación de tecnologías con LS a la salida y HC a la entrada.}
 \label{fig:lshc}
 \end{figure}
 
-De la Tabla (\ref{tabla:nm}) se destaca el valor negativo de $NM_{High}$ al colocar las compuertas de tecnología HC a la salida de una LS, detalle que se vuelve a observar en la Figura (\ref{fig:lshc}). Al conectar los dispositivos como se mencionó anteriormente, se observa que existe la posibilidad de que tensiones de salida que se consideran altas caigan en un margen en el cual la siguiente compuerta no las considere como valores activos, es decir, que actúe frente a estos.
+A la hora de conectar una compuerta con otra, es deseable que los rangos de valores validos de salida sean menores que los de entrada, ya que de esta forma se garantiza que cualquier salida sea interpretada adecuadamente por la siguiente etapa. Por consiguiente, de la Tabla (\ref{tabla:nm}) se destaca el valor negativo de $NM_{High}$ al colocar las compuertas de tecnología HC a la salida de una LS, detalle que se vuelve a observar en la Figura (\ref{fig:lshc}). Al conectar los dispositivos como se mencionó anteriormente, se pone en evidencia que existe la posibilidad de que tensiones de salida que se consideran altas caigan en un margen en el cual la siguiente compuerta las considera como valores imprecisos, es decir, que no actúa frente a estos. Particularmente, tensiones de salida desde $2.7 \ V$ hasta $3.15 \ V$ sin incluir, que son considerados como activos altos para la tecnología LS, no lo son para la HC. Por lo tanto, no es conveniente realizar dicha conexión, ya que se podría generar perdida de datos.
 
 \subsection{Desarrollo del circuito}
 

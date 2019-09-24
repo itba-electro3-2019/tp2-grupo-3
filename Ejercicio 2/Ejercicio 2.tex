@@ -4,7 +4,7 @@
 \begin{document}
 \subsection{Análisis de tecnologías}
 
-En esta instancia del informe, se procede a comparar compuertas lógicas del tipo NOR de diversas tecnologías. Para ello se vale de las hojas de datos de las compuertas \href{http://www.ti.com/lit/ds/symlink/sn74hc02.pdf}{74HC02}, \href{http://www.ti.com/lit/ds/symlink/sn74hct02.pdf}{74HCT02} y \href{http://www.ti.com/lit/ds/symlink/sn74ls02.pdf}{74LS02}. Previo a dicho análisis, cabe detallar cada una de las tecnologías. Primero, se encuentra el 74HC02, siendo este, como su nombre lo indica, del tipo HC, cuyas siglas significan ``High-speed CMOS'', tecnología caracterizada por ser de baja potencia y alta velocidad. Luego se encuentra el 74HCT02, siendo HCT una variación de la tecnología HC. Esta denominación proviene de las mismas siglas que HC, solo que ademas posee lo que se conoce como ``logica transistor–transistor'' (TTL). En otras palabras, este tipo de compuertas puede operar bajo dicho estándar de tensiones, tanto de alimentación como de input.\footnote{``Logic family'', En.wikipedia.org, 2019. [Online]. Available: \url{https://en.wikipedia.org/wiki/Logic\_family\#HC\_logic}. [Accessed: 21- Sep- 2019].} Finalmente se encuentra el 74LS02, cuyas siglas provienen de ``Low-power Schottky''. Los integrados de esta familia se caracterizan por estar hechos con tecnología TTL.\footnote{``Serie 7400'', Es.wikipedia.org, 2019. [Online]. Available: \url{https://es.wikipedia.org/wiki/Serie\_7400}. [Accessed: 21- Sep- 2019].} Se destaca que este último, a diferencia de los dos primeros, se caracteriza por ser fabricado mediante el uso de tecnología BJT.
+En esta instancia del informe, se procede a comparar compuertas lógicas del tipo NOR de diversas tecnologías. Para ello se vale de las hojas de datos de las compuertas \href{http://www.ti.com/lit/ds/symlink/sn74hc02.pdf}{74HC02}, \href{http://www.ti.com/lit/ds/symlink/sn74hct02.pdf}{74HCT02} y \href{http://www.ti.com/lit/ds/symlink/sn74ls02.pdf}{74LS02}. Previo a dicho análisis, cabe detallar cada una de las tecnologías. Primero, se encuentra el 74HC02, siendo este, como su nombre lo indica, del tipo HC, cuyas siglas significan ``High-speed CMOS'', tecnología caracterizada por ser de baja potencia y alta velocidad. Luego se encuentra el 74HCT02, siendo HCT una variación de las HC. Esta denominación proviene de las mismas siglas previamente mencionadas, solo que ademas posee compatibilidad con la tecnología conocida como ``logica transistor–transistor'' (TTL). En otras palabras, este tipo de compuertas puede operar bajo dicho estándar de tensiones, tanto de alimentación como de input.\footnote{``Logic family'', En.wikipedia.org, 2019. [Online]. Available: \url{https://en.wikipedia.org/wiki/Logic\_family\#HC\_logic}. [Accessed: 21- Sep- 2019].} Finalmente se encuentra el 74LS02, cuyas siglas provienen de ``Low~-power Schottky''. Los integrados de esta familia se caracterizan por estar hechos con tecnología TTL.\footnote{``Serie 7400'', Es.wikipedia.org, 2019. [Online]. Available: \url{https://es.wikipedia.org/wiki/Serie\_7400}. [Accessed: 21- Sep- 2019].} Se destaca que este último, a diferencia de los dos primeros, se caracteriza por ser fabricado mediante el uso de tecnología BJT.
 
 Analizando las respectivas hojas de dato, se recopila información sobre los  valores aceptables de señal, tanto de entrada como de salida. Es así que se realiza la siguiente tabla:
 \begin{table}[H]
@@ -33,12 +33,10 @@ Analizando las respectivas hojas de dato, se recopila información sobre los  va
 
 Con la información que se ha detallado, se procede a analizar el margen de ruido, tanto para los niveles altos (high), como para los bajos (low), al combinar tecnologías HC y LS, siendo este calculado de la forma
 \begin{equation*}
-\left\{
 \begin{aligned}
-		& NM_{High}= V_{OH} - V_{IH} \\
-		& NM_{Low}= V_{IL} - V_{OL} 
+		NM_{High}=\ & V_{OH} - V_{IH} \\
+		NM_{Low}=\ & V_{IL} - V_{OL} 
 \end{aligned}
-\right.
 \end{equation*}
 
 Nuevamente se decide plasmar los resultados en una tabla:
@@ -54,7 +52,7 @@ Nuevamente se decide plasmar los resultados en una tabla:
 \label{tabla:nm}
 \end{table}
 
-Además, se busca plasmar de una forma más clara los datos obtenidos en la Tabla (\ref{tabla:vinout}). Esto se logra mediante los siguientes gráficos.  
+Luego, se procede a representar de una forma más clara los datos obtenidos en la Tabla (\ref{tabla:vinout}) y (\ref{tabla:nm}).  
 
 \begin{figure}[H]
 \begin{center}

@@ -58,7 +58,7 @@ El mando de control a utilizar está compuesto por dos potenciómetros, uno para
 	
 			node[label=east:{\color{blue}\textbf{GND}}]{}
 			
-		
+		to[open] ++ (0, -5.5)
 
 		;
 
@@ -67,6 +67,72 @@ El mando de control a utilizar está compuesto por dos potenciómetros, uno para
 		\caption{Circuito equivalente del mando HW-504 con mismos nombres que el pin-out del periférico.}
 		\label{circuit:joytick_eq}
 	\end{subfigure}
+\end{figure}
+
+\subsection{circuitikz que en algun momento vamos ausar saludos}
+
+\begin{figure}[H]
+
+	\centering
+	\begin{circuitikz}
+		\draw	
+	
+			node[op amp](opamp){}
+			
+			(opamp.up) to[short, -*] ++ (0, 2)
+				to[open] ++ (-4, 0)
+				node[label=west:$V_{CC}$]{}
+				to[short, o-] ++ (8, 0)
+			
+			(opamp.down) to[short, -*] ++ (0, -2)
+				to[open] ++ (-4, 0)
+				node[label=west:$GND$]{}
+				to[short, o-] ++ (8, 0)
+				
+			(opamp.-) to[short] ++ (-0.5, 0)
+				node[label=west:$V_{REF}$]{}				
+				to[R, l=$R_1$, *-*] ++ (0, 2)
+				to[open] ++ (0, -2)
+				to[short] ++ (0, -1)
+				to[R, l=$R_2$, -*] ++ (0, -2.03)			
+			
+			(opamp.+) to[crossing] ++ (-1, 0)
+				to[short, -o] ++ (-2, 0)
+				node[label=west:$V_{in}$]{}
+	
+			(opamp.out) to[short, -o] ++ (2.75, 0)
+				node[label=east:$V_{out}$]{}
+	
+		;
+	\end{circuitikz}
+	\caption{Amplificador operacional en configuración comparador.}
+	\label{circ:comparador}
+\end{figure}
+
+
+\begin{equation*}
+V_{out} = A_0 (V_{in} - V_{REF}) =
+\left\{
+\begin{aligned}
+		& \approx V_{CC} \ \ \ \ \ si \ \ V_{in} > V_{REF} \\		
+		& \approx 0 \ \ \ \ \ \ \ \ \ si \ \ V_{in} < V_{REF}\\		
+\end{aligned}
+\right.
+\end{equation*}
+
+\begin{figure}[H]
+	\centering
+	\begin{circuitikz}
+		\draw	
+		node[op amp](op1){}
+		to[open] ++ (0, -3)
+		node[op amp](op2){}
+		to[open] ++ (4, 0)
+		node[fourport](srlatch){}
+		to[open] ++ (0, 3)
+		node[npn](npn){}
+		;
+	\end{circuitikz}
 \end{figure}
 
 

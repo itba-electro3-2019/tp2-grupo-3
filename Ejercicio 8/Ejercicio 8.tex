@@ -19,7 +19,7 @@ El mando de control a utilizar está compuesto por dos potenciómetros, uno para
 	\begin{subfigure}[t]{0.49\textwidth}
 		\centering
 		\includegraphics[width=0.6\textwidth]{Imagenes/joystick.jpg}
-		\caption{Mando de control HW-504 a utilizar.[1]}
+		\caption{Mando de control HW-504 a utilizar$^{0}$.}
 		\label{fig:joystick}
 	\end{subfigure}
 	\begin{subfigure}[t]{0.49\textwidth}
@@ -69,6 +69,8 @@ El mando de control a utilizar está compuesto por dos potenciómetros, uno para
 	\end{subfigure}
 \end{figure}
 
+\footnotetext{https://eshop.tecnoconciencia.com.ve/eshop/wp-content/uploads/2017/08/JOYSTICK-ARDUINO.jpg. [Accessed: 23- Sep- 2019].}
+
 \subsection{circuitikz que en algun momento vamos ausar saludos}
 
 \begin{figure}[H]
@@ -96,7 +98,7 @@ El mando de control a utilizar está compuesto por dos potenciómetros, uno para
 				to[short] ++ (0, -1)
 				to[R, l=$R_2$, -*] ++ (0, -2.03)			
 			
-			(opamp.+) to[crossing] ++ (-1, 0)
+			(opamp.+) to[short] ++ (-1, 0)
 				to[short, -o] ++ (-2, 0)
 				node[label=west:$V_{in}$]{}
 	
@@ -124,19 +126,97 @@ V_{out} = A_0 (V_{in} - V_{REF}) =
 	\centering
 	\begin{circuitikz}
 		\draw	
-		node[op amp](op1){}
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%Setting figures
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		node[op amp](op1){} %Opamp1
+			to[open] ++ (-0.1, -0.3)
+			node[label=\tiny{Comparator}]{}
+			to[open] ++ (0,0.2)
 		to[open] ++ (0, -3)
-		node[op amp](op2){}
-		to[open] ++ (4, 0)
-		node[fourport](srlatch){}
-		to[open] ++ (0, 3)
-		node[npn](npn){}
+		
+		node[op amp, yscale=-1](op2){} %Opamp2
+			to[open] ++ (-0.1, -0.3)
+			node[label=\tiny{Comparator}]{}
+			to[open] ++ (0,0.2)
+		to[open] ++ (3, 1.5)
+		
+		node[fourport](srlatch){} %SR-Latch
+			(srlatch.1) ++ (0.3, -0.3) node[label=$S$]{}
+			(srlatch.2) ++ (-0.3, -0.3) node[label=$\overline{Q}$]{}
+			(srlatch.3) ++ (-0.3, -0.3) node[label=$Q$]{}
+			(srlatch.4) ++ (0.3, -0.3) node[label=$R$]{}
+		to[open] ++ (4, 2)
+		
+		node[npn](npn){} %Neperiano
+			(npn.E) node[tlground]{}
+
+		(srlatch.2) ++ (2.5, 0) node[fourport, label=center:OUT, scale = 0.5](outdriver){}
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%NODES:
+		%	op1, op2, srlatch, npn, outdriver
+		%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		(op1.out) |- (srlatch.4)
+		
+		(op2.out) |- (srlatch.1)
+		
+		(srlatch.3) to[short] ++ (0.5, 0)
+			node[plain crossing, rotate=45]{}
+		
+		(srlatch.2) to[short, o-o] (outdriver.west)
+			to[open, -*] ++ (-1, 0)
+			|- (npn.B)
+			
+		(npn.C) to[short, -o] ++ (0, 1.75)
+			node[label=north:DISCHARGE]{}
+			node[label=west:7]{}
+			
+		(outdriver.east) to[short, -o] ++ (2, 0)
+			node[label=east:OUT]{}
+			node[label=north:3]{}
+			
+		(srlatch.north) to[short, o-o] ++ (0, 3.75)
+			node[label=north:RESET]{}
+			node[label=west:4]{}
+		
+		(op1.-) to[short, -*] ++ (-0.5, 0)
+			to[short] ++ (0, 2.5)
+			node[ocirc, label=north:CONTROL VOLT]{}
+			node[label=west:5]{}		
+			to[open] ++ (0, -2.5)
+			to[short, -*] ++ (-2.5, 0)
+			to[R, l_=$5K$, -o] ++ (0, 2.42)
+			node[label=north:VCC]{}
+			node[label=west:8]{}
+			to[open] ++ (0, -2.42)
+			to[R, l=$5K$, -*] ++ (0, -3.1)
+			node(aux){}
+			to[R, l=$5K$, -o] ++ (0, -3)
+			node[label=south:GND]{}
+			node[label=west:1]{}
+
+
+		(op1.+) to[short] ++ (-1.2, 0)
+			to[short] ++ (0, 0.5)
+			to[short, -o] ++ (-3, 0)
+			node[label=north:6]{}
+			node[label=west:THRESHOLD]{}
+
+		(op2.+) to[short] ++ (-2.94, 0)
+		
+		(op2.-) to[short] ++ (-1.2, 0)
+			to[short] ++ (0,0.5)
+			to[short, -o] ++ (-3, 0)
+			node[label=north:2]{}
+			node[label=west:TRIGGER]{}
+		
 		;
 	\end{circuitikz}
+	\caption{Diagrama en bloques del integrado 555.}
+	\label{fig:555}
 \end{figure}
 
-
-\subsection{Bibliografía}
-[1]Eshop.tecnoconciencia.com.ve, 2019. [Online]. Available: https://eshop.tecnoconciencia.com.ve/eshop/wp-content/uploads/2017/08/JOYSTICK-ARDUINO.jpg. [Accessed: 23- Sep- 2019].
 
 \end{document}

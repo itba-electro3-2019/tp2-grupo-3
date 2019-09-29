@@ -126,7 +126,7 @@
 	\label{circ:async_counter_connection}		
 \end{figure}				
 		
-		Como los pulsos deben de propagarse a lo largo de varias compuertas lógicas, sucede que para cada incremento en el contador, no todos los bits de la palabra almacenada cambian al mismo instante. En la Figura (\ref{async_ripple}) se esquematiza este efecto para un contador que transita de almacenar un $0111_2$ a almacenar un $1000_2$.
+	Como los pulsos deben de propagarse a lo largo de varias compuertas lógicas, sucede que para cada incremento en el contador, no todos los bits de la palabra almacenada cambian al mismo instante. En la Figura (\ref{async_ripple}) se esquematiza este efecto para un contador que transita de almacenar un $0111_2$ a almacenar un $1000_2$.
 
 \begin{figure}[H]
 	\centering
@@ -135,11 +135,11 @@
 	\label{async_ripple}
 \end{figure}
 
-Debido a este fenómeno, las implementaciones asíncronas de contadores no son del todo fidedignas. Sin embargo, abundan como divisores de frecuencia ya que la salida de cada flip-flop será la frecuencia de los pulsos de entrada dividida por una potencia de dos. Otra desventaja de los contadores asíncronos está directamente relacionada con la anterior y es que debido al fenómeno de propagación estos dispositivos se vuelven mucho más lentos en comparación a otros tipos de contadores.
-
-No obstante, la ventaja de esta implementación es que estos dispositivos son muy simples y fáciles de contruir.
+	Debido a este fenómeno, las implementaciones asíncronas de contadores no son del todo fidedignas. Sin embargo, abundan como divisores de frecuencia ya que la salida de cada flip-flop será la frecuencia de los pulsos de entrada dividida por una potencia de dos. Otra desventaja de los contadores asíncronos está directamente relacionada con la anterior y es que debido al fenómeno de propagación estos dispositivos se vuelven mucho más lentos en comparación a otros tipos de contadores. No obstante, la ventaja de esta implementación es que estos dispositivos son muy simples y fáciles de contruir.
 
 \subsubsection{Contadores Síncronos}
+
+Los contadores síncronos poseen todos sus flip-flops conectados al generador de pulsos. Por esta razón, se elimina la propagación presente en los contadores asíncronos y los problemas que este fenómeno deriva.
 
 \begin{figure}[H]
 	\centering
@@ -178,6 +178,246 @@ No obstante, la ventaja de esta implementación es que estos dispositivos son mu
 	\end{circuitikz}
 	\caption{Conección entre flip-flops para un contador síncrono.}
 	\label{circ:sync_counter_connection}		
-\end{figure}	
+\end{figure}
+
+Es por esta razón que no solo los contadores síncronos son una implementación segura para contar, sino que también son más rápidos que su contraparte asíncrona. No obstante, la complejidad de estos dispositivos aumenta considerablemente.
+
+\subsection{Implementaciones y Mediciones}
+\subsubsection{Contador Asíncrono}
+En la Figura (\ref{fig:async_circ}) se puede observar la implementación realizada en PCB.
+
+\begin{figure}[H]
+	\centering
+	\begin{circuitikz}
+		\draw
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			%Figuras
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			(-3,-2)
+			node[ocirc, label=west:$CLK$](CLK){}	
+			
+			(0,0)
+			node[fourport](FF1){}
+				(FF1.1) ++ (0.12,0.43) node[]{\scalebox{1.2}{\rotatebox{-90}{$\triangle$}}}
+				 ++ (-0.12,0) node[](FF1_CLK){}
+				(FF1.1) ++ (0.15, -0.12) node[](){$K$}
+					node[](FF1_1){}
+				(FF1.2) ++ (-0.15, -0.12) node[](){$\overline{Q}$}
+				node[](FF1_2){}
+				(FF1.3) ++ (-0.15, 0.12) node[](){$Q$}
+				node[](FF1_3){}
+				(FF1.4) ++ (0.15, 0.12) node[](){$J$}
+				node[](FF1_4){}
+				(FF1_CLK) to[short] ++ (-0.5, 0)
+					node[](FF1_CLK){}
+				(FF1.1) to[short] ++ (-0.5, 0)
+					node[](FF1_1){}
+				(FF1.2) to[short] ++ (0.5, 0)
+					node[](FF1_2){}
+				(FF1.3) to[short] ++ (0.5, 0)
+					node[](FF1_3){}
+					to[short, -o] ++ (0, 2)
+					node[label=north:$Q_0$]{}
+				(FF1.4) to[short] ++ (-0.5, 0)
+					node[](FF1_4){}
+			
+			(4,0)
+			node[fourport](FF2){}
+				(FF2.1) ++ (0.12,0.43) node[]{\scalebox{1.2}{\rotatebox{-90}{$\triangle$}}}
+				++ (-0.12, 0) node[](FF2_CLK){}
+				(FF2.1) ++ (0.15, -0.12) node[](){$K$}
+				(FF2.2) ++ (-0.15, -0.12) node[](){$\overline{Q}$}
+				(FF2.3) ++ (-0.15, 0.12) node[](){$Q$}
+				(FF2.4) ++ (0.15, 0.12) node[](){$J$}
+				(FF2_CLK) to[short] ++ (-0.5, 0)
+					node[](FF2_CLK){}
+				(FF2.1) to[short] ++ (-0.5, 0)
+					node[](FF2_1){}
+				(FF2.2) to[short] ++ (0.5, 0)
+					node[](FF2_2){}
+				(FF2.3) to[short] ++ (0.5, 0)
+					node[](FF2_3){}
+					to[short, -o] ++ (0, 2)
+					node[label=north:$Q_1$]{}
+				(FF2.4) to[short] ++ (-0.5, 0)
+					node[](FF2_4){}
+			
+			(8,0)
+			node[fourport](FF3){}
+				(FF3.1) ++ (0.12,0.43) node[]{\scalebox{1.2}{\rotatebox{-90}{$\triangle$}}}
+				++ (-0.12, 0) node[](FF3_CLK){}
+				(FF3.1) ++ (0.15, -0.12) node[](){$K$}
+				(FF3.2) ++ (-0.15, -0.12) node[](){$\overline{Q}$}
+				(FF3.3) ++ (-0.15, 0.12) node[](){$Q$}
+				(FF3.4) ++ (0.15, 0.12) node[](){$J$}
+				(FF3_CLK) to[short] ++ (-0.5, 0)
+					node[](FF3_CLK){}
+				(FF3.1) to[short] ++ (-0.5, 0)
+					node[](FF3_1){}
+				(FF3.2) to[short] ++ (0.5, 0)
+					node[plain crossing, rotate=45](FF3_2){}
+				(FF3.3) to[short] ++ (0.5, 0)
+					node[](FF3_3){}
+					to[short, -o] ++ (0, 2)
+					node[label=north:$Q_2$]{}
+				(FF3.4) to[short] ++ (-0.5, 0)
+					node[](FF3_4){}
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			%FF1, FF2, FF3, CLK
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			(CLK) to[short] ++ (1, 0) |- (FF1_CLK.center)
+				
+			(FF1_1) to[short, -*] (FF1_4)
+			(FF2_1) to[short, -*] (FF2_4)
+			(FF3_1) to[short, -*] (FF3_4)
+			
+			(FF1_4) to[short, -*] ++ (0, 1)
+			(FF2_4) to[short, -*] ++ (0, 1)
+			(FF3_4) to[short] ++ (0, 1)
+				to[short] ++ (-9.5, 0)
+				node[ocirc, label=west:$1$](){}
+			%(spdt.out 1) to[short, -o] ++ (-0.5, 0)
+			%	node[label=west:$1$]{}
+			%(spdt.out 2) to[short, -o] ++ (-0.5, 0)
+			%	node[label=west:$0$]{}
+			
+			(FF3_CLK) to[open] ++ (-0.6, 0)
+				node[spdt, rotate=180, yscale=-1](sw1){}
+				
+			(FF2_CLK) to[open] ++ (-0.6, 0)
+				node[spdt, rotate=180, yscale=-1](sw2){}
+				
+			(sw1.out 1) to[short, -*] ++ (0, 0.15)
+			(sw2.out 1) to[short, -*] ++ (0, 0.15)
+			(sw1.out 2) to[short] ++ (0, -0.11)
+			(sw2.out 2) to[short] ++ (0, -0.11)
+		;
+	\end{circuitikz}
+	\caption{Implementación de contador asíncrono.}
+	\label{fig:async_circ}
+\end{figure}
+
+\subsubsection{Contador Síncrono}
+En la Figura (\ref{fig:sync_circ}) se puede observar la implementación realizada en PCB.
+
+\begin{figure}[H]
+	\centering
+	\begin{circuitikz}
+		\draw
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			%Figuras
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			(-3,-2)
+			node[ocirc, label=west:$CLK$](CLK){}	
+			
+			(0,0)
+			node[fourport](FF1){}
+				(FF1.1) ++ (0.12,0.43) node[]{\scalebox{1.2}{\rotatebox{-90}{$\triangle$}}}
+				 ++ (-0.12,0) node[](FF1_CLK){}
+				(FF1.1) ++ (0.15, -0.12) node[](){$K$}
+					node[](FF1_1){}
+				(FF1.2) ++ (-0.15, -0.12) node[](){$\overline{Q}$}
+				node[](FF1_2){}
+				(FF1.3) ++ (-0.15, 0.12) node[](){$Q$}
+				node[](FF1_3){}
+				(FF1.4) ++ (0.15, 0.12) node[](){$J$}
+				node[](FF1_4){}
+				(FF1_CLK) to[short] ++ (-0.5, 0)
+					node[](FF1_CLK){}
+				(FF1.1) to[short] ++ (-0.5, 0)
+					node[](FF1_1){}
+				(FF1.2) to[short] ++ (0.5, 0)
+					node[](FF1_2){}
+				(FF1.3) to[short] ++ (0.5, 0)
+					node[](FF1_3){}
+					to[short, -o] ++ (0, 2)
+					node[label=north:$Q_0$]{}
+				(FF1.4) to[short] ++ (-0.5, 0)
+					node[circ](FF1_4){}
+			
+			(4,0)
+			node[fourport](FF2){}
+				(FF2.1) ++ (0.12,0.43) node[]{\scalebox{1.2}{\rotatebox{-90}{$\triangle$}}}
+				++ (-0.12, 0) node[](FF2_CLK){}
+				(FF2.1) ++ (0.15, -0.12) node[](){$K$}
+				(FF2.2) ++ (-0.15, -0.12) node[](){$\overline{Q}$}
+				(FF2.3) ++ (-0.15, 0.12) node[](){$Q$}
+				(FF2.4) ++ (0.15, 0.12) node[](){$J$}
+				(FF2_CLK) to[short] ++ (-0.5, 0)
+					node[](FF2_CLK){}
+				(FF2.1) to[short] ++ (-0.5, 0)
+					node[](FF2_1){}
+				(FF2.2) to[short] ++ (0.5, 0)
+					node[](FF2_2){}
+				(FF2.3) to[short] ++ (0.5, 0)
+					node[](FF2_3){}
+					to[short, -o] ++ (0, 2)
+					node[label=north:$Q_1$]{}
+				(FF2.4) to[short] ++ (-0.5, 0)
+					node[circ](FF2_4){}
+			
+			(10,0)
+			node[fourport](FF3){}
+				(FF3.1) ++ (0.12,0.43) node[]{\scalebox{1.2}{\rotatebox{-90}{$\triangle$}}}
+				++ (-0.12, 0) node[](FF3_CLK){}
+				(FF3.1) ++ (0.15, -0.12) node[](){$K$}
+				(FF3.2) ++ (-0.15, -0.12) node[](){$\overline{Q}$}
+				(FF3.3) ++ (-0.15, 0.12) node[](){$Q$}
+				(FF3.4) ++ (0.15, 0.12) node[](){$J$}
+				(FF3_CLK) to[short] ++ (-0.5, 0)
+					node[](FF3_CLK){}
+				(FF3.1) to[short] ++ (-0.5, 0)
+					node[](FF3_1){}
+				(FF3.2) to[short] ++ (0.5, 0)
+					node[plain crossing, rotate=45](FF3_2){}
+				(FF3.3) to[short] ++ (0.5, 0)
+					node[](FF3_3){}
+					to[short, -o] ++ (0, 2)
+					node[label=north:$Q_2$]{}
+				(FF3.4) to[short] ++ (-0.5, 0)
+					node[circ](FF3_4){}
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			%FF1, FF2, FF3, CLK
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			(CLK) to[short, -*] ++ (1, 0) |- (FF1_CLK.center)
+			(CLK) to[open] ++ (1, 0) 
+				to[short, -*] ++ (4, 0) |- (FF2_CLK.center)
+			(CLK) to[open] ++ (5, 0)
+				to[short] ++ (6, 0) |- (FF3_CLK.center)
+				
+			(FF1_1) to[short] (FF1_4)
+			(FF2_1) to[short] (FF2_4)
+			(FF3_1) to[short] (FF3_4)
+			
+			(FF1_4) to[short] ++ (0, 1)
+				to[short] ++ (-1.5, 0)
+				node[ocirc, label=west:$1$](){}
+			
+			
+			(FF3_4) to[open] ++ (-2, 0)
+			 	to[open] ++ (-0.6, 0)
+				node[spdt, rotate=180, yscale=-1](sw1){}
+			(sw1.out 1) node[circ]{}
+			
+			(FF3_4) ++ (-0.5, 0) node[and port, scale=0.7](and){}
+				(FF3_4) to[short] ++ (-0.5,0)				
+			
+			(FF2_4) to[open] ++ (-0.6, 0)
+				node[spdt, rotate=180, yscale=-1](sw2){}
+			(sw2.out 1) node[circ]{}
+			
+			(FF1_2) to[short] (sw2.out 2)
+			(FF2_2) to[short] (sw1.out 2)
+			
+			(sw1.in) |- (and.in 2)
+			
+			(FF2_4) to[short]++(0, 0.75)
+				-| (and.in 1)
+			
+		;
+	\end{circuitikz}
+	\caption{Implementación de contador síncrono.}
+	\label{fig:sync_circ}
+\end{figure}
 
 \end{document}

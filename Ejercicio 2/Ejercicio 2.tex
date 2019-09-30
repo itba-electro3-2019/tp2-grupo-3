@@ -169,7 +169,17 @@ Luego, se procede a representar de una forma más clara los datos obtenidos en l
 \label{fig:lshc}
 \end{figure}
 
-A la hora de conectar una compuerta con otra, es deseable que los rangos de valores validos de salida sean menores que los de entrada, ya que de esta forma se garantiza que cualquier salida sea interpretada adecuadamente por la siguiente etapa. Por consiguiente, de la Tabla (\ref{tabla:nm}) se destaca el valor negativo de $NM_{High}$ al colocar las compuertas de tecnología HC a la salida de una LS, detalle que se vuelve a observar en la Figura (\ref{fig:lshc}). Al conectar los dispositivos como se mencionó anteriormente, se pone en evidencia que existe la posibilidad de que tensiones de salida que se consideran altas caigan en un margen en el cual la siguiente compuerta las considera como valores imprecisos, es decir, que no actúa frente a estos. Particularmente, tensiones de salida desde $2.7 \ V$ hasta $3.15 \ V$ sin incluir, que son considerados como activos altos para la tecnología LS, no lo son para la HC. Por lo tanto, no es conveniente realizar dicha conexión, ya que se podría generar perdida de datos.
+A la hora de conectar una compuerta con otra, es deseable que los rangos de valores validos de salida sean menores que los de entrada, ya que de esta forma se garantiza que cualquier salida sea interpretada adecuadamente por la siguiente etapa. Por consiguiente, de la Tabla (\ref{tabla:nm}) se destaca el valor negativo de $NM_{High}$ al colocar las compuertas de tecnología HC a la salida de una LS, detalle que se vuelve a observar en la Figura (\ref{fig:lshc}). Al conectar los dispositivos como se mencionó anteriormente, se pone en evidencia que existe la posibilidad de que tensiones de salida, que se consideran altas, caigan en un margen en el cual la siguiente compuerta las considera como valores imprecisos, es decir, que no actúa frente a estos. Particularmente, tensiones de salida desde $2.7 \ V$ hasta $3.15 \ V$ sin incluir, que son considerados como activos altos para la tecnología LS, no lo son para la HC. Por lo tanto, no es conveniente realizar dicha conexión, ya que se podría generar perdida de datos.
+
+Es de esta forma que se analiza el fanout de la conexión presentada en la Figura (\ref{fig:hcls}), ya que no es conveniente llevar adelante la otra conexión presentada, debido a los motivos ya expuestos. Para ello de sebe saber cuatro factores: $I_{OH}$, $I_{OL}$, $I_{IH}$ y $I_{IL}$\footnote{``Familias Lógicas – Evolución cronológica'', Slideplayer.es, 2019. [Online]. Available: \url{https://slideplayer.es/slide/1552774/}. [Accessed: 30- Sep- 2019].}, los cuales son obtenidos de la hoja de datos. De esta forma, se calcula el fanout de la forma
+
+\begin{equation*}
+	FO = Min \left( \frac{I_{OH}}{I_{IH}}, \ \frac{I_{OL}}{I_{IL}} \right) = Min \left( \left| \frac{-4 \ mA}{20 \ \mu A} \right|, \ \left| \frac{4 \ mA}{-0.4 \ mA}\right| \right) = Min \left( 200, \ 10000 \right) = 200
+\end{equation*}
+
+\begin{center}
+	\textcolor{red}{\textbf{PREGUNTAR.}}
+\end{center}
 
 \subsection{Desarrollo del circuito}
 

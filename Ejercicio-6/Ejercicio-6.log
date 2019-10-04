@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.12)  4 OCT 2019 17:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.12)  4 OCT 2019 17:24
 entering extended mode
-**./Informe.tex
-(Informe.tex
+**./Ejercicio-6.tex
+(Ejercicio-6.tex
 LaTeX2e <2018-12-01>
-(Header.tex
+(../Informe/Header.tex
 ("C:\Users\ellon\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls"
 Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
 ("C:\Users\ellon\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size10.clo"
@@ -872,44 +872,32 @@ Package: nicefrac 1998/08/04 v0.9b Nice fractions
 \L@UnitsRaiseDisplaystyle=\skip63
 \L@UnitsRaiseTextstyle=\skip64
 \L@UnitsRaiseScriptstyle=\skip65
-))) (karnaugh-map.tex
-("C:\Users\ellon\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlaye
-r/tikz/libraries\tikzlibrarymatrix.code.tex"
-File: tikzlibrarymatrix.code.tex 2019/08/03 v3.1.4b (3.1.4b)
-)) (fillarea.tex
-("C:\Users\ellon\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlaye
-r/tikz/libraries\tikzlibrarypatterns.code.tex"
-File: tikzlibrarypatterns.code.tex 2019/08/03 v3.1.4b (3.1.4b)
-
-("C:\Users\ellon\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries\pg
-flibrarypatterns.code.tex"
-File: pgflibrarypatterns.code.tex 2019/08/03 v3.1.4b (3.1.4b)
-))
-\hatchspread=\skip66
-\hatchthickness=\skip67
-\hatchshift=\skip68
-) (Informe.aux
+))) (Ejercicio-6.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
-)
-\openout1 = `Informe.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Info: Redefining \. on input line 5.
-LaTeX Info: Redefining \% on input line 5.
+
+LaTeX Warning: Label `fig:circsrlatch' multiply defined.
+
+)
+\openout1 = `Ejercicio-6.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Info: Redefining \. on input line 3.
+LaTeX Info: Redefining \% on input line 3.
 
 ("C:\Users\ellon\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-p
 df.mkii"
@@ -980,7 +968,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box71
-Package hyperref Info: Link coloring ON on input line 5.
+Package hyperref Info: Link coloring ON on input line 3.
 
 ("C:\Users\ellon\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref.s
 ty"
@@ -992,172 +980,75 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count163
 )
-LaTeX Info: Redefining \ref on input line 5.
-LaTeX Info: Redefining \pageref on input line 5.
-LaTeX Info: Redefining \nameref on input line 5.
- (Informe.out) (Informe.out)
+LaTeX Info: Redefining \ref on input line 3.
+LaTeX Info: Redefining \pageref on input line 3.
+LaTeX Info: Redefining \nameref on input line 3.
+ (Ejercicio-6.out) (Ejercicio-6.out)
 \@outlinefile=\write4
-\openout4 = `Informe.out'.
+\openout4 = `Ejercicio-6.out'.
 
- (Caratula.tex
+LaTeX Font Info:    Try loading font information for U+msa on input line 12.
 
-LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
-(Font)              using `OT1/cmr/bx/n' instead on input line 4.
-
-LaTeX Font Info:    Try loading font information for U+msa on input line 9.
 ("C:\Users\ellon\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 9.
+LaTeX Font Info:    Try loading font information for U+msb on input line 12.
 ("C:\Users\ellon\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
-
-{C:/Users/ellon/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}])
-(Informe.toc
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
 )
-\tf@toc=\write5
-\openout5 = `Informe.toc'.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.18 \newpage
-              [1] (../Ejercicio-1/Ejercicio-1.tex
-Missing character: There is no c in font nullfont!
-
-Overfull \hbox (5.23001pt too wide) in paragraph at lines 28--29
+Overfull \hbox (38.50049pt too wide) in paragraph at lines 65--66
 [][] 
  []
 
-<ImagenesEjercicio1/Esquematico.PNG, id=107, 1020.81375pt x 427.5975pt>
-File: ImagenesEjercicio1/Esquematico.PNG Graphic file (type png)
-<use ImagenesEjercicio1/Esquematico.PNG>
-Package pdftex.def Info: ImagenesEjercicio1/Esquematico.PNG  used on input line
- 59.
-(pdftex.def)             Requested size: 256.0748pt x 107.26448pt.
-<ImagenesEjercicio1/PCB.PNG, id=109, 628.59843pt x 632.3625pt>
-File: ImagenesEjercicio1/PCB.PNG Graphic file (type png)
-<use ImagenesEjercicio1/PCB.PNG>
-Package pdftex.def Info: ImagenesEjercicio1/PCB.PNG  used on input line 60.
-(pdftex.def)             Requested size: 153.64644pt x 154.55867pt.
-[2]
-<ImagenesEjercicio1/DC-SWEEP/MedicionRampa.PNG, id=123, 834.7185pt x 330.9966pt
->
-File: ImagenesEjercicio1/DC-SWEEP/MedicionRampa.PNG Graphic file (type png)
-<use ImagenesEjercicio1/DC-SWEEP/MedicionRampa.PNG>
-Package pdftex.def Info: ImagenesEjercicio1/DC-SWEEP/MedicionRampa.PNG  used on
- input line 85.
-(pdftex.def)             Requested size: 460.9315pt x 182.78102pt.
-<ImagenesEjercicio1/DC-SWEEP/EntradaSalida.PNG, id=124, 837.6093pt x 307.8702pt
->
-File: ImagenesEjercicio1/DC-SWEEP/EntradaSalida.PNG Graphic file (type png)
-<use ImagenesEjercicio1/DC-SWEEP/EntradaSalida.PNG>
-Package pdftex.def Info: ImagenesEjercicio1/DC-SWEEP/EntradaSalida.PNG  used on
- input line 93.
-(pdftex.def)             Requested size: 460.9315pt x 169.41838pt.
- [3 <./ImagenesEjercicio1/Esquematico.PNG> <./ImagenesEjercicio1/PCB.PNG> <./Im
-agenesEjercicio1/DC-SWEEP/MedicionRampa.PNG>]
-<ImagenesEjercicio1/DC-SWEEP/0t1mtl.PNG, id=157, 775.4571pt x 303.534pt>
-File: ImagenesEjercicio1/DC-SWEEP/0t1mtl.PNG Graphic file (type png)
-<use ImagenesEjercicio1/DC-SWEEP/0t1mtl.PNG>
-Package pdftex.def Info: ImagenesEjercicio1/DC-SWEEP/0t1mtl.PNG  used on input 
-line 103.
-(pdftex.def)             Requested size: 460.9315pt x 180.42201pt.
-<ImagenesEjercicio1/DC-SWEEP/1t0mtl.PNG, id=158, 774.7344pt x 305.7021pt>
-File: ImagenesEjercicio1/DC-SWEEP/1t0mtl.PNG Graphic file (type png)
-<use ImagenesEjercicio1/DC-SWEEP/1t0mtl.PNG>
-Package pdftex.def Info: ImagenesEjercicio1/DC-SWEEP/1t0mtl.PNG  used on input 
-line 104.
-(pdftex.def)             Requested size: 460.9315pt x 181.87866pt.
- [4 <./ImagenesEjercicio1/DC-SWEEP/EntradaSalida.PNG> <./ImagenesEjercicio1/DC-
-SWEEP/0t1mtl.PNG> <./ImagenesEjercicio1/DC-SWEEP/1t0mtl.PNG>]
-<ImagenesEjercicio1/DC-SWEEP/OutputCurrent.PNG, id=169, 873.0216pt x 313.6518pt
->
-File: ImagenesEjercicio1/DC-SWEEP/OutputCurrent.PNG Graphic file (type png)
-<use ImagenesEjercicio1/DC-SWEEP/OutputCurrent.PNG>
-Package pdftex.def Info: ImagenesEjercicio1/DC-SWEEP/OutputCurrent.PNG  used on
- input line 114.
-(pdftex.def)             Requested size: 460.9315pt x 165.6029pt.
-) [5 <./ImagenesEjercicio1/DC-SWEEP/OutputCurrent.PNG>] [6] (../Ejercicio-3/Eje
-rcicio-3.tex [7] [8]
-<ImagenesEjercicio3/scope_5.png, id=224, 1027.84pt x 825.0825pt>
-File: ImagenesEjercicio3/scope_5.png Graphic file (type png)
-<use ImagenesEjercicio3/scope_5.png>
-Package pdftex.def Info: ImagenesEjercicio3/scope_5.png  used on input line 150
-.
-(pdftex.def)             Requested size: 409.72124pt x 306.21042pt.
-) [9 <./ImagenesEjercicio3/scope_5.png (PNG copy)>] [10] [11] (../Ejercicio-6/E
-jercicio-6.tex
-Overfull \hbox (38.50049pt too wide) in paragraph at lines 61--62
-[][] 
- []
+[1{C:/Users/ellon/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
-[12]
-<ImagenesEjercicio6/edgedetector.PNG, id=256, 890.5772pt x 167.12437pt>
+]
+<ImagenesEjercicio6/edgedetector.PNG, id=38, 890.5772pt x 167.12437pt>
 File: ImagenesEjercicio6/edgedetector.PNG Graphic file (type png)
 <use ImagenesEjercicio6/edgedetector.PNG>
 Package pdftex.def Info: ImagenesEjercicio6/edgedetector.PNG  used on input lin
-e 158.
+e 162.
 (pdftex.def)             Requested size: 409.72124pt x 76.88834pt.
-) [13 <./ImagenesEjercicio6/edgedetector.PNG>] [14] [15]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 48.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 48.
- (Informe.aux
+ [2 <./ImagenesEjercicio6/edgedetector.PNG>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 189.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 189.
+ (Ejercicio-6.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 48.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 48.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 189.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 189.
+Package rerunfilecheck Info: File `Ejercicio-6.out' has not changed.
+(rerunfilecheck)             Checksum: B1F63330F2054DDC4FCA909529F9A41B;101.
 
 
-Package rerunfilecheck Warning: File `Informe.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: Checksums for `Informe.out':
-(rerunfilecheck)             Before: BDF13E1D3E641558F48F4896C9B6F883;1034
-(rerunfilecheck)             After:  67AA4D41A4751742A1525A929FE345B3;1155.
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 48.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 189.
  ) 
 Here is how much of TeX's memory you used:
- 32746 strings out of 492895
- 752320 string characters out of 3123735
- 938524 words of memory out of 3000000
- 36132 multiletter control sequences out of 15000+200000
- 18353 words of font info for 70 fonts, out of 3000000 for 9000
+ 30497 strings out of 492895
+ 696669 string characters out of 3123735
+ 890263 words of memory out of 3000000
+ 33992 multiletter control sequences out of 15000+200000
+ 9698 words of font info for 38 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,17n,79p,1008b,1067s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 57i,15n,79p,504b,1031s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/ellon/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmbx10.pfb><C:/Users/ellon/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/cm/cmbx12.pfb><C:/Users/ellon/AppData/Local/Programs/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/ellon/AppData/Local/Program
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/ellon/AppData/
-Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/el
-lon/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-<C:/Users/ellon/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmr12.pfb><C:/Users/ellon/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmr17.pfb><C:/Users/ellon/AppData/Local/Programs/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/ellon/AppData/Local/Programs/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/ellon/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/ellon/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users
-/ellon/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.p
-fb><C:/Users/ellon/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmti10.pfb><C:/Users/ellon/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmti12.pfb>
-Output written on Informe.pdf (16 pages, 488744 bytes).
+onts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/ellon/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/ellon/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/ello
+n/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:
+/Users/ellon/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mr7.pfb><C:/Users/ellon/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmr8.pfb><C:/Users/ellon/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ellon/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on Ejercicio-6.pdf (2 pages, 140404 bytes).
 PDF statistics:
- 342 PDF objects out of 1000 (max. 8388607)
- 73 named destinations out of 1000 (max. 500000)
- 200 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 88 PDF objects out of 1000 (max. 8388607)
+ 14 named destinations out of 1000 (max. 500000)
+ 34 words of extra memory for PDF output out of 10000 (max. 10000000)
 

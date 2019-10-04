@@ -1,2 +1,0 @@
-Propagation time: 24.2351nS
-Rise Time:11.03nS

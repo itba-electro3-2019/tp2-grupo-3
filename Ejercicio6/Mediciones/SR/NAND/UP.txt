@@ -1,2 +1,0 @@
-PROPAGATION: 18ns
-rise:4ns

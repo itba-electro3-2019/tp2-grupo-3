@@ -1,0 +1,17 @@
+Removed Pin From Net: NetName=VIN Pin=Q1-1
+Removed Pin From Net: NetName=VOUT-MOS Pin=Q1-2
+Removed Pin From Net: NetName=VCC Pin=Q1-3
+Removed Pin From Net: NetName=VIN Pin=Q2-1
+Removed Member From Class: ClassName=Sheet1 Member=Q1
+Change Component Designator: OldDesignator=RTL NewDesignator=out
+Added Component: Designator=R5(0805)
+Added Component: Designator=R6(0805)
+Added Pin To Net: NetName=VIN Pin=R5-1
+Added Pin To Net: NetName=VOUT-MOS Pin=R6-1
+Added Pin To Net: NetName=VCC Pin=R6-2
+Added Pin To Net: NetName=NetQ2_1 Pin=Q2-1
+Added Pin To Net: NetName=NetQ2_1 Pin=R5-2
+Added Net: Name=NetQ2_1
+Added Member To Class: ClassName=Sheet1 Member=Component R5 15K
+Added Member To Class: ClassName=Sheet1 Member=Component R6 1K
+Added Room: Name=Sheet1

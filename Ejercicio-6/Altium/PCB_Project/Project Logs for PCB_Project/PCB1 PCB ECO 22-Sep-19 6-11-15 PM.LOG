@@ -1,0 +1,40 @@
+Added Component: Designator=DFF(BORNERA2)
+Added Component: Designator=LATCH(646-06)
+Added Component: Designator=OutSR2(TPTH)
+Added Component: Designator=OutSR(TPTH)
+Added Component: Designator=SR(BORNERA2)
+Added Component: Designator=U1(646-06)
+Added Component: Designator=VCC(BORNERA2)
+Added Pin To Net: NetName=CLCK Pin=DFF-1
+Added Net: Name=CLCK
+Added Pin To Net: NetName=D Pin=DFF-2
+Added Net: Name=D
+Added Pin To Net: NetName=GND Pin=LATCH-7
+Added Pin To Net: NetName=GND Pin=U1-7
+Added Pin To Net: NetName=GND Pin=VCC-1
+Added Net: Name=GND
+Added Pin To Net: NetName=NetLATCH_1 Pin=LATCH-1
+Added Pin To Net: NetName=NetLATCH_1 Pin=OutSR2-1
+Added Net: Name=NetLATCH_1
+Added Pin To Net: NetName=NetOutSR_1 Pin=OutSR-1
+Added Pin To Net: NetName=NetOutSR_1 Pin=U1-1
+Added Pin To Net: NetName=NetOutSR_1 Pin=U1-5
+Added Net: Name=NetOutSR_1
+Added Pin To Net: NetName=NetU1_3 Pin=U1-3
+Added Pin To Net: NetName=NetU1_3 Pin=U1-4
+Added Pin To Net: NetName=NetU1_3 Pin=U1-7
+Added Net: Name=NetU1_3
+Added Pin To Net: NetName=R Pin=LATCH-3
+Added Pin To Net: NetName=R Pin=SR-1
+Added Pin To Net: NetName=R Pin=U1-2
+Added Net: Name=R
+Added Pin To Net: NetName=S Pin=LATCH-2
+Added Pin To Net: NetName=S Pin=SR-2
+Added Pin To Net: NetName=S Pin=U1-6
+Added Net: Name=S
+Added Pin To Net: NetName=VCC Pin=LATCH-14
+Added Pin To Net: NetName=VCC Pin=U1-14
+Added Pin To Net: NetName=VCC Pin=VCC-2
+Added Net: Name=VCC
+Added Class: Name=Sheet1
+Added Room: Name=Sheet1

@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=GND Pin=vcc-1
+Removed Pin From Net: NetName=VCC Pin=vcc-2
+Added Pin To Net: NetName=VCC Pin=vcc-1
+Added Pin To Net: NetName=GND Pin=vcc-2
+Added Member To Class: ClassName=Sheet1 Member=Component vcc BORNERA 2

@@ -1,0 +1,3 @@
+Propagation Time: 23.6nS
+Rise Time: 4.43nS
+Stabilization time: 42nS o 28ns

@@ -1,0 +1,17 @@
+\babel@toc {spanish}{}
+\contentsline {section}{\numberline {1}Ejercicio 1}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Introducci\IeC {\'o}n}{2}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Comparaci\IeC {\'o}n tecnolog\IeC {\'\i }as.}{2}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Circuitos Propuestos.}{2}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}Dise\IeC {\~n}o PCB.}{2}{subsection.1.4}
+\contentsline {subsection}{\numberline {1.5}Observables de inter\IeC {\'e}s.}{3}{subsection.1.5}
+\contentsline {subsection}{\numberline {1.6}An\IeC {\'a}lisis de resultados.}{5}{subsection.1.6}
+\contentsline {section}{\numberline {2}Ejercicio 2}{6}{section.2}
+\contentsline {section}{\numberline {3}Ejercicio 3}{7}{section.3}
+\contentsline {section}{\numberline {4}Ejercicio 4}{8}{section.4}
+\contentsline {section}{\numberline {5}Ejercicio 5}{9}{section.5}
+\contentsline {section}{\numberline {6}Ejercicio 6}{10}{section.6}
+\contentsline {subsection}{\numberline {6.1}SR-Latch}{10}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Flip Flop D}{10}{subsection.6.2}
+\contentsline {section}{\numberline {7}Ejercicio 7}{12}{section.7}
+\contentsline {section}{\numberline {8}Ejercicio 8}{13}{section.8}

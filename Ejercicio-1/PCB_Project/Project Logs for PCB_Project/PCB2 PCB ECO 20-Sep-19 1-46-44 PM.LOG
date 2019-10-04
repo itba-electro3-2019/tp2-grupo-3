@@ -1,0 +1,5 @@
+Change Component Designator: OldDesignator=J? NewDesignator=in
+Change Component Designator: OldDesignator=J? NewDesignator=out
+Change Component Designator: OldDesignator=J? NewDesignator=vcc
+Added Member To Class: ClassName=Sheet1 Member=Component in BORNERA 2
+Added Member To Class: ClassName=Sheet1 Member=Component out BORNERA 3

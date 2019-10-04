@@ -1,0 +1,81 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, es-tabla]{babel}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{float}
+\usepackage{graphicx}
+
+\usepackage{caption}
+\usepackage{subcaption}
+\captionsetup{compatibility=false}
+
+\usepackage{multirow}
+\setlength{\doublerulesep}{\arrayrulewidth}
+
+\newcommand{\quotes}[1]{``#1''}
+\newcommand\underrel[2]{\mathrel{\mathop{#2}\limits_{#1}}}
+
+\usepackage{array}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\usepackage[american]{circuitikz}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+
+\newlength{\stockheight}
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    citecolor=blue,    
+}
+
+\urlstyle{same}
+
+\usepackage{units} 
+\pagestyle{fancy}
+\fancyhf{}
+
+\rfoot{Página \thepage}
+
+\begin{document}
+\subsection{Introducción}
+En esta sección se procedio a realizar el analisis de dos compuertas lógicas de distintas tecnologías que consisten en una compuerta \textbf{AND} de tecnología TTL y una compuerta \textbf{OR} CMOS conectadas de la siguiente forma
+
+\subsection{Análisis compuerta AND open gate}
+Para realizar este análisis se utilizó una de las 4 compuertas que brinda el integrado SN74S08, como es una compuerta AND y una de sus entradas ya esta conectada a $ V_CC $ la señal de salida dependerá solo del valor que tenga la señal en esa sola entrada. Ahora dejando al vacio esa entrada se puede observar que el valor que se obtiene a la salida corresponde a HIGH(1 lógico), esto ocurre debido se esta dejando al vacio el emisor del transistor al que le corresponde esa entrada por lo tanto dicho transistor se encuentra al corte lo que hace que a la salida siempre se vea HIGH.
+
+\subsection{Análisis compuerta OR open gate}
+En este caso se utiizó una de las compuertas lógicas que brinda el integrado CD4071 pero en este caso se conecto uno de sus pines de entrada a $ GND $ y se dejó otro abierto. En este caso el valor que se ve a la salida también solo depende del valor de la entrada que se dejó abierta. Como la alta impedencia de
+
+\subsection{Análisis ambas compuertas conectadas entre si}
+Utilizando los circuitos ahora se los conecto de la siguienta manera:
+\begin{figure}[h]
+    \centering
+    \includegraphics{Imagenes/pend.jpg}
+    \caption{Conexión de la AND con la OR}
+\end{figure}
+
+La salida de este circuito por lo analizado en los puntos anteriores solo depende de la señal de entrada que se va a utilizar. Analizando las hojas de datos de ambos integrados y utilizando una alimentación $V_{DD}= 4.5V $ se obtiene que la tensión mínima de la salida en estado alto es $V_{OH}=2.5 V$ que cae en el rango de valores indeterminados para la OR cuya $V_{IL}= 3.15 V$ en el peor de los casos, lo que puede ocasionar que a pesar de que la salida de la AND sea HIGH a la salida total del circuito se vea un LOW o 0.
+
+
+\subsection{Solución al problema anterior}
+
+Una solución al problema mencionado anteriormente es utilizar un circuito llamado level shifter que se puede fabricar utilizando un transistor PNP y un par de resistencias. Este circuito tomará la salida de la primer compuerta y en el caso de que está fuera HIGH llevará dicho valor a un nivel de tensión mas alto para que así la compuerta siguiente pueda tomar correctamente el valor que debería recibir.
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics{Imagenes/pend.jpg}
+    \caption{Implementación del level shifter}
+\end{figure}
+
+
+\end{document}

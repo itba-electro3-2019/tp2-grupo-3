@@ -144,6 +144,18 @@ De la misma forma que antes, se busca representar la ecuación hallada a partir 
 
 \subsection{Desarrollo del circuito}
 
+Se implementó el circuito de la Figura (\ref{fig:cirasinc}) en un PCB. Para ello se valió del uso de las compuertas \href{http://www.ti.com/lit/ds/symlink/sn74hc04.pdf}{SN74HC04}, \href{http://www.ti.com/lit/ds/symlink/sn74hc08.pdf}{SN74HC08} y \href{http://www.ti.com/lit/ds/symlink/sn74hc32.pdf}{SN74HC32}. Para poder realizar las mediciones adecuadas, y debido a que no se contaba con una compuerta OR de tres entradas, se decidió implementar en una primera instancia lo observado en la Figura (\ref{fig:cirsinc}) (es decir, el circuito que representa a $\bar{b} c + \bar{a} b$), la cual se encuentra conectada a una bornera para poder medirla y también a otra compuerta OR, cuya segunda entrada es la resultante del termino faltante ($\bar{a} c$), la cual se encuentra conectada a otra bornera. De esta forma se puede medir tanto el circuito sin la implementación de la solución del glitch y como con dicha implementación.
+
 \subsection{Mediciones}
+
+Se procede a simular la situación ejemplificada previamente, es decir con  $a = 0$ y $c = 1$, alternando el valor de $b$ entre $0$ y $1$. Dicha variación se simula utilizando un generador de ondas cuadradas, el cuál oscila entre $0 \ V$ y $5 \ V$. Observando tanto la entrada como las dos salidas previamente mencionadas, se obtiene lo siguiente: 
+\begin{figure}[H]
+\centering
+	\includegraphics[width=0.8\textwidth, trim = {0 0 0 2cm},clip]{Imagenes/scope_5.png}
+	\caption{Salida con glitch (rosa) y sin glitch (violeta) variando $b$ (amarillo).}
+	\label{fig:medicion}
+\end{figure}
+
+Se observa de la figura anterior como la salida varía en función de la entrada. Si bien la señal que no posee la solución al glitch (señal rosada) no decae por completo a un cero lógico, esta posee una variación importante, la cual vale destacar. Dicha variación coloca la tensión a la salida de la primer compuerta OR por debajo de los $3.15 \ V$, valor que, según la tecnología adoptada, es menor a la tensión $V_{OH}$, por ende, este valor deja de ser considerado como un uno lógico. Por un lado, se denota que la señal que sí posee dicha solución (señal violeta) también posee una variación, la cual no es de importancia ya que se sigue manteniendo dentro del rango $V_{IH} \sim Vcc$, de forma el valor lógico de esta salida no varía.
 
 \end{document}

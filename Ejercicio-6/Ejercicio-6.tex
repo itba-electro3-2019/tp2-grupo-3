@@ -66,12 +66,29 @@ Un Latch-SR es un elemento de memoria asincrónico, con dos inputs (S-R) tambié
 \end{tabular}
 \end{table}
 El circuito propuesto de implementación es el siguiente:\footnote{Brown, S. and Vranesic, Z. (2002). Fundamentals of digital logic with VHDL design. 3rd ed. pp.250-251.}:
-\begin{figure}[H]	
-	\centering
-	\includegraphics[width=0.5\textwidth]{ImagenesEjercicio6/srlatch.PNG}
-	\caption{Circuito Propuesto SR-Latch.}
-	\label{fig:circsrlatch}
+\begin{figure}[H]
+\begin{center}
+\begin{circuitikz}
+
+	\node [american nor port](O1){};
+	\draw (O1) to[open] ++(0,-3) node[american nor port](O2){};
+	\draw (O1.in 1) to[short] ++(-1,0) node[circ, label=left:$R$](R){};
+	\draw (O2.in 2) to[short] ++(-1,0) node[circ, label=left:$S$](S){};
+
+	\draw (O1.in 2) to[short] ++(0,-0.5) node[](aux1){};
+	\draw (O2.in 1) to[short] ++(0,0.5) node[](aux2){};
+
+	\draw (O1.out) to[short] ++(0,-0.75) to[short] (aux2);
+	\draw (O2.out) to[short] ++(0,0.75) to[short] (aux1);
+		
+	\draw (O1.out) to[short] ++(1,0) node[circ, label=right:$Q$](Q){};
+	\draw (O2.out) to[short] ++(1,0) node[circ, label=right:$\bar{Q}$](Qn){};
+\end{circuitikz}
+\caption{Circuito Propuesto SR-Latch.}
+\label{fig:circsrlatch}
+\end{center}
 \end{figure}
+
 Se llevará a cabo utilizando compuertas NOR, se eligió el integrado 74HC02 debido a que es High-Speed y no es necesario compatibilidad con TTL, como se analizó en el punto (2). 
 
 Se tomarán como observables  de interés el tiempo de propagación:
@@ -95,13 +112,49 @@ $\uparrow$     & 0            & 0              \\
 $\uparrow$     & 1            & 1             
 \end{tabular}
 \end{table}
+
 El circuito propuesto de implementación es el siguiente:\footnote{Brown, S. and Vranesic, Z. (2002). Fundamentals of digital logic with VHDL design. 3rd ed. pp.254-256.}:
-\begin{figure}[H]	
-	\centering
-	\includegraphics[width=0.8\textwidth]{ImagenesEjercicio6/dff.PNG}
-	\caption{Circuito Propuesto Flip Flop D.}
-	\label{fig:circsrlatch}
+\begin{figure}[H]
+\begin{center}
+\begin{circuitikz}
+
+	\node [american nand port](O1){};
+	\draw (O1) to[open] ++(0,-3) node[american nand port](O2){};
+	\draw (O1.in 1) to[short] ++(-1,0) node[](R){};
+	\draw (O2.in 2) to[short] ++(-1,0) node[](S){};
+
+	\draw (O1.in 2) to[short] ++(0,-0.5) node[](aux1){};
+	\draw (O2.in 1) to[short] ++(0,0.5) node[](aux2){};
+
+	\draw (O1.out) to[short] ++(0,-0.75) to[short] (aux2);
+	\draw (O2.out) to[short] ++(0,0.75) to[short] (aux1);
+		
+	\draw (O1.out) to[short] ++(1,0) node[circ, label=right:$Q$](Q){};
+	\draw (O2.out) to[short] ++(1,0) node[circ, label=right:$\bar{Q}$](Qn){};
+	
+	\draw (R) node[american nand port, anchor=out](A3){};
+	\draw (S) node[american nand port, anchor=out](A4){};
+	\draw (A3.in 2) -- (A4.in 1);
+	
+	\draw (A3.in 2) to[open] ++(0,-1.5) to[short] ++ (-2,0) node[circ, label=left:$Clk$](){};
+	
+	\draw (A3.in 1) node[label=north:$S$](){};
+	\draw (A3.in 1) to[short] ++(-2,0) node[circ, label=north:$D$](D){};
+	
+	\draw (A4.in 2) node[label=north:$R$](){};
+	\draw (A4.bin 2) node[ocirc](){};
+	\draw (A4.in 2) to[short] ++(-1,0) node[](aux3){};
+	
+	\draw (D) to[open] ++(1,0) to[short] (aux3);
+	
+	
+	
+\end{circuitikz}
+\caption{Circuito Propuesto Flip Flop D.}
+\label{fig:circsrlatch}
+\end{center}
 \end{figure}
+
 Se llevará a cabo utilizando compuertas NAND, se eligió el integrado 74HC132  debido a que es High-Speed y no es necesario compatibilidad con TTL, como se analizó en el punto (2). 
 
 Se tomarán como observables  de interés el tiempo de propagación:

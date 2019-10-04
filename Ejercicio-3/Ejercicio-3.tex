@@ -1,7 +1,3 @@
-\input{../Informe/Header.tex}
-\input{../Informe/karnaugh-map.tex}
-
-\begin{document}
 \subsection{Introducción a riesgos estáticos}
 En este punto se analiza la siguiente tabla de verdad:
 \begin{table}[H]
@@ -157,5 +153,3 @@ Se procede a simular la situación ejemplificada previamente, es decir con  $a =
 \end{figure}
 
 Por un lado se observa de la figura anterior como la salida varía en función de la entrada. Si bien la señal que no posee la solución al glitch (señal rosada) no decae por completo a un cero lógico, esta posee una variación importante, la cual vale destacar. Dicha variación coloca la tensión a la salida de la primer compuerta OR por debajo de los $3.15 \ V$, valor que, según la tecnología adoptada, es menor a la tensión $V_{OH}$, por ende, este valor deja de ser considerado como un uno lógico. Por otro lado, se denota que la señal que sí posee dicha solución (señal violeta) también posee una variación, la cual no es de importancia ya que se sigue manteniendo por encima de $V_{IH}$, de forma el valor lógico de esta salida no varía.
-
-\end{document}

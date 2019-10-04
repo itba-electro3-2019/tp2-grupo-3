@@ -1,0 +1,2 @@
+propagation:43.2ns
+down: 4nS

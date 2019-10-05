@@ -1,3 +1,7 @@
+\input{../Informe/Header.tex}
+\input{../Informe/fillarea.tex}
+
+\begin{document}
 \subsection{Análisis de tecnologías}
 
 En esta instancia del informe, se procede a comparar compuertas lógicas del tipo NOR de diversas tecnologías. Para ello se vale de las hojas de datos de las compuertas \href{http://www.ti.com/lit/ds/symlink/sn74hc02.pdf}{74HC02}, \href{http://www.ti.com/lit/ds/symlink/sn74hct02.pdf}{74HCT02} y \href{http://www.ti.com/lit/ds/symlink/sn74ls02.pdf}{74LS02}. Previo a dicho análisis, cabe detallar cada una de las tecnologías. Primero, se encuentra el 74HC02, siendo este, como su nombre lo indica, del tipo HC, cuyas siglas significan ``High-speed CMOS'', tecnología caracterizada por ser de baja potencia y alta velocidad. Luego se encuentra el 74HCT02, siendo HCT una variación de las HC. Esta denominación proviene de las mismas siglas previamente mencionadas, solo que ademas posee compatibilidad con la tecnología conocida como ``logica transistor–transistor'' (TTL). En otras palabras, este tipo de compuertas puede operar bajo dicho estándar de tensiones, tanto de alimentación como de input.\footnote{``Logic family'', En.wikipedia.org, 2019. [Online]. Available: \url{https://en.wikipedia.org/wiki/Logic\_family\#HC\_logic}. [Accessed: 21- Sep- 2019].} Finalmente se encuentra el 74LS02, cuyas siglas provienen de ``Low~-power Schottky''. Los integrados de esta familia se caracterizan por estar hechos con tecnología TTL.\footnote{``Serie 7400'', Es.wikipedia.org, 2019. [Online]. Available: \url{https://es.wikipedia.org/wiki/Serie\_7400}. [Accessed: 21- Sep- 2019].} Se destaca que este último, a diferencia de los dos primeros, se caracteriza por ser fabricado mediante el uso de tecnología BJT.
@@ -198,7 +202,7 @@ A continuación, se procede a reemplazar la compuerta 74HC02 por la de tecnolog�
 74HCT02      & 74LS02       & 4.5                            & 0.7                             & 0.3     		                    \\ \hline
 \end{tabular}
 \caption{Margen de ruido para combinaciones de tecnologías HC y LS.}
-\label{tabla:nm2}
+\label{tabla:nm}
 \end{table}
 
 De manera análoga al caso anterior, se confecciona el siguiente gráfico:
@@ -333,6 +337,12 @@ De la misma forma que se realizó para la conexión 74HC02 - 74LS02, se mide la 
 \label{fig:medicion2}
 \end{figure} 
 
-Es así que comparando las Figuras (\ref{fig:medicion1}) y (\ref{fig:medicion2}), se denota como se solventa el problema existente de compatibilidad. En el segundo caso, al ser las compuertas compatibles, estas no se sobrecargan entre sí y no existen problemas de tensiones, logrando que la imagen se vea mucho mejor.
+Es así que comparando las Figuras (\ref{fig:medicion1}) y (\ref{fig:medicion2}), se denota como se solventa el problema existente de compatibilidad.
 
 Por otro lado, se destaca que en el caso de colocar la compuerta de tecnología HCT a la salida y la LS a la entrada, no genera cambios en el fanout, ya que solo se debe corregir los valores de $I_{OH}$ y $I_{OL}$, los cuales son los mismos que para la tecnología HC.
+
+\begin{center}
+	\textcolor{red}{\textbf{FANOUT CON LS EN LA SALIDA Y HCT EN LA ENTRADA.}}
+\end{center}
+
+\end{document}

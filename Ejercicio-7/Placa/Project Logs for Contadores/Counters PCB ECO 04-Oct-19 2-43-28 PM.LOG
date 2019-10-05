@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=J0_U_JK_FF1 Pin=P2-1
+Change Component Designator: OldDesignator=P1 NewDesignator=CLK
+Added Component: Designator=VCC(BORNERA2)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=GND Pin=VCC-2
+Added Pin To Net: NetName=NetP2_1 Pin=P2-1
+Added Pin To Net: NetName=NetP2_1 Pin=VCC-1
+Added Net: Name=NetP2_1
+Added Member To Class: ClassName=Counters Member=Component VCC BORNERA 2

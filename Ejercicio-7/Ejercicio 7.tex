@@ -7,7 +7,7 @@
 
 \subsection{Introducción}
 \subsubsection{Contadores}
-		Los contadores son dispositivos digitales capaces de almacenar la cantidad de pulsos que este recibe. Como todo almacenamiento digital requiere de memoria, los contadores están generalmente constituidos por varias celdas de almacenamiento de 1 bit, comúnmente usados los JK flip-flops. Se puede contemplar la implementación de un JK flip-flip en la Figura (\ref{circ:fkflipflop}) utilizando solamente compuertas lógicas discretas. 
+		Los contadores son dispositivos digitales capaces de almacenar la cantidad de pulsos que este recibe. Como todo almacenamiento digital requiere de memoria, los contadores están generalmente constituidos por varias celdas de almacenamiento de 1 bit, comúnmente usados los JK flip-flops. Se puede contemplar la implementación de un JK flip-flop en la Figura (\ref{circ:fkflipflop}) utilizando solamente compuertas lógicas discretas. 
 		
 		\begin{figure}[H]
 	\hspace*{-1cm}
@@ -35,17 +35,15 @@
 			(nor1.out) to[short, -*] ++ (0.5, 0)
 					node[](feedback1){}
 				to[short] ++ (0.5, 0)
-				to[short, -*] ++ (0.5, 0)
-					node[](feedback2){}
 				to[short, -o] ++ (0.5, 0)
+					node[](feedback2){}
 				node[label=east:$Q$]{}
 			
 			(nor2.out) to[short, -*] ++ (0.5, 0)
 					node[](feedback3){}
-				to[short, -*] ++ (0.5, 0)
-					node[](feedback4){}
 				to[short] ++ (0.5, 0)
-				to[short, -o] ++ (0.5, 0)
+					node[](feedback4){}
+				to[short,-o] ++ (0.5, 0)
 				node[label=east:$\overline{Q}$]{}
 				
 			(feedback1) to[short] ++ (0, -0.38)
@@ -73,12 +71,12 @@
 				|- (and2.in 1)
 				
 			(and2.in 3)	to[short] ++ (-0.5, 0)
-				|- ++ (6, -0.5)
-				-| (feedback2.center)
+				|- ++ (5.5, -0.5)
+				-| (feedback3.center)
 				
 			(and1.in 1) to[short] ++ (-0.5, 0)
 				|- ++ (5.5, 0.6)
-				-| (feedback4.center)
+				-| (feedback1.center)
 				
 			(enable) to[short] ++ (-0.5, 0)
 				to[twoport, -o, l_=Edge Det] ++ (-3, 0)
@@ -130,7 +128,7 @@
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\textwidth]{ImagenesEjercicio7/async_ripple.png}
+	\includegraphics[width=0.7\textwidth]{Imagenes/async_ripple.png}
 	\caption{Propagación de un pulso recibido a través de un contador asíncrono para la palabra almacenada transitando del estado $(7)_{10}$ al estado $(8)_{10}$.}
 	\label{async_ripple}
 \end{figure}

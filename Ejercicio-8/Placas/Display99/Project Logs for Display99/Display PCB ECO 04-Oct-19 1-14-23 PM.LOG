@@ -1,0 +1,83 @@
+Added Component: Designator=CAP_D5(CAP200)
+Add component. Clean all parameters for all variants
+Added Component: Designator=CAP_D6(CAP200)
+Add component. Clean all parameters for all variants
+Added Component: Designator=DISP1(DISPLAY_LED_0.3")
+Add component. Clean all parameters for all variants
+Added Component: Designator=DISP2(DISPLAY_LED_0.3")
+Add component. Clean all parameters for all variants
+Added Component: Designator=P1(HDR2X5)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=R1(RES400)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R?(RES400)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=GND Pin=CAP_D5-2
+Added Pin To Net: NetName=GND Pin=CAP_D6-2
+Added Pin To Net: NetName=GND Pin=P1-10
+Added Pin To Net: NetName=GND Pin=R1-1
+Added Pin To Net: NetName=GND Pin=R?-1
+Added Net: Name=GND
+Added Pin To Net: NetName=NetDEC1_1 Pin=P1-3
+Added Net: Name=NetDEC1_1
+Added Pin To Net: NetName=NetDEC1_2 Pin=P1-4
+Added Net: Name=NetDEC1_2
+Added Pin To Net: NetName=NetDEC1_6 Pin=P1-5
+Added Net: Name=NetDEC1_6
+Added Pin To Net: NetName=NetDEC1_7 Pin=P1-2
+Added Net: Name=NetDEC1_7
+Added Pin To Net: NetName=NetDEC1_9 Pin=DISP1-4
+Added Net: Name=NetDEC1_9
+Added Pin To Net: NetName=NetDEC1_10 Pin=DISP1-5
+Added Net: Name=NetDEC1_10
+Added Pin To Net: NetName=NetDEC1_11 Pin=DISP1-8
+Added Net: Name=NetDEC1_11
+Added Pin To Net: NetName=NetDEC1_12 Pin=DISP1-9
+Added Net: Name=NetDEC1_12
+Added Pin To Net: NetName=NetDEC1_13 Pin=DISP1-10
+Added Net: Name=NetDEC1_13
+Added Pin To Net: NetName=NetDEC1_14 Pin=DISP1-3
+Added Net: Name=NetDEC1_14
+Added Pin To Net: NetName=NetDEC1_15 Pin=DISP1-2
+Added Net: Name=NetDEC1_15
+Added Pin To Net: NetName=NetDEC2_1 Pin=P1-7
+Added Net: Name=NetDEC2_1
+Added Pin To Net: NetName=NetDEC2_2 Pin=P1-8
+Added Net: Name=NetDEC2_2
+Added Pin To Net: NetName=NetDEC2_6 Pin=P1-9
+Added Net: Name=NetDEC2_6
+Added Pin To Net: NetName=NetDEC2_7 Pin=P1-6
+Added Net: Name=NetDEC2_7
+Added Pin To Net: NetName=NetDEC2_9 Pin=DISP2-4
+Added Net: Name=NetDEC2_9
+Added Pin To Net: NetName=NetDEC2_10 Pin=DISP2-5
+Added Net: Name=NetDEC2_10
+Added Pin To Net: NetName=NetDEC2_11 Pin=DISP2-8
+Added Net: Name=NetDEC2_11
+Added Pin To Net: NetName=NetDEC2_12 Pin=DISP2-9
+Added Net: Name=NetDEC2_12
+Added Pin To Net: NetName=NetDEC2_13 Pin=DISP2-10
+Added Net: Name=NetDEC2_13
+Added Pin To Net: NetName=NetDEC2_14 Pin=DISP2-3
+Added Net: Name=NetDEC2_14
+Added Pin To Net: NetName=NetDEC2_15 Pin=DISP2-2
+Added Net: Name=NetDEC2_15
+Added Pin To Net: NetName=NetDISP1_1 Pin=DISP1-1
+Added Pin To Net: NetName=NetDISP1_1 Pin=DISP1-6
+Added Pin To Net: NetName=NetDISP1_1 Pin=R1-2
+Added Net: Name=NetDISP1_1
+Added Pin To Net: NetName=NetDISP2_1 Pin=DISP2-1
+Added Pin To Net: NetName=NetDISP2_1 Pin=DISP2-6
+Added Pin To Net: NetName=NetDISP2_1 Pin=R?-2
+Added Net: Name=NetDISP2_1
+Added Pin To Net: NetName=VCC Pin=CAP_D5-1
+Added Pin To Net: NetName=VCC Pin=CAP_D6-1
+Added Pin To Net: NetName=VCC Pin=P1-1
+Added Net: Name=VCC
+Added Class: Name=display
+Added Class: Name=U_dual7segment
+Added Room: Name=display
+Added Room: Name=U_dual7segment

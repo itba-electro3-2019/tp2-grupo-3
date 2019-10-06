@@ -1,7 +1,3 @@
-\input{../Informe/Header.tex}
-\input{../Informe/fillarea.tex}
-
-\begin{document}
 \subsection{Análisis de tecnologías}
 
 En esta instancia del informe, se procede a comparar compuertas lógicas del tipo NOR de diversas tecnologías. Para ello se vale de las hojas de datos de las compuertas \href{http://www.ti.com/lit/ds/symlink/sn74hc02.pdf}{74HC02}, \href{http://www.ti.com/lit/ds/symlink/sn74hct02.pdf}{74HCT02} y \href{http://www.ti.com/lit/ds/symlink/sn74ls02.pdf}{74LS02}. Previo a dicho análisis, cabe detallar cada una de las tecnologías. Primero, se encuentra el 74HC02, siendo este, como su nombre lo indica, del tipo HC, cuyas siglas significan ``High-speed CMOS'', tecnología caracterizada por ser de baja potencia y alta velocidad. Luego se encuentra el 74HCT02, siendo HCT una variación de las HC. Esta denominación proviene de las mismas siglas previamente mencionadas, solo que ademas posee compatibilidad con la tecnología conocida como ``logica transistor–transistor'' (TTL). En otras palabras, este tipo de compuertas puede operar bajo dicho estándar de tensiones, tanto de alimentación como de input.\footnote{``Logic family'', En.wikipedia.org, 2019. [Online]. Available: \url{https://en.wikipedia.org/wiki/Logic\_family\#HC\_logic}. [Accessed: 21- Sep- 2019].} Finalmente se encuentra el 74LS02, cuyas siglas provienen de ``Low~-power Schottky''. Los integrados de esta familia se caracterizan por estar hechos con tecnología TTL.\footnote{``Serie 7400'', Es.wikipedia.org, 2019. [Online]. Available: \url{https://es.wikipedia.org/wiki/Serie\_7400}. [Accessed: 21- Sep- 2019].} Se destaca que este último, a diferencia de los dos primeros, se caracteriza por ser fabricado mediante el uso de tecnología BJT.
@@ -42,7 +38,7 @@ Con la información que se ha detallado, se procede a analizar el margen de ruid
 Nuevamente se decide plasmar los resultados en una tabla:
 \begin{table}[H]
 \centering
-\begin{tabular}{|c|c|c|c|c|}
+\begin{tabular}{ccccc}
 \hline
 \textbf{In} & \textbf{Out} & $\mathbf{V_{CC}}$ \textbf{[V]} & $\mathbf{NM_{High}}$ \textbf{[V]} & $\mathbf{NM_{Low}} $\textbf{[V]} \\ \hline
 74LS02      & 74HC02       & 4.5                            & 2.4                               & 0.7                              \\ 
@@ -171,13 +167,27 @@ Luego, se procede a representar de una forma más clara los datos obtenidos en l
 
 A la hora de conectar una compuerta con otra, es deseable que los rangos de valores validos de salida sean menores que los de entrada, ya que de esta forma se garantiza que cualquier salida sea interpretada adecuadamente por la siguiente etapa. Por consiguiente, de la Tabla (\ref{tabla:nm}) se destaca el valor negativo de $NM_{High}$ al colocar las compuertas de tecnología HC a la salida de una LS, detalle que se vuelve a observar en la Figura (\ref{fig:lshc}). Al conectar los dispositivos como se mencionó anteriormente, se pone en evidencia que existe la posibilidad de que tensiones de salida, que se consideran altas, caigan en un margen en el cual la siguiente compuerta las considera como valores imprecisos, es decir, que no actúa frente a estos. Particularmente, tensiones de salida desde $2.7 \ V$ hasta $3.15 \ V$ sin incluir, que son considerados como activos altos para la tecnología LS, no lo son para la HC. Por lo tanto, no es conveniente realizar dicha conexión, ya que se podría generar perdida de datos.
 
-Es de esta forma que se analiza el fanout de la conexión presentada en la Figura (\ref{fig:hcls}), ya que no es conveniente llevar adelante la otra conexión presentada, debido a los motivos ya expuestos. Para ello de sebe saber cuatro factores: $I_{OH}$, $I_{OL}$, $I_{IH}$ y $I_{IL}$\footnote{``Familias Lógicas – Evolución cronológica'', Slideplayer.es, 2019. [Online]. Available: \url{https://slideplayer.es/slide/1552774/}. [Accessed: 30- Sep- 2019].}, los cuales son obtenidos de la hoja de datos. De esta forma, se calcula el fanout de la forma
+Es así que se decide observar dicho factor. Se diseñó un circuito que represente lo mostrado en la Figura (\ref{fig:lshc}), con las compuertas mencionadas, variando la entrada del circuito con una rampa periódica que varía desde los $0 \ V$ hasta los $5 \ V$. De esta forma se obtuvieron las siguientes mediciones:
+
+\begin{figure}[H]
+\centering
+	\includegraphics[width=0.8\textwidth]{ImagenesEjercicio2/scope_17_1.png}
+\end{figure}
+\vspace*{-2cm}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=0.8\textwidth]{ImagenesEjercicio2/scope_18_1.png}	
+\caption{Entrada del circuito , salida del 74LS02 y salida del 74HC02.}
+\label{fig:medicion1}
+\end{figure} 
+
+Luego se analiza el fanout de la conexión presentada en la Figura (\ref{fig:hcls}), ya que no es conveniente llevar adelante la otra conexión presentada, debido a los motivos ya expuestos. Para ello de sebe saber cuatro factores: $I_{OH}$, $I_{OL}$, $I_{IH}$ y $I_{IL}$\footnote{``Familias Lógicas – Evolución cronológica'', Slideplayer.es, 2019. [Online]. Available: \url{https://slideplayer.es/slide/1552774/}. [Accessed: 30- Sep- 2019].}, los cuales son obtenidos de la hoja de datos. De esta forma, se calcula el fanout de la forma
 
 \begin{equation*}
 	FO = Min \left( \frac{I_{OH}}{I_{IH}}, \ \frac{I_{OL}}{I_{IL}} \right) = Min \left( \left| \frac{-4 \ mA}{20 \ \mu A} \right|, \ \left| \frac{4 \ mA}{-0.4 \ mA}\right| \right) = Min \left( 200, \ 10000 \right) = 200
 \end{equation*}
 
-Luego, se procede a reemplazar la compuerta 74HC02 por la de tecnología HTC. De esta forma, y nuevamente mediante lo expresado en la Tabla (\ref{tabla:vinout}), se obtiene lo siguiente:
+A continuación, se procede a reemplazar la compuerta 74HC02 por la de tecnología HTC. De esta forma, y nuevamente mediante lo expresado en la Tabla (\ref{tabla:vinout}), se obtiene lo siguiente:
 
 \begin{table}[H]
 \centering
@@ -188,7 +198,7 @@ Luego, se procede a reemplazar la compuerta 74HC02 por la de tecnología HTC. De
 74HCT02      & 74LS02       & 4.5                            & 0.7                             & 0.3     		                    \\ \hline
 \end{tabular}
 \caption{Margen de ruido para combinaciones de tecnologías HC y LS.}
-\label{tabla:nm}
+\label{tabla:nm2}
 \end{table}
 
 De manera análoga al caso anterior, se confecciona el siguiente gráfico:
@@ -309,16 +319,32 @@ De manera análoga al caso anterior, se confecciona el siguiente gráfico:
 \label{fig:lshct}
 \end{figure}
 
-Como era de esperarse, y debido a a que la compuerta 74HTC02 es compatible con la tecnología TTL, al reemplazar la HC por la HTC se soluciona el problema presentado previamente, ya que al comparar las Figuras (\ref{fig:lshc}) y (\ref{fig:lshct}), se observa que ya no existe una zona en la cual las tensiones de salida no son consideradas como validas por la entrada siguiente.
+Como era de esperarse, y debido a a que la compuerta 74HCT02 es compatible con la tecnología TTL, al reemplazar la HC por la HTC se soluciona el problema presentado previamente, ya que al comparar las Figuras (\ref{fig:lshc}) y (\ref{fig:lshct}), se observa que ya no existe una zona en la cual las tensiones de salida no son consideradas como validas por la entrada siguiente.
+
+De la misma forma que se realizó para la conexión 74HC02 - 74LS02, se mide la conexión 74HCT02 - 74LS02.
+\begin{figure}[H]
+\centering
+	\includegraphics[width=0.8\textwidth]{ImagenesEjercicio2/scope_23_1.png}
+\end{figure}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=0.8\textwidth]{ImagenesEjercicio2/scope_26_1.png}
+\caption{Entrada del circuito, salida del 74LS02 y salida del 74HC02.}
+\label{fig:medicion2}
+\end{figure} 
+
+Es así que comparando las Figuras (\ref{fig:medicion1}) y (\ref{fig:medicion2}), se denota como se solventa el problema existente de compatibilidad. En el segundo caso, al ser las compuertas compatibles, estas no se sobrecargan entre sí y no existen problemas de tensiones, logrando que la imagen se vea mucho mejor.
 
 Por otro lado, se destaca que en el caso de colocar la compuerta de tecnología HCT a la salida y la LS a la entrada, no genera cambios en el fanout, ya que solo se debe corregir los valores de $I_{OH}$ y $I_{OL}$, los cuales son los mismos que para la tecnología HC.
 
+Finalmente, se presentan las relaciones de tensiones de entrada y salida medidas, variando las combinaciones de tecnologías posibles, para las cuales se empleó un suavizado exponencial para poder obtener mediciones apreciables.
+\begin{figure}[H]
+\centering
+	\includegraphics[width=0.8\textwidth]{ImagenesEjercicio2/Xy.png}
+\caption{Entradas y salidas de las compuertas.}
+\label{fig:medicion2}
+\end{figure}
+
 \begin{center}
-	\textcolor{red}{\textbf{FANOUT CON LS EN LA SALIDA Y HCT EN LA ENTRADA.}}
+	\textcolor{red}{\textbf{AGREGAR CONCLUSIÓN PARA LA ÚLTIMA IMAGEN.}}
 \end{center}
-
-\subsection{Desarrollo del circuito}
-
-\subsection{Mediciones}
-
-\end{document}

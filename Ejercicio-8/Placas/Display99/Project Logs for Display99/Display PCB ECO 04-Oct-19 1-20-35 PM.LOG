@@ -1,0 +1,46 @@
+Added Component: Designator=DEC1(*DIP254P762X508-16)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Digi-Key_Part_Number"; Value = "296-14537-5-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Digi-Key_Purchase_URL"; Value = "https://www.digikey.com/product-detail/en/texas-instruments/CD74HC4511E/296-14537-5-ND/555825?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "CD74HC4511E"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "PDIP-16 Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/CD74HC4511E/Texas%20Instruments/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=DEC2(*DIP254P762X508-16)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Digi-Key_Part_Number"; Value = "296-14537-5-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Digi-Key_Purchase_URL"; Value = "https://www.digikey.com/product-detail/en/texas-instruments/CD74HC4511E/296-14537-5-ND/555825?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "CD74HC4511E"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "PDIP-16 Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/CD74HC4511E/Texas%20Instruments/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetDEC1_1 Pin=DEC1-1
+Added Pin To Net: NetName=NetDEC1_2 Pin=DEC1-2
+Added Pin To Net: NetName=NetDEC1_6 Pin=DEC1-6
+Added Pin To Net: NetName=NetDEC1_7 Pin=DEC1-7
+Added Pin To Net: NetName=GND Pin=DEC1-8
+Added Pin To Net: NetName=NetDEC1_9 Pin=DEC1-9
+Added Pin To Net: NetName=NetDEC1_10 Pin=DEC1-10
+Added Pin To Net: NetName=NetDEC1_11 Pin=DEC1-11
+Added Pin To Net: NetName=NetDEC1_12 Pin=DEC1-12
+Added Pin To Net: NetName=NetDEC1_13 Pin=DEC1-13
+Added Pin To Net: NetName=NetDEC1_14 Pin=DEC1-14
+Added Pin To Net: NetName=NetDEC1_15 Pin=DEC1-15
+Added Pin To Net: NetName=VCC Pin=DEC1-16
+Added Pin To Net: NetName=NetDEC2_1 Pin=DEC2-1
+Added Pin To Net: NetName=NetDEC2_2 Pin=DEC2-2
+Added Pin To Net: NetName=NetDEC2_6 Pin=DEC2-6
+Added Pin To Net: NetName=NetDEC2_7 Pin=DEC2-7
+Added Pin To Net: NetName=GND Pin=DEC2-8
+Added Pin To Net: NetName=NetDEC2_9 Pin=DEC2-9
+Added Pin To Net: NetName=NetDEC2_10 Pin=DEC2-10
+Added Pin To Net: NetName=NetDEC2_11 Pin=DEC2-11
+Added Pin To Net: NetName=NetDEC2_12 Pin=DEC2-12
+Added Pin To Net: NetName=NetDEC2_13 Pin=DEC2-13
+Added Pin To Net: NetName=NetDEC2_14 Pin=DEC2-14
+Added Pin To Net: NetName=NetDEC2_15 Pin=DEC2-15
+Added Pin To Net: NetName=VCC Pin=DEC2-16
+Added Member To Class: ClassName=U_dual7segment Member=Component DEC1 CD74HC4511E
+Added Member To Class: ClassName=U_dual7segment Member=Component DEC2 CD74HC4511E

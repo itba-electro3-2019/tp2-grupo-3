@@ -1,0 +1,52 @@
+Added Component: Designator=CAP_CTRL(CAP200)
+Add component. Clean all parameters for all variants
+Added Component: Designator=CAP_D1(CAP200)
+Add component. Clean all parameters for all variants
+Added Component: Designator=CAP_THRESH(CAP200)
+Add component. Clean all parameters for all variants
+Added Component: Designator=CLK(MOLEX2)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R1(RES400)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R2(RES400)
+Add component. Clean all parameters for all variants
+Added Component: Designator=RV1(POTENCIOMETRO)
+Add component. Clean all parameters for all variants
+Added Component: Designator=T555(DIP8)
+Add component. Clean all parameters for all variants
+Added Component: Designator=VCC(BORNERA2)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=NetCAP_CTRL_1 Pin=CAP_CTRL-1
+Added Pin To Net: NetName=NetCAP_CTRL_1 Pin=T555-5
+Added Net: Name=NetCAP_CTRL_1
+Added Pin To Net: NetName=NetCAP_CTRL_2 Pin=CAP_CTRL-2
+Added Pin To Net: NetName=NetCAP_CTRL_2 Pin=CAP_D1-2
+Added Pin To Net: NetName=NetCAP_CTRL_2 Pin=CAP_THRESH-2
+Added Pin To Net: NetName=NetCAP_CTRL_2 Pin=CLK-2
+Added Pin To Net: NetName=NetCAP_CTRL_2 Pin=T555-1
+Added Pin To Net: NetName=NetCAP_CTRL_2 Pin=VCC-2
+Added Net: Name=NetCAP_CTRL_2
+Added Pin To Net: NetName=NetCAP_D1_1 Pin=CAP_D1-1
+Added Pin To Net: NetName=NetCAP_D1_1 Pin=R1-2
+Added Pin To Net: NetName=NetCAP_D1_1 Pin=T555-4
+Added Pin To Net: NetName=NetCAP_D1_1 Pin=T555-8
+Added Pin To Net: NetName=NetCAP_D1_1 Pin=VCC-1
+Added Net: Name=NetCAP_D1_1
+Added Pin To Net: NetName=NetCAP_THRESH_1 Pin=CAP_THRESH-1
+Added Pin To Net: NetName=NetCAP_THRESH_1 Pin=R2-1
+Added Pin To Net: NetName=NetCAP_THRESH_1 Pin=T555-2
+Added Pin To Net: NetName=NetCAP_THRESH_1 Pin=T555-6
+Added Net: Name=NetCAP_THRESH_1
+Added Pin To Net: NetName=NetCLK_1 Pin=CLK-1
+Added Pin To Net: NetName=NetCLK_1 Pin=T555-3
+Added Net: Name=NetCLK_1
+Added Pin To Net: NetName=NetR1_1 Pin=R1-1
+Added Pin To Net: NetName=NetR1_1 Pin=RV1-3
+Added Pin To Net: NetName=NetR1_1 Pin=T555-7
+Added Net: Name=NetR1_1
+Added Pin To Net: NetName=NetR2_2 Pin=R2-2
+Added Pin To Net: NetName=NetR2_2 Pin=RV1-1
+Added Pin To Net: NetName=NetR2_2 Pin=RV1-2
+Added Net: Name=NetR2_2
+Added Class: Name=Schematic
+Added Room: Name=Schematic

@@ -1,0 +1,38 @@
+Removed Pin From Net: NetName=NetAND1_U_JK_FF5_2 Pin=S2-1
+Removed Pin From Net: NetName=NetAND1_U_JK_FF4_5 Pin=S2-2
+Removed Pin From Net: NetName=NetAND1_U_JK_FF4_8 Pin=S2-3
+Removed Pin From Net: NetName=NetAND1_U_JK_FF3_5 Pin=S2-4
+Removed Pin From Net: NetName=NetAND1_U_JK_FF4_2 Pin=S2-5
+Removed Pin From Net: NetName=NetAND1_U_JK_FF3_8 Pin=S2-6
+Removed Pin From Net: NetName=NetAND2_11 Pin=S5-1
+Removed Pin From Net: NetName=NetAND1_U_JK_FF2_5 Pin=S5-2
+Removed Pin From Net: NetName=NetAND1_U_JK_FF2_8 Pin=S5-3
+Removed Pin From Net: NetName=NetAND1_U_JK_FF1_5 Pin=S5-4
+Removed Pin From Net: NetName=NetAND1_U_JK_FF2_1 Pin=S5-5
+Removed Pin From Net: NetName=NetAND1_U_JK_FF1_8 Pin=S5-6
+Removed Member From Class: ClassName=U_Async Member=S2
+Removed Member From Class: ClassName=U_Sync Member=S5
+Added Component: Designator=J1(JUMPER3)
+Add component. Clean all parameters for all variants
+Added Component: Designator=J2(JUMPER3)
+Add component. Clean all parameters for all variants
+Added Component: Designator=J3(JUMPER3)
+Add component. Clean all parameters for all variants
+Added Component: Designator=J4(JUMPER3)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=NetAND1_U_JK_FF3_5 Pin=J1-1
+Added Pin To Net: NetName=NetAND1_U_JK_FF4_2 Pin=J1-2
+Added Pin To Net: NetName=NetAND1_U_JK_FF3_8 Pin=J1-3
+Added Pin To Net: NetName=NetAND1_U_JK_FF4_5 Pin=J2-1
+Added Pin To Net: NetName=NetAND1_U_JK_FF5_2 Pin=J2-2
+Added Pin To Net: NetName=NetAND1_U_JK_FF4_8 Pin=J2-3
+Added Pin To Net: NetName=NetAND1_U_JK_FF1_5 Pin=J3-1
+Added Pin To Net: NetName=NetAND1_U_JK_FF2_1 Pin=J3-2
+Added Pin To Net: NetName=NetAND1_U_JK_FF1_8 Pin=J3-3
+Added Pin To Net: NetName=NetAND1_U_JK_FF2_5 Pin=J4-1
+Added Pin To Net: NetName=NetAND2_11 Pin=J4-2
+Added Pin To Net: NetName=NetAND1_U_JK_FF2_8 Pin=J4-3
+Added Member To Class: ClassName=U_Async Member=Component J1 JUMPER
+Added Member To Class: ClassName=U_Async Member=Component J2 JUMPER
+Added Member To Class: ClassName=U_Sync Member=Component J3 JUMPER
+Added Member To Class: ClassName=U_Sync Member=Component J4 JUMPER

@@ -1,0 +1,186 @@
+Removed Pin From Net: NetName=J0_U_JK_FF1 Pin=CAP_D2_U_JK_FF1-1
+Removed Pin From Net: NetName=GND Pin=CAP_D2_U_JK_FF1-2
+Removed Pin From Net: NetName=J0_U_JK_FF1 Pin=CAP_D2_U_JK_FF2-1
+Removed Pin From Net: NetName=GND Pin=CAP_D2_U_JK_FF2-2
+Removed Pin From Net: NetName=J0_U_JK_FF1 Pin=CAP_D2_U_JK_FF3-1
+Removed Pin From Net: NetName=GND Pin=CAP_D2_U_JK_FF3-2
+Removed Pin From Net: NetName=J0_U_JK_FF1 Pin=CAP_D2_U_JK_FF4-1
+Removed Pin From Net: NetName=GND Pin=CAP_D2_U_JK_FF4-2
+Removed Pin From Net: NetName=J0_U_JK_FF1 Pin=CAP_D2_U_JK_FF5-1
+Removed Pin From Net: NetName=GND Pin=CAP_D2_U_JK_FF5-2
+Removed Pin From Net: NetName=NetAND2_11 Pin=S1-1
+Removed Pin From Net: NetName=NetAND1_U_JK_FF2_5 Pin=S1-2
+Removed Pin From Net: NetName=NetAND1_U_JK_FF2_8 Pin=S1-3
+Removed Pin From Net: NetName=NetAND1_U_JK_FF1_5 Pin=S1-4
+Removed Pin From Net: NetName=J0_U_JK_FF2 Pin=S1-5
+Removed Pin From Net: NetName=NetAND1_U_JK_FF1_8 Pin=S1-6
+Removed Member From Class: ClassName=U_Sync Member=S1
+Change component parameters: Designator = "P2"; Footprint = "HDR2X5"; UniqueID = "\KPFWRFSO"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "AND1_U_JK_FF1"; Footprint = "*SOIC127P600X175-14N"; UniqueID = "\COJCXBBE\WMUCOOHV\TIJEWMXG"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "CD4073BM"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "SOIC-14 Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/CD4073BM/Texas%20Instruments/view-part/?ref=snap"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "AND1_U_JK_FF2"; Footprint = "*SOIC127P600X175-14N"; UniqueID = "\COJCXBBE\KDIVJCCW\TIJEWMXG"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "CD4073BM"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "SOIC-14 Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/CD4073BM/Texas%20Instruments/view-part/?ref=snap"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "AND1_U_JK_FF3"; Footprint = "*SOIC127P600X175-14N"; UniqueID = "\EEPFNDRS\FIEHIKJH\TIJEWMXG"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "CD4073BM"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "SOIC-14 Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/CD4073BM/Texas%20Instruments/view-part/?ref=snap"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "AND1_U_JK_FF4"; Footprint = "*SOIC127P600X175-14N"; UniqueID = "\EEPFNDRS\FKEYVWYQ\TIJEWMXG"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "CD4073BM"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "SOIC-14 Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/CD4073BM/Texas%20Instruments/view-part/?ref=snap"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "AND1_U_JK_FF5"; Footprint = "*SOIC127P600X175-14N"; UniqueID = "\EEPFNDRS\THPRGEXV\TIJEWMXG"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "CD4073BM"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "SOIC-14 Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/CD4073BM/Texas%20Instruments/view-part/?ref=snap"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "AND2"; Footprint = "*SOIC127P600X175-14N"; UniqueID = "\COJCXBBE\XNHFEOFD\VWDLNLVI"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "CD4073BM"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "SOIC-14 Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/CD4073BM/Texas%20Instruments/view-part/?ref=snap"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "NOR1_U_JK_FF1"; Footprint = "*DIP254P762X508-14"; UniqueID = "\COJCXBBE\WMUCOOHV\TSFKUFKH"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "SN74HC02N"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "DIP-14 Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/SN74HC02N/Texas%20Instruments/view-part/?ref=snap"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "NOR1_U_JK_FF2"; Footprint = "*DIP254P762X508-14"; UniqueID = "\COJCXBBE\KDIVJCCW\TSFKUFKH"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "SN74HC02N"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "DIP-14 Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/SN74HC02N/Texas%20Instruments/view-part/?ref=snap"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "NOR1_U_JK_FF3"; Footprint = "*DIP254P762X508-14"; UniqueID = "\EEPFNDRS\FIEHIKJH\TSFKUFKH"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "SN74HC02N"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "DIP-14 Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/SN74HC02N/Texas%20Instruments/view-part/?ref=snap"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "NOR1_U_JK_FF4"; Footprint = "*DIP254P762X508-14"; UniqueID = "\EEPFNDRS\FKEYVWYQ\TSFKUFKH"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "SN74HC02N"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "DIP-14 Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/SN74HC02N/Texas%20Instruments/view-part/?ref=snap"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "NOR1_U_JK_FF5"; Footprint = "*DIP254P762X508-14"; UniqueID = "\EEPFNDRS\THPRGEXV\TSFKUFKH"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "SN74HC02N"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "DIP-14 Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/SN74HC02N/Texas%20Instruments/view-part/?ref=snap"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "NOR2"; Footprint = "*DIP254P762X508-14"; UniqueID = "\COJCXBBE\XNHFEOFD\RNATCSIM"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "SN74HC02N"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "DIP-14 Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/SN74HC02N/Texas%20Instruments/view-part/?ref=snap"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "S2"; Footprint = "SOT23-6_N"; UniqueID = "\EEPFNDRS\DSBKXQWP"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Code_IPC"; Value = "SOT26A-6"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Code_JEITA"; Value = "SC-74"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "29-May-2009"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "IPC-7351 Footprint Added."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageDescription"; Value = "6-Pin SOT-23 Package 0.95 mm Pitch, 2.7 mm Lead Span"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageReference"; Value = "SOT23-6"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageVersion"; Value = "Mar-2001"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Published"; Value = "24-Mar-1999"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=S5(SOT23-6_N)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Code_IPC"; Value = "SOT26A-6"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Code_JEITA"; Value = "SC-74"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "29-May-2009"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "IPC-7351 Footprint Added."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "6-Pin SOT-23 Package 0.95 mm Pitch, 2.7 mm Lead Span"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "SOT23-6"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageVersion"; Value = "Mar-2001"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "24-Mar-1999"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=CAP_D2_U_JK_FF1-1
+Added Pin To Net: NetName=J0_U_JK_FF1 Pin=CAP_D2_U_JK_FF1-2
+Added Pin To Net: NetName=GND Pin=CAP_D2_U_JK_FF2-1
+Added Pin To Net: NetName=J0_U_JK_FF1 Pin=CAP_D2_U_JK_FF2-2
+Added Pin To Net: NetName=GND Pin=CAP_D2_U_JK_FF3-1
+Added Pin To Net: NetName=J0_U_JK_FF1 Pin=CAP_D2_U_JK_FF3-2
+Added Pin To Net: NetName=GND Pin=CAP_D2_U_JK_FF4-1
+Added Pin To Net: NetName=J0_U_JK_FF1 Pin=CAP_D2_U_JK_FF4-2
+Added Pin To Net: NetName=GND Pin=CAP_D2_U_JK_FF5-1
+Added Pin To Net: NetName=J0_U_JK_FF1 Pin=CAP_D2_U_JK_FF5-2
+Added Pin To Net: NetName=J0_U_JK_FF1 Pin=P2-1
+Added Pin To Net: NetName=NetAND2_11 Pin=S5-1
+Added Pin To Net: NetName=NetAND1_U_JK_FF2_5 Pin=S5-2
+Added Pin To Net: NetName=NetAND1_U_JK_FF2_8 Pin=S5-3
+Added Pin To Net: NetName=NetAND1_U_JK_FF1_5 Pin=S5-4
+Added Pin To Net: NetName=J0_U_JK_FF2 Pin=S5-5
+Added Pin To Net: NetName=NetAND1_U_JK_FF1_8 Pin=S5-6
+Added Pin To Net: NetName=J0_U_JK_FF1 Pin=VCC-1
+Change Net Name : Old Net Name=CLK0 New Net Name=NetAND1_U_JK_FF1_2
+Change Net Name : Old Net Name=CLK0_U_JK_FF4 New Net Name=NetAND1_U_JK_FF4_2
+Change Net Name : Old Net Name=CLK0_U_JK_FF5 New Net Name=NetAND1_U_JK_FF5_2
+Change Net Name : Old Net Name=J0 New Net Name=NetAND2_1
+Change Net Name : Old Net Name=J0_U_JK_FF1 New Net Name=VCC
+Change Net Name : Old Net Name=J0_U_JK_FF2 New Net Name=NetAND1_U_JK_FF2_1
+Added Member To Class: ClassName=U_Sync Member=Component S5 SW DPDT
+Added Room: Name=Counters
+Added Room: Name=U_Async
+Added Room: Name=U_JK_FF1
+Added Room: Name=U_JK_FF2
+Added Room: Name=U_JK_FF3
+Added Room: Name=U_JK_FF4
+Added Room: Name=U_JK_FF5
+Added Room: Name=U_JK_FF_WITH_AND1
+Added Room: Name=U_Sync

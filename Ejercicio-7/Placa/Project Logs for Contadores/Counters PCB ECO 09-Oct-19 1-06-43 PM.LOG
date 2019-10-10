@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=NetJ1_1 Pin=SW1-1
+Removed Pin From Net: NetName=NetJ1_1 Pin=SW1-2
+Removed Pin From Net: NetName=NetAND1_U_JK_FF1_2 Pin=SW1-3
+Removed Pin From Net: NetName=NetAND1_U_JK_FF3_2 Pin=SW1-4
+Removed Member From Class: ClassName=Counters Member=SW1
+Removed Member From Class: ClassName=U_Async Member=UP
+Added Component: Designator=J1(JUMPER2)
+Add component. Clean all parameters for all variants
+Added Component: Designator=J2(JUMPER2)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=NetAND1_U_JK_FF3_2 Pin=J1-1
+Added Pin To Net: NetName=NetJ1_1 Pin=J1-2
+Added Pin To Net: NetName=NetJ1_1 Pin=J2-1
+Added Pin To Net: NetName=NetAND1_U_JK_FF1_2 Pin=J2-2

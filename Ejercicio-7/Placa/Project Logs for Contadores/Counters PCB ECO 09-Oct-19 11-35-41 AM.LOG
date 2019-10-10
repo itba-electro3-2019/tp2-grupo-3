@@ -1,0 +1,72 @@
+Removed Pin From Net: NetName=NetAND1_U_JK_FF1_2 Pin=CD4073BM-2
+Removed Pin From Net: NetName=NetAND1_U_JK_FF1_2 Pin=CD4073BM-4
+Removed Pin From Net: NetName=NetAND1_U_JK_FF1_2 Pin=CLK-1
+Removed Member From Class: ClassName=U_JK_FF2 Member=CD4073BM
+Removed Member From Class: ClassName=U_JK_FF3 Member=CD4073BM
+Removed Member From Class: ClassName=U_JK_FF4 Member=CD4073BM
+Removed Member From Class: ClassName=U_JK_FF5 Member=CD4073BM
+Removed Member From Class: ClassName=U_JK_FF_WITH_AND1 Member=CD4073BM
+Removed Member From Class: ClassName=U_JK_FF2 Member=SN74HC02N
+Removed Member From Class: ClassName=U_JK_FF3 Member=SN74HC02N
+Removed Member From Class: ClassName=U_JK_FF4 Member=SN74HC02N
+Removed Member From Class: ClassName=U_JK_FF5 Member=SN74HC02N
+Removed Member From Class: ClassName=U_JK_FF_WITH_AND1 Member=SN74HC02N
+Removed Member From Class: ClassName=Counters Member=UP
+Removed Member From Class: ClassName=U_Async Member=UP
+Added Component: Designator=R1(RES400)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R2(RES400)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R3(RES400)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R4(RES400)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R5(RES400)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R6(RES400)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R7(RES400)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R8(RES400)
+Add component. Clean all parameters for all variants
+Added Component: Designator=SW1(DIP-4)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "DIP-4"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "24-Mar-1999"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=R1-1
+Added Pin To Net: NetName=GND Pin=R2-1
+Added Pin To Net: NetName=NetAND1_U_JK_FF1_2 Pin=R2-2
+Added Pin To Net: NetName=GND Pin=R3-1
+Added Pin To Net: NetName=NetAND1_U_JK_FF3_8 Pin=R3-2
+Added Pin To Net: NetName=GND Pin=R4-1
+Added Pin To Net: NetName=NetAND1_U_JK_FF4_8 Pin=R4-2
+Added Pin To Net: NetName=GND Pin=R5-1
+Added Pin To Net: NetName=NetAND1_U_JK_FF5_8 Pin=R5-2
+Added Pin To Net: NetName=GND Pin=R6-1
+Added Pin To Net: NetName=NetAND1_U_JK_FF1_8 Pin=R6-2
+Added Pin To Net: NetName=GND Pin=R7-1
+Added Pin To Net: NetName=NetAND1_U_JK_FF2_8 Pin=R7-2
+Added Pin To Net: NetName=GND Pin=R8-1
+Added Pin To Net: NetName=NetAND2_8 Pin=R8-2
+Added Pin To Net: NetName=NetAND1_U_JK_FF1_2 Pin=SW1-3
+Added Pin To Net: NetName=NetAND1_U_JK_FF3_2 Pin=CD4073BM-2
+Added Pin To Net: NetName=NetAND1_U_JK_FF3_2 Pin=CD4073BM-4
+Added Pin To Net: NetName=NetAND1_U_JK_FF3_2 Pin=R1-2
+Added Pin To Net: NetName=NetAND1_U_JK_FF3_2 Pin=SW1-4
+Added Net: Name=NetAND1_U_JK_FF3_2
+Added Pin To Net: NetName=NetJ1_1 Pin=CLK-1
+Added Pin To Net: NetName=NetJ1_1 Pin=SW1-1
+Added Pin To Net: NetName=NetJ1_1 Pin=SW1-2
+Added Net: Name=NetJ1_1
+Added Member To Class: ClassName=Counters Member=Component R1 RES
+Added Member To Class: ClassName=Counters Member=Component R2 RES
+Added Member To Class: ClassName=Counters Member=Component R3 RES
+Added Member To Class: ClassName=Counters Member=Component R4 RES
+Added Member To Class: ClassName=Counters Member=Component R5 RES
+Added Member To Class: ClassName=Counters Member=Component R6 RES
+Added Member To Class: ClassName=Counters Member=Component R7 RES
+Added Member To Class: ClassName=Counters Member=Component R8 RES
+Added Member To Class: ClassName=Counters Member=Component SW1 SW DIP-2

@@ -1,31 +1,31 @@
 Board Information Report
-Filename     : C:\Users\Guido\Documents\GitHub\tp2-grupo-3\Ejercicio-7\Placa\Counters.PcbDoc
+Filename     : C:\Users\Acer\Desktop\GitHub\ElectroIII\tp2-grupo-3\Ejercicio-7\Placa\Counters.PcbDoc
 Date         : 09-Oct-19
-Time         : 3:35:03 AM
+Time         : 12:22:38 PM
 Time Elapsed : 00:00:00
 
 General
     Board Size, 100mmx100mm
-    Components on board, 31
+    Components on board, 40
 count : 2
 
 Routing Information
     Routing completion, 100.00%
-    Connections, 128
-    Connections routed, 128
+    Connections, 146
+    Connections routed, 146
     Connections remaining, 0
 count : 4
 
 Layer, Arcs, Pads, Vias, Tracks, Texts, Fills, Regions, ComponentBodies
-    Top Layer, 0, 0, 0, 165, 0, 0, 0, 0
-    Bottom Layer, 0, 0, 0, 569, 0, 0, 0, 0
-    Mechanical 1, 0, 0, 0, 0, 0, 0, 0, 22
+    Top Layer, 0, 0, 0, 202, 0, 0, 98, 0
+    Bottom Layer, 0, 0, 0, 592, 0, 0, 292, 0
+    Mechanical 1, 0, 0, 0, 0, 0, 0, 0, 30
     Mechanical 4, 24, 0, 0, 1488, 0, 0, 0, 0
-    Mechanical 13, 0, 0, 0, 0, 0, 0, 0, 0
-    Mechanical 15, 0, 0, 0, 0, 0, 0, 0, 0
-    Multi-Layer, 0, 218, 57, 0, 0, 0, 1, 0
+    Mechanical 13, 1, 0, 0, 4, 0, 0, 0, 1
+    Mechanical 15, 0, 0, 0, 2, 0, 0, 0, 0
+    Multi-Layer, 0, 238, 58, 0, 0, 0, 1, 0
     Top Paste, 0, 0, 0, 0, 0, 0, 0, 0
-    Top Overlay, 36, 0, 0, 154, 66, 1, 0, 0
+    Top Overlay, 39, 0, 0, 207, 84, 1, 0, 0
     Top Solder, 0, 0, 0, 0, 0, 0, 0, 0
     Bottom Solder, 0, 0, 0, 0, 0, 0, 0, 0
     Bottom Overlay, 0, 0, 0, 0, 0, 0, 0, 0

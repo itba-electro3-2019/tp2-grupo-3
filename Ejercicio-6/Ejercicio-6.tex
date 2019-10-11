@@ -70,11 +70,13 @@ Se propusieron dos circuitos de implementación, utilizando para el primero comp
 
 Utilizando compuertas NOR y NAND, se eligió el integrado \href{https://pdf1.alldatasheet.com/datasheet-pdf/view/228632/ONSEMI/74HC02.html}{74HC02} debido a que es High-Speed y que no se requiere compatibilidad con TTL, como se analizó en el Punto (\ref{Ejercicio-2}). 
 
-Se toman como observables de interés los tiempos de propagación:
+Se toman como observables de interés los tiempos de propagación y transición:
 \begin{equation*}
 \begin{split}
 	t_{p-SQ}: S \implies Q \\
-	t_{p-RQ}: R \implies Q
+	t_{p-RQ}: R \implies Q \\
+	t_{r-SQ}: S \implies Q \\
+	t_{r-RQ}: R \implies Q
 \end{split}
 \end{equation*}
 

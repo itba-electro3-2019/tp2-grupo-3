@@ -5,16 +5,13 @@ Es esta sección se implementa un SR-Latch y un Flip Flop D utilizando compuerta
 Un Latch-SR es un elemento de memoria asincrónico con dos inputs (S y R), también conocido con Set-Reset Latch. A este circuito le corresponde la siguiente tabla de verdad:
 \begin{table}[H]
 \centering
-\begin{tabular}{
->{\columncolor[HTML]{FFFFFF}}c 
->{\columncolor[HTML]{FFFFFF}}c |
->{\columncolor[HTML]{FFFFFF}}c }
+\begin{tabular}{cc|c}
 \hline
 \textbf{$S$} & \textbf{$R$} & \textbf{$Q_n$} \\ \hline
 0            & 0            & $Q_{n-1}$      \\
 0            & 1            & 0              \\
 1            & 0            & 1              \\
-1            & 1            & 0             \\
+1            & 1            & 0              \\
 \hline
 \end{tabular}
 \caption{Tabla de verdad de un Latch-SR.}
@@ -70,11 +67,13 @@ Se propusieron dos circuitos de implementación, utilizando para el primero comp
 
 Utilizando compuertas NOR y NAND, se eligió el integrado \href{https://pdf1.alldatasheet.com/datasheet-pdf/view/228632/ONSEMI/74HC02.html}{74HC02} debido a que es High-Speed y que no se requiere compatibilidad con TTL, como se analizó en el Punto (\ref{Ejercicio-2}). 
 
-Se toman como observables de interés los tiempos de propagación:
+Se toman como observables de interés los tiempos de propagación y transición:
 \begin{equation*}
 \begin{split}
 	t_{p-SQ}: S \implies Q \\
-	t_{p-RQ}: R \implies Q
+	t_{p-RQ}: R \implies Q \\
+	t_{r-SQ}: S \implies Q \\
+	t_{r-RQ}: R \implies Q
 \end{split}
 \end{equation*}
 
@@ -184,4 +183,8 @@ Estos tiempos medidos son comparados con un integrado \href{https://pdf1.alldata
 \label{tab:ffd}
 \end{table}
 
-Finalmente se destaca que, observando las Tablas (\ref{tab:srl}) y (\ref{tab:ffd}), los circuitos armados poseen valores próximos a los de los integrados, evidenciando un buen funcionamiento de estos. En algunos casos, los tiempos de propagación y transición son mayores a los de obtenidos de los comerciales. En otros casos, resalta que dichas variables son menores en los circuitos que en los integrados, factor que se atribuye a la fabricación propia de estos últimos. En otras palabras, el 74HC279 y el 74HC374, debido a su caracter comercial poseen considerando factores que en los circuitos elaborados no
+A continuación se destaca que, observando las Tablas (\ref{tab:srl}) y (\ref{tab:ffd}), los circuitos armados poseen valores próximos a los de los integrados, evidenciando un buen funcionamiento de estos. En algunos casos, los tiempos de propagación y transición son mayores a los de obtenidos de los comerciales. En otros casos, resalta que dichas variables son menores en los circuitos que en los integrados, factor que se atribuye a la fabricación propia de estos últimos. En otras palabras, el 74HC279 y el 74HC374, debido a su carácter comercial, poseen distintos tipos de consideraciones (estabilidad frente a ruido, temperatura, entre otras) que los desarrollados para este informe no, siendo estas las causantes de las diferencias previamente mencionadas.
+
+Cabe destacar una ventaja que proporcionan los integrados, la cual no ha sido evidenciada hasta ahora. Esta es el tamaño que empeña cada uno en una placa. Los circuitos desarrollados para este informe ocupan mucho espacio, debido a que fueron concebidos mediante el uso de diversos integrados. Si bien, dichas placas pueden ser optimizadas empleando la totalidad de las compuertas (no se utilizaron todas las que brinda cada integrado), este no es el objetivo del informe.
+
+Finalmente, se menciona una ventaja importante que posee la placa frente al integrado. Este punto a favor consiste en que se puede conocer como está compuesta, es decir, que tipo de compuertas se emplean, y permite comparaciones como la presentada en la Tabla (\ref{tab:srl}), entre un circuito SR-Latch con compu

@@ -17,5 +17,5 @@
 \contentsline {section}{\numberline {6}Ejercicio 6}{17}{section.6}% 
 \contentsline {subsection}{\numberline {6.1}SR-Latch}{17}{subsection.6.1}% 
 \contentsline {subsection}{\numberline {6.2}Flip Flop D}{18}{subsection.6.2}% 
-\contentsline {section}{\numberline {7}Ejercicio 7}{19}{section.7}% 
-\contentsline {section}{\numberline {8}Ejercicio 8}{20}{section.8}% 
+\contentsline {section}{\numberline {7}Ejercicio 7}{20}{section.7}% 
+\contentsline {section}{\numberline {8}Ejercicio 8}{21}{section.8}% 

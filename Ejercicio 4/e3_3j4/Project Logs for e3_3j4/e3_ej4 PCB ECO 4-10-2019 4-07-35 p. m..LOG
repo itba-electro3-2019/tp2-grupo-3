@@ -1,0 +1,6 @@
+Change Component Designator: OldDesignator=Open NewDesignator=J2
+Change Component Designator: OldDesignator=OUT NewDesignator=TP1
+Added Pin To Net: NetName=NetJ2_1 Pin=U1-4
+Added Pin To Net: NetName=NetJ2_1 Pin=U1-5
+Added Member To Class: ClassName=e3_ej4 Member=Component J3 Alimentacion
+Added Room: Name=e3_ej4

@@ -418,4 +418,8 @@ En la Figura (\ref{fig:sync_circ}) se puede observar la implementación realizad
 	\label{fig:sync_circ}
 \end{figure}
 
+\subsubsection{Máxima Velocidad de Operación}
+
+Se midió en una primera instancia el tiempo de propagación al realizar la acción de \textit{toggle} de un solo JK flip-flop, obteniéndose un valor de $191.21 ns$ para el establecimiento de $Q$ al valor previo de $\overline{Q}$. Luego, se midió la cantidad de tiempo entre un flanco ascendente de la señal de clock proporcionada al contador asíncrono y sincrónico, y el cambio del bit $Q_2$ de ambos contadores para el caso presentado en la Figura (\ref{async_ripple}). Los tiempos obtenidos fueron de $223.51 ns$ para el contador sincrónico y $738.32 ns$ para el contador asíncrono, poniendo en evidencia no sólo lo mucho más lento que es el contador asíncrono sino cuánto más rápido es un JK flip-flop integrado a uno implementado con compuertas lógicas discretas, ya que los integrados poseen un tiempo de propagación típico menor a $10ns$. 
+
 \end{document}

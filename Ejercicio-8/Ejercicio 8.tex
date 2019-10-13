@@ -13,7 +13,7 @@ Esta sección del informe se centra en la implementación de un convertidor anal
 
 \subsection{Joystick HW-504}
 
-El mando de control a utilizado está compuesto por dos potenciómetros, uno para el eje X y otro para el eje Y, y un switch accionado al apretar el mando hacia dentro. El periférico requiere de una alimentación de $5V$ y puede esquematizarse como el siguiente modelo electóonico:
+El mando de control utilizado está compuesto por dos potenciómetros, uno para el eje X y otro para el eje Y junto a un switch accionado al apretar el mando hacia dentro. El periférico requiere de una alimentación de $5V$ y puede esquematizarse como el siguiente modelo electrónico:
 
 \begin{figure}[H]
 	\begin{subfigure}[t]{0.49\textwidth}
@@ -68,6 +68,63 @@ El mando de control a utilizado está compuesto por dos potenciómetros, uno par
 		\label{circuit:joytick_eq}
 	\end{subfigure}
 \end{figure}
+
+Como se puede observar en la Figura (\ref{circuit:joytick_eq}), la tensión en los pines $VR_x$ y $VR_y$ será proporcional a la posición del joystick, mientras que el pin $SW$ permanecerá en estado bajo a menos que se presione el mando.
+
+\subsection{Diseños Propuestos}
+
+\begin{figure}[H]
+
+	\centering
+	\begin{circuitikz}
+		\draw	
+	
+			node[fourport](CLK){}
+			node[]{CLK Gen}
+			
+			(CLK) ++ (3, 1.5) node[fourport](CLK/100){}
+			node[]{\LARGE{$\frac{f}{100}$}}
+			
+			++ (3, 0) node[fourport](INTEGRATOR){}
+			node[]{\LARGE{$\int$}}
+
+			++ (3.5, 0) node[fourport, xscale=1.5](COMPARATOR){}
+			node[]{\large{Comparator}}
+			
+			++ (3.5, 0) node[fourport](JOYSTICK){}
+			node[]{\large{Joystick}}
+						
+			(CLK) ++ (3.5, -1.5) node[fourport, xscale=1.5](COUNTER){}
+			node[]{\large{Counter 0-99}}
+			
+			(COMPARATOR) ++ (0, -1.5) node[fourport, xscale=1.5, yscale=0.3](EDGEDETECTOR){}
+			node[]{Edge Detector}
+			
+			(EDGEDETECTOR) ++ (0, -1.5) node[fourport](DISPLAY){}
+			node[]{Display}
+			
+			(CLK.east) to[short] ++ (0.5, 0)
+				|- (CLK/100.west)
+				
+			(CLK.east) to[open] ++ (0.5,0)
+				|- (COUNTER.west)
+			
+			(CLK/100.east) -- (INTEGRATOR.west) 
+			(INTEGRATOR.east) -- (COMPARATOR.west)
+			(COMPARATOR.east) -- (JOYSTICK.west)
+			(COMPARATOR.south) -- (EDGEDETECTOR.north)
+			(EDGEDETECTOR.south) -- (DISPLAY.north)
+			(COUNTER.east) -- (DISPLAY.west)
+			
+		;
+	\end{circuitikz}
+	\caption{Diagrama en bloques del segundo diseño propuesto.}
+	\label{primdiseño}
+\end{figure}
+
+Se propuso como primer diseño el presentado en la Figura (\ref{primdiseño}). Este consta de un generador de clock el cual es provisto a un contador el cual se reinicia al llegar al numero 99. Este contador posee sus salidas conectadas permanentemente a un módulo de display el cual tiene una entrada de aquire, la cual debe estar en un estado alto para que el display muestre y guarde el último número ingresado.
+
+A su vez, el generador de clock esta conectado a otro módulo el cual divide la frecuencia del clock por cien. Esta señal cuadrada de frecuencia cien veces menor a la original es ingresada a un integrador el cual genera a partir de esta una rampa. El valor de tensión de la rampa es permanentemente comparado con el valor de tensión del pin de posición del joystick de tal manera que apenas sea la tensión de la rampa mayor a la tensión provista por el joystick, el comparador pondrá su salida a un estado alto. Esta salida está conectada un detector de flancos, y es este flanco el que ingresa al pin de acquire del display, obteniendo en el display siempre la posición del joystick mapeada de 0 a 99.
 
 \subsection{circuitikz que en algun momento vamos ausar saludos}
 

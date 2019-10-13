@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.12)  13 OCT 2019 14:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.12)  13 OCT 2019 15:12
 entering extended mode
 **"./Ejercicio 7.tex"
 ("Ejercicio 7.tex"
@@ -989,7 +989,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout5 = `"Ejercicio 7.toc"'.
 
 \realshift=\dimen275
-<Imagenes/async_ripple.png, id=48, 758.835pt x 333.8874pt>
+<Imagenes/async_ripple.png, id=53, 758.835pt x 333.8874pt>
 File: Imagenes/async_ripple.png Graphic file (type png)
 <use Imagenes/async_ripple.png>
 Package pdftex.def Info: Imagenes/async_ripple.png  used on input line 131.
@@ -1005,22 +1005,15 @@ LaTeX Info: Redefining \% on input line 23.
 )
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 425.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 425.
-
-
-Package rerunfilecheck Warning: File `"Ejercicio 7".out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `"Ejercicio 7".out':
-(rerunfilecheck)             Before: 67E2193BBCA5407E7499D1CF42BB0D08;586
-(rerunfilecheck)             After:  5FB659C5ADFB453B9BBB5F9D091F3740;681.
+Package rerunfilecheck Info: File `"Ejercicio 7".out' has not changed.
+(rerunfilecheck)             Checksum: 5FB659C5ADFB453B9BBB5F9D091F3740;681.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 425.
  ) 
 Here is how much of TeX's memory you used:
- 32624 strings out of 492895
- 751055 string characters out of 3124202
- 1021209 words of memory out of 3000000
- 36117 multiletter control sequences out of 15000+200000
+ 32675 strings out of 492895
+ 752424 string characters out of 3124202
+ 1020092 words of memory out of 3000000
+ 36168 multiletter control sequences out of 15000+200000
  7203 words of font info for 28 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,12n,69p,904b,970s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1033,9 +1026,9 @@ rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Acer/AppDa
 ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/User
 s/Acer/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.
 pfb>
-Output written on "Ejercicio 7.pdf" (3 pages, 121240 bytes).
+Output written on "Ejercicio 7.pdf" (3 pages, 121937 bytes).
 PDF statistics:
- 111 PDF objects out of 1000 (max. 8388607)
+ 115 PDF objects out of 1000 (max. 8388607)
  20 named destinations out of 1000 (max. 500000)
- 82 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 90 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,20 +1,17 @@
-Es esta sección se implementará un SR-Latch y un Flip Flop D utilizando compuertas.
+Es esta sección se implementa un SR-Latch y un Flip Flop D utilizando compuertas.
 
 \subsection{SR-Latch}
 
 Un Latch-SR es un elemento de memoria asincrónico con dos inputs (S y R), también conocido con Set-Reset Latch. A este circuito le corresponde la siguiente tabla de verdad:
 \begin{table}[H]
 \centering
-\begin{tabular}{
->{\columncolor[HTML]{FFFFFF}}c 
->{\columncolor[HTML]{FFFFFF}}c |
->{\columncolor[HTML]{FFFFFF}}c }
+\begin{tabular}{cc|c}
 \hline
 \textbf{$S$} & \textbf{$R$} & \textbf{$Q_n$} \\ \hline
 0            & 0            & $Q_{n-1}$      \\
 0            & 1            & 0              \\
 1            & 0            & 1              \\
-1            & 1            & 0             \\
+1            & 1            & 0              \\
 \hline
 \end{tabular}
 \caption{Tabla de verdad de un Latch-SR.}
@@ -68,17 +65,19 @@ Se propusieron dos circuitos de implementación, utilizando para el primero comp
 \end{center}
 \end{figure}
 
-Se lleva a cabo utilizando compuertas NOR y NAND, se eligió el integrado \href{https://pdf1.alldatasheet.com/datasheet-pdf/view/228632/ONSEMI/74HC02.html}{74HC02} debido a que es High-Speed y ya que no es necesario compatibilidad con TTL, como se analizó en el Punto (2). 
+Utilizando compuertas NOR y NAND, se eligió el integrado \href{https://pdf1.alldatasheet.com/datasheet-pdf/view/228632/ONSEMI/74HC02.html}{74HC02} debido a que es High-Speed y que no se requiere compatibilidad con TTL, como se analizó en el Punto (\ref{Ejercicio-2}). 
 
-Se toman como observables de interés el tiempo de propagación:
+Se toman como observables de interés los tiempos de propagación y transición:
 \begin{equation*}
 \begin{split}
 	t_{p-SQ}: S \implies Q \\
-	t_{p-RQ}: R \implies Q
+	t_{p-RQ}: R \implies Q \\
+	t_{r-SQ}: S \implies Q \\
+	t_{r-RQ}: R \implies Q
 \end{split}
 \end{equation*}
 
-Estos tiempos son comparados con un integrado \href{http://noel.feld.cvut.cz/hw/st/1937.pdf}{74HC279}, el cual contiene 4 SR-Latch. Las mediciones hechas se ven en la siguiente tabla:
+Estos parámetros son comparados con un integrado \href{http://noel.feld.cvut.cz/hw/st/1937.pdf}{74HC279}, el cual contiene 4 SR-Latch. Las mediciones hechas se ven en la siguiente tabla:
 \begin{table}[H]
 \centering
 \begin{tabular}{cccl}
@@ -90,11 +89,10 @@ Estos tiempos son comparados con un integrado \href{http://noel.feld.cvut.cz/hw/
 \textbf{$t_{t-SQ}$} & 11 ns                  & 4 ns                    & 8 ns             \\
 \hline
 \end{tabular}
-\caption{Mediciones obtenidas.}
+\caption{Mediciones obtenidas para el SR-Latch.}
+\label{tab:srl}
 \end{table}
 
-Es notable que los tiempos son similares. Por otro lado, el espacio que ocupan no lo es, dado que toma el doble de integrados para la misma cantidad de Latches.
- 
 \subsection{Flip Flop D}
 
 Un Flip Flop D es un elemento de memoria sincrónico, el cual cuenta con 2 entradas, siendo una de clock y la otra de la información (Data). Le corresponde la siguiente tabla de verdad:
@@ -103,10 +101,7 @@ Un Flip Flop D es un elemento de memoria sincrónico, el cual cuenta con 2 entra
 % If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
 \begin{table}[H]
 \centering
-\begin{tabular}{
->{\columncolor[HTML]{FFFFFF}}c 
->{\columncolor[HTML]{FFFFFF}}c |
->{\columncolor[HTML]{FFFFFF}}c }
+\begin{tabular}{cc|c}
 \hline
 \textbf{Clock} & \textbf{$D$} & \textbf{$Q_n$} \\ \hline
 $\downarrow$   & X            & $Q_{n-1}$      \\
@@ -156,7 +151,7 @@ El circuito de implementación propuesto es el siguiente\footnote{Brown, S. and 
 \end{center}
 \end{figure}
 
-Este circuito se lleva a cabo utilizando compuertas NAND. Se eligió el integrado \href{https://pdf1.alldatasheet.com/datasheet-pdf/view/351460/ONSEMI/74HC132.html}{74HC132} debido a que es High-Speed y no es necesaria la compatibilidad con TTL, como se analizó en el punto (2). También para el clock se realizó un Edge-Detector implementado con el circuito presentado a continuación. Este dispositivo es anexado al circuito implementado con NANDS del latch SR.
+Este circuito se lleva a cabo utilizando compuertas NAND. Se eligió el integrado \href{https://pdf1.alldatasheet.com/datasheet-pdf/view/351460/ONSEMI/74HC132.html}{74HC132} por las mismas razones que en el circuito anterior. Además, para el clock se realizó un Edge-Detector, implementado con el circuito presentado a continuación. Este dispositivo es anexado al circuito implementado con NANDS del latch SR.
 \begin{figure}[H]	
 	\centering
 	\includegraphics[width=0.8\textwidth]{ImagenesEjercicio6/edgedetector.PNG}
@@ -164,7 +159,7 @@ Este circuito se lleva a cabo utilizando compuertas NAND. Se eligió el integrad
 	\label{fig:circedge}
 \end{figure}
 
-Se toman como observables de interés el tiempo de propagación y de transición:
+Se toman como observables de interés los tiempos de propagación y de transición:
 \begin{equation*}
 \begin{split}
 	t_{p-DQ}: D \implies Q \\
@@ -172,7 +167,7 @@ Se toman como observables de interés el tiempo de propagación y de transición
 \end{split}
 \end{equation*}
  
-En cuanto a la medición de estos tiempos, se tuvo la problemática de que el rise time de las compuertas eran menores que el rise time del osciloscopio. Para algunas de ellas se logró conseguir uno con mayor ancho de banda, lo cual mejoró las mediciones.
+En cuanto a la medición de estos tiempos, se tuvo la problemática de que el rise time de las compuertas eran menores al del osciloscopio. Para algunas de las mediciones se logró conseguir uno con mayor ancho de banda, lo cual permitió mejorarlas.
 
 Estos tiempos medidos son comparados con un integrado \href{https://pdf1.alldatasheet.com/datasheet-pdf/view/15593/PHILIPS/74HC374.html}{74HC374}, el cual contiene 8 Flip Flop D. Las mediciones hechas se ven en la siguiente tabla:
 \begin{table}[H]
@@ -180,8 +175,16 @@ Estos tiempos medidos son comparados con un integrado \href{https://pdf1.alldata
 \begin{tabular}{ccc}
 \hline
 \textit{}                               & \textbf{Circuito}         & \textbf{74HC374}     \\ \hline
-\textbf{$t_{p-DQ}$}                     & 23.6nS                    & 16nS                 \\
-\textbf{$t_{t-DQ}$}                     & 4.43nS                    & 5nS                  \\
+\textbf{$t_{p-DQ}$}                     & 23.6 ns                    & 16 ns                 \\
+\textbf{$t_{t-DQ}$}                     & 4.43 ns                    & 5 ns                  \\
 \hline
 \end{tabular}
+\caption{Mediciones obtenidas para el Flip Flop D.}
+\label{tab:ffd}
 \end{table}
+
+A continuación se destaca que, observando las Tablas (\ref{tab:srl}) y (\ref{tab:ffd}), los circuitos armados poseen valores próximos a los de los integrados, evidenciando un buen funcionamiento de estos. En algunos casos, los tiempos de propagación y transición son mayores a los de obtenidos de los comerciales. En otros casos, resalta que dichas variables son menores en los circuitos que en los integrados, factor que se atribuye a la fabricación propia de estos últimos. En otras palabras, el 74HC279 y el 74HC374, debido a su carácter comercial, poseen distintos tipos de consideraciones (estabilidad frente a ruido, temperatura, entre otras) que los desarrollados para este informe no, siendo estas las causantes de las diferencias previamente mencionadas.
+
+Cabe destacar una ventaja que proporcionan los integrados, la cual no ha sido evidenciada hasta ahora. Esta es el tamaño que empeña cada uno en una placa. Los circuitos desarrollados para este informe ocupan mucho espacio, debido a que fueron concebidos mediante el uso de diversos integrados. Si bien, dichas placas pueden ser optimizadas empleando la totalidad de las compuertas (no se utilizaron todas las que brinda cada integrado), este no es el objetivo del informe.
+
+Finalmente, se menciona una ventaja importante que posee la placa frente al integrado. Este punto a favor consiste en que se puede conocer como está compuesta, es decir, que tipo de compuertas se emplean, y permite comparaciones como la presentada en la Tabla (\ref{tab:srl}), entre un circuito SR-Latch con compu

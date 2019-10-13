@@ -7,3 +7,4 @@
 \contentsline {subsection}{\numberline {1.2}Implementaciones y Mediciones}{2}{subsection.1.2}% 
 \contentsline {subsubsection}{\numberline {1.2.1}Contador As\IeC {\'\i }ncrono}{2}{subsubsection.1.2.1}% 
 \contentsline {subsubsection}{\numberline {1.2.2}Contador S\IeC {\'\i }ncrono}{3}{subsubsection.1.2.2}% 
+\contentsline {subsubsection}{\numberline {1.2.3}M\IeC {\'a}xima Velocidad de Operaci\IeC {\'o}n}{3}{subsubsection.1.2.3}% 

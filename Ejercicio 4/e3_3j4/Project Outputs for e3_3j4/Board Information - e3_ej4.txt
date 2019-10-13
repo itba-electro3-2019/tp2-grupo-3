@@ -1,0 +1,17 @@
+Board Information Report
+Filename     : C:\Users\marth\Documents\ITBA\Electronica III\tps\tp2-grupo-3\Ejercicio 4\e3_3j4\e3_ej4.PcbDoc
+Date         : 4/10/2019
+Time         : 2:36:29 a. m.
+Time Elapsed : 00:00:00
+
+General
+    Board Size, 65mmx50mm
+    Components on board, 20
+count : 2
+
+Routing Information
+    Routing completion, 100,00%
+    Connections, 47
+    Connections routed, 47
+    Connections remaining, 0
+count : 4

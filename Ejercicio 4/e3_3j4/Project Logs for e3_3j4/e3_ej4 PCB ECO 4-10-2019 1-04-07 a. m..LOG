@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=GND Pin=R5-2
+Added Component: Designator=D5(LED3)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=GND Pin=D5-2
+Added Pin To Net: NetName=NetD5_1 Pin=D5-1
+Added Pin To Net: NetName=NetD5_1 Pin=R5-2
+Added Net: Name=NetD5_1
+Added Member To Class: ClassName=e3_ej4 Member=Component D5 LED
+Added Room: Name=e3_ej4

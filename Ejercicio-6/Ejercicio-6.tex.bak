@@ -93,6 +93,14 @@ Estos parámetros son comparados con un integrado \href{http://noel.feld.cvut.cz
 \label{tab:srl}
 \end{table}
 
+A modo ilustrativo, para no mostrar la totalidad de las mediciones y llenar el informe con estas, se presentan las curvas medidas para el circuito previamente mencionado, en el caso de la propagación de S a Q:
+\begin{figure}[H]	
+	\centering
+	\includegraphics[width=0.8\textwidth]{ImagenesEjercicio6/Medicion-SR.png}
+	\caption{Tensiones medidas para el SR.}
+	\label{fig:medsr}
+\end{figure}
+
 \subsection{Flip Flop D}
 
 Un Flip Flop D es un elemento de memoria sincrónico, el cual cuenta con 2 entradas, siendo una de clock y la otra de la información (Data). Le corresponde la siguiente tabla de verdad:
@@ -109,6 +117,7 @@ $\uparrow$     & 0            & 0              \\
 $\uparrow$     & 1            & 1             \\
 \hline
 \end{tabular}
+\caption{Tabla de verdad de un Flip Flop D.}
 \end{table}
 
 El circuito de implementación propuesto es el siguiente\footnote{Brown, S. and Vranesic, Z. (2002). Fundamentals of digital logic with VHDL design. 3rd ed. pp.254-256.}:
@@ -183,8 +192,17 @@ Estos tiempos medidos son comparados con un integrado \href{https://pdf1.alldata
 \label{tab:ffd}
 \end{table}
 
+Bajo el mismo criterio que se tomó para el caso del SR, se presenta una de las mediciones realizadas
+%A modo ilustrativo, para no mostrar la totalidad de las mediciones y llenar el informe con estas, se presentan las curvas medidas para el circuito previamente mencionado, en el caso de la propagación de S a Q:
+\begin{figure}[H]	
+	\centering
+	\includegraphics[width=0.8\textwidth]{ImagenesEjercicio6/Medicion-DFF.png}
+	\caption{Tensiones medidas para el D Flip Flop.}
+	\label{fig:meddff}
+\end{figure}
+
 A continuación se destaca que, observando las Tablas (\ref{tab:srl}) y (\ref{tab:ffd}), los circuitos armados poseen valores próximos a los de los integrados, evidenciando un buen funcionamiento de estos. En algunos casos, los tiempos de propagación y transición son mayores a los de obtenidos de los comerciales. En otros casos, resalta que dichas variables son menores en los circuitos que en los integrados, factor que se atribuye a la fabricación propia de estos últimos. En otras palabras, el 74HC279 y el 74HC374, debido a su carácter comercial, poseen distintos tipos de consideraciones (estabilidad frente a ruido, temperatura, entre otras) que los desarrollados para este informe no, siendo estas las causantes de las diferencias previamente mencionadas.
 
-Cabe destacar una ventaja que proporcionan los integrados, la cual no ha sido evidenciada hasta ahora. Esta es el tamaño que empeña cada uno en una placa. Los circuitos desarrollados para este informe ocupan mucho espacio, debido a que fueron concebidos mediante el uso de diversos integrados. Si bien, dichas placas pueden ser optimizadas empleando la totalidad de las compuertas (no se utilizaron todas las que brinda cada integrado), este no es el objetivo del informe.
+Cabe destacar una ventaja que proporcionan los integrados, la cual no ha sido evidenciada hasta ahora. Esta es el tamaño que empeña cada uno en una placa. Los circuitos desarrollados para este informe ocupan mucho espacio, ya que fueron concebidos mediante el uso de diversos integrados, de los cuales no se utilizaron todas las que brinda cada uno. Si bien, dichas placas pueden ser optimizadas empleando la totalidad de las compuertas, este no es el objetivo del informe.
 
-Finalmente, se menciona una ventaja importante que posee la placa frente al integrado. Este punto a favor consiste en que se puede conocer como está compuesta, es decir, que tipo de compuertas se emplean, y permite comparaciones como la presentada en la Tabla (\ref{tab:srl}), entre un circuito SR-Latch con compu
+Finalmente, se menciona una ventaja importante que posee la placa frente al integrado. Este punto a favor consiste en que se puede conocer como está compuesta, es decir, que tipo de compuertas se emplean, y permite comparaciones como la presentada en la Tabla (\ref{tab:srl}), entre un circuito SR-Latch con compuertas NOR y con compuertas NAND, análisis que un Latch comercial no permite. De este último se destaca que, debido a las variaciones que presentan ambos circuitos, no se logra llegar a una unanimidad en cuanto a un circuito óptimo por sobre el otro. En otras palabras, se debe priorizar un carácter de interés en particular a la hora de seleccionar entre uno u otro.

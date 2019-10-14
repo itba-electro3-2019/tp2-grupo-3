@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=GND Pin=J1-1
+Removed Pin From Net: NetName=Vin Pin=J1-2
+Added Pin To Net: NetName=Vin Pin=J1-1
+Added Pin To Net: NetName=GND Pin=J1-2
+Added Member To Class: ClassName=e3_ej4 Member=Component J1 Vin
+Added Room: Name=e3_ej4

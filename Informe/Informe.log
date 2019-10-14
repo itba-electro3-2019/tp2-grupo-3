@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.14)  10 OCT 2019 23:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.14)  14 OCT 2019 12:35
 entering extended mode
 **./Informe.tex
 (Informe.tex
@@ -1045,7 +1045,7 @@ Overfull \hbox (5.23001pt too wide) in paragraph at lines 28--29
 [][] 
  []
 
-<../Ejercicio-1/ImagenesEjercicio1/Esquematico.PNG, id=122, 1020.81375pt x 427.
+<../Ejercicio-1/ImagenesEjercicio1/Esquematico.PNG, id=117, 1020.81375pt x 427.
 5975pt>
 File: ../Ejercicio-1/ImagenesEjercicio1/Esquematico.PNG Graphic file (type png)
 
@@ -1053,14 +1053,14 @@ File: ../Ejercicio-1/ImagenesEjercicio1/Esquematico.PNG Graphic file (type png)
 Package pdftex.def Info: ../Ejercicio-1/ImagenesEjercicio1/Esquematico.PNG  use
 d on input line 59.
 (pdftex.def)             Requested size: 256.0748pt x 107.26448pt.
-<../Ejercicio-1/ImagenesEjercicio1/PCB.PNG, id=124, 628.59843pt x 632.3625pt>
+<../Ejercicio-1/ImagenesEjercicio1/PCB.PNG, id=119, 628.59843pt x 632.3625pt>
 File: ../Ejercicio-1/ImagenesEjercicio1/PCB.PNG Graphic file (type png)
 <use ../Ejercicio-1/ImagenesEjercicio1/PCB.PNG>
 Package pdftex.def Info: ../Ejercicio-1/ImagenesEjercicio1/PCB.PNG  used on inp
 ut line 60.
 (pdftex.def)             Requested size: 153.64644pt x 154.55867pt.
 [2]
-<../Ejercicio-1/ImagenesEjercicio1/DC-SWEEP/MedicionRampa.PNG, id=138, 834.7185
+<../Ejercicio-1/ImagenesEjercicio1/DC-SWEEP/MedicionRampa.PNG, id=133, 834.7185
 pt x 330.9966pt>
 File: ../Ejercicio-1/ImagenesEjercicio1/DC-SWEEP/MedicionRampa.PNG Graphic file
  (type png)
@@ -1068,7 +1068,7 @@ File: ../Ejercicio-1/ImagenesEjercicio1/DC-SWEEP/MedicionRampa.PNG Graphic file
 Package pdftex.def Info: ../Ejercicio-1/ImagenesEjercicio1/DC-SWEEP/MedicionRam
 pa.PNG  used on input line 85.
 (pdftex.def)             Requested size: 460.9315pt x 182.78102pt.
-<../Ejercicio-1/ImagenesEjercicio1/DC-SWEEP/EntradaSalida.PNG, id=139, 837.6093
+<../Ejercicio-1/ImagenesEjercicio1/DC-SWEEP/EntradaSalida.PNG, id=134, 837.6093
 pt x 307.8702pt>
 File: ../Ejercicio-1/ImagenesEjercicio1/DC-SWEEP/EntradaSalida.PNG Graphic file
  (type png)
@@ -1079,7 +1079,7 @@ da.PNG  used on input line 93.
  [3 <../Ejercicio-1/ImagenesEjercicio1/Esquematico.PNG> <../Ejercicio-1/Imagene
 sEjercicio1/PCB.PNG> <../Ejercicio-1/ImagenesEjercicio1/DC-SWEEP/MedicionRampa.
 PNG>]
-<../Ejercicio-1/ImagenesEjercicio1/DC-SWEEP/0t1mtl.PNG, id=172, 775.4571pt x 30
+<../Ejercicio-1/ImagenesEjercicio1/DC-SWEEP/0t1mtl.PNG, id=167, 775.4571pt x 30
 3.534pt>
 File: ../Ejercicio-1/ImagenesEjercicio1/DC-SWEEP/0t1mtl.PNG Graphic file (type 
 png)
@@ -1087,7 +1087,7 @@ png)
 Package pdftex.def Info: ../Ejercicio-1/ImagenesEjercicio1/DC-SWEEP/0t1mtl.PNG 
  used on input line 103.
 (pdftex.def)             Requested size: 460.9315pt x 180.42201pt.
-<../Ejercicio-1/ImagenesEjercicio1/DC-SWEEP/1t0mtl.PNG, id=173, 774.7344pt x 30
+<../Ejercicio-1/ImagenesEjercicio1/DC-SWEEP/1t0mtl.PNG, id=168, 774.7344pt x 30
 5.7021pt>
 File: ../Ejercicio-1/ImagenesEjercicio1/DC-SWEEP/1t0mtl.PNG Graphic file (type 
 png)
@@ -1098,7 +1098,7 @@ Package pdftex.def Info: ../Ejercicio-1/ImagenesEjercicio1/DC-SWEEP/1t0mtl.PNG
  [4 <../Ejercicio-1/ImagenesEjercicio1/DC-SWEEP/EntradaSalida.PNG> <../Ejercici
 o-1/ImagenesEjercicio1/DC-SWEEP/0t1mtl.PNG> <../Ejercicio-1/ImagenesEjercicio1/
 DC-SWEEP/1t0mtl.PNG>]
-<../Ejercicio-1/ImagenesEjercicio1/DC-SWEEP/OutputCurrent.PNG, id=184, 873.0216
+<../Ejercicio-1/ImagenesEjercicio1/DC-SWEEP/OutputCurrent.PNG, id=179, 873.0216
 pt x 313.6518pt>
 File: ../Ejercicio-1/ImagenesEjercicio1/DC-SWEEP/OutputCurrent.PNG Graphic file
  (type png)
@@ -1108,7 +1108,7 @@ nt.PNG  used on input line 114.
 (pdftex.def)             Requested size: 460.9315pt x 165.6029pt.
 ) [5 <../Ejercicio-1/ImagenesEjercicio1/DC-SWEEP/OutputCurrent.PNG>] (../Ejerci
 cio-2/Ejercicio-2.tex [6]
-<../Ejercicio-2/ImagenesEjercicio2/scope_17_1.png, id=224, 1387.584pt x 710.414
+<../Ejercicio-2/ImagenesEjercicio2/scope_17_1.png, id=219, 1387.584pt x 710.414
 1pt>
 File: ../Ejercicio-2/ImagenesEjercicio2/scope_17_1.png Graphic file (type png)
 <use ../Ejercicio-2/ImagenesEjercicio2/scope_17_1.png>
@@ -1116,7 +1116,7 @@ Package pdftex.def Info: ../Ejercicio-2/ImagenesEjercicio2/scope_17_1.png  used
  on input line 174.
 (pdftex.def)             Requested size: 409.72124pt x 209.76546pt.
  [7]
-<../Ejercicio-2/ImagenesEjercicio2/scope_18_1.png, id=231, 1387.584pt x 710.414
+<../Ejercicio-2/ImagenesEjercicio2/scope_18_1.png, id=226, 1387.584pt x 710.414
 1pt>
 File: ../Ejercicio-2/ImagenesEjercicio2/scope_18_1.png Graphic file (type png)
 <use ../Ejercicio-2/ImagenesEjercicio2/scope_18_1.png>
@@ -1125,14 +1125,14 @@ Package pdftex.def Info: ../Ejercicio-2/ImagenesEjercicio2/scope_18_1.png  used
 (pdftex.def)             Requested size: 409.72124pt x 209.76546pt.
  [8 <../Ejercicio-2/ImagenesEjercicio2/scope_17_1.png> <../Ejercicio-2/Imagenes
 Ejercicio2/scope_18_1.png>]
-<../Ejercicio-2/ImagenesEjercicio2/scope_23_1.png, id=246, 1387.584pt x 710.414
+<../Ejercicio-2/ImagenesEjercicio2/scope_23_1.png, id=241, 1387.584pt x 710.414
 1pt>
 File: ../Ejercicio-2/ImagenesEjercicio2/scope_23_1.png Graphic file (type png)
 <use ../Ejercicio-2/ImagenesEjercicio2/scope_23_1.png>
 Package pdftex.def Info: ../Ejercicio-2/ImagenesEjercicio2/scope_23_1.png  used
  on input line 328.
 (pdftex.def)             Requested size: 409.72124pt x 209.76546pt.
-<../Ejercicio-2/ImagenesEjercicio2/scope_26_1.png, id=247, 1387.584pt x 710.414
+<../Ejercicio-2/ImagenesEjercicio2/scope_26_1.png, id=242, 1387.584pt x 710.414
 1pt>
 File: ../Ejercicio-2/ImagenesEjercicio2/scope_26_1.png Graphic file (type png)
 <use ../Ejercicio-2/ImagenesEjercicio2/scope_26_1.png>
@@ -1140,14 +1140,14 @@ Package pdftex.def Info: ../Ejercicio-2/ImagenesEjercicio2/scope_26_1.png  used
  on input line 332.
 (pdftex.def)             Requested size: 409.72124pt x 209.76546pt.
  [9 <../Ejercicio-2/ImagenesEjercicio2/scope_23_1.png>]
-<../Ejercicio-2/ImagenesEjercicio2/Xy-feo.png, id=258, 987.2082pt x 484.9317pt>
+<../Ejercicio-2/ImagenesEjercicio2/Xy-feo.png, id=253, 987.2082pt x 484.9317pt>
 
 File: ../Ejercicio-2/ImagenesEjercicio2/Xy-feo.png Graphic file (type png)
 <use ../Ejercicio-2/ImagenesEjercicio2/Xy-feo.png>
 Package pdftex.def Info: ../Ejercicio-2/ImagenesEjercicio2/Xy-feo.png  used on 
 input line 344.
 (pdftex.def)             Requested size: 409.72124pt x 201.25769pt.
-<../Ejercicio-2/ImagenesEjercicio2/Xy-bien.png, id=259, 987.2082pt x 484.9317pt
+<../Ejercicio-2/ImagenesEjercicio2/Xy-bien.png, id=254, 987.2082pt x 484.9317pt
 >
 File: ../Ejercicio-2/ImagenesEjercicio2/Xy-bien.png Graphic file (type png)
 <use ../Ejercicio-2/ImagenesEjercicio2/Xy-bien.png>
@@ -1157,7 +1157,7 @@ Package pdftex.def Info: ../Ejercicio-2/ImagenesEjercicio2/Xy-bien.png  used on
  [10 <../Ejercicio-2/ImagenesEjercicio2/scope_26_1.png> <../Ejercicio-2/Imagene
 sEjercicio2/Xy-feo.png>]) [11 <../Ejercicio-2/ImagenesEjercicio2/Xy-bien.png>]
 (../Ejercicio-3/Ejercicio-3.tex [12] [13]
-<../Ejercicio-3/ImagenesEjercicio3/scope_5_1.png, id=310, 1387.584pt x 710.4141
+<../Ejercicio-3/ImagenesEjercicio3/scope_5_1.png, id=305, 1387.584pt x 710.4141
 pt>
 File: ../Ejercicio-3/ImagenesEjercicio3/scope_5_1.png Graphic file (type png)
 <use ../Ejercicio-3/ImagenesEjercicio3/scope_5_1.png>
@@ -1170,41 +1170,55 @@ Overfull \hbox (38.50049pt too wide) in paragraph at lines 61--62
 [][] 
  []
 
+<../Ejercicio-6/ImagenesEjercicio6/Medicion-SR.png, id=324, 1387.584pt x 710.41
+41pt>
+File: ../Ejercicio-6/ImagenesEjercicio6/Medicion-SR.png Graphic file (type png)
+
+<use ../Ejercicio-6/ImagenesEjercicio6/Medicion-SR.png>
+Package pdftex.def Info: ../Ejercicio-6/ImagenesEjercicio6/Medicion-SR.png  use
+d on input line 99.
+(pdftex.def)             Requested size: 409.72124pt x 209.76546pt.
 [17]
-<../Ejercicio-6/ImagenesEjercicio6/edgedetector.PNG, id=339, 890.5772pt x 167.1
+<../Ejercicio-6/ImagenesEjercicio6/edgedetector.PNG, id=335, 890.5772pt x 167.1
 2437pt>
 File: ../Ejercicio-6/ImagenesEjercicio6/edgedetector.PNG Graphic file (type png
 )
 <use ../Ejercicio-6/ImagenesEjercicio6/edgedetector.PNG>
 Package pdftex.def Info: ../Ejercicio-6/ImagenesEjercicio6/edgedetector.PNG  us
-ed on input line 158.
+ed on input line 166.
 (pdftex.def)             Requested size: 409.72124pt x 76.88834pt.
- [18 <../Ejercicio-6/ImagenesEjercicio6/edgedetector.PNG>]) [19] [20]
-[21]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 50.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 50.
+ [18 <../Ejercicio-6/ImagenesEjercicio6/Medicion-SR.png>]
+<../Ejercicio-6/ImagenesEjercicio6/Medicion-DFF.png, id=347, 1387.584pt x 710.4
+141pt>
+File: ../Ejercicio-6/ImagenesEjercicio6/Medicion-DFF.png Graphic file (type png
+)
+<use ../Ejercicio-6/ImagenesEjercicio6/Medicion-DFF.png>
+Package pdftex.def Info: ../Ejercicio-6/ImagenesEjercicio6/Medicion-DFF.png  us
+ed on input line 198.
+(pdftex.def)             Requested size: 409.72124pt x 209.76546pt.
+ [19 <../Ejercicio-6/ImagenesEjercicio6/edgedetector.PNG> <../Ejercicio-6/Image
+nesEjercicio6/Medicion-DFF.png>]) [20] [21]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 47.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 47.
  (Informe.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 50.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 50.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 47.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 47.
 Package rerunfilecheck Info: File `Informe.out' has not changed.
-(rerunfilecheck)             Checksum: C1381920A68CDEAF471D5BC2B3A1B4C1;1235.
+(rerunfilecheck)             Checksum: A4106F9E5C3C74F7DE2B0729196BAD65;1187.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 50.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 47.
  ) 
 Here is how much of TeX's memory you used:
- 32937 strings out of 492895
- 758218 string characters out of 3122801
- 941804 words of memory out of 3000000
- 36271 multiletter control sequences out of 15000+200000
+ 32924 strings out of 492895
+ 758046 string characters out of 3122801
+ 941986 words of memory out of 3000000
+ 36255 multiletter control sequences out of 15000+200000
  19761 words of font info for 75 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,17n,79p,1699b,1066s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1229,9 +1243,9 @@ grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Usuario/Ap
 pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/U
 sers/Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
 mtt8.pfb>
-Output written on Informe.pdf (22 pages, 1254474 bytes).
+Output written on Informe.pdf (22 pages, 1404847 bytes).
 PDF statistics:
- 442 PDF objects out of 1000 (max. 8388607)
- 95 named destinations out of 1000 (max. 500000)
- 252 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 443 PDF objects out of 1000 (max. 8388607)
+ 96 named destinations out of 1000 (max. 500000)
+ 254 words of extra memory for PDF output out of 10000 (max. 10000000)
 

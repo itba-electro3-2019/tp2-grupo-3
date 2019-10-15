@@ -24,17 +24,32 @@ En esta sección se procedió a realizar el análisis de dos compuertas lógicas
 
 \subsection{Análisis compuerta AND Open Gate}
 
-Para realizar este análisis se utilizó una de las 4 compuertas que brinda el integrado \href{http://www.ti.com/lit/ds/symlink/sn74s08.pdf}{SN74S08}. Como es una compuerta AND, y una de sus entradas ya esta conectada a $V_{CC}$, la señal de salida dependerá solo del valor que tenga la señal en esa sola entrada. Ahora, dejando al vacío esa entrada, se puede observar una tensión continua de valor aproximada $1.45 \ V$, que corresponde al rango de valores que la compuerta considera como indeterminados, obteniéndose así a la salida un 1 lógico. Esto ocurre debido a que se esta dejando al vacío el emisor del transistor al que le corresponde esa entrada, por lo tanto dicho transistor se encuentra al corte, lo que hace que a la salida siempre se vea dicho valor.
+Para realizar este análisis se utilizó una de las 4 compuertas que brinda el integrado \href{http://www.ti.com/lit/ds/symlink/sn74s08.pdf}{SN74S08}. Como es una compuerta AND, y una de sus entradas ya esta conectada a $V_{CC}$, la señal de salida dependerá solo del valor que tenga la señal en esa sola entrada. Ahora, dejando al vacío esa entrada, se puede observar una tensión continua de valor aproximado $1.45 \ V$, que corresponde al rango de valores que la compuerta considera como indeterminados, obteniéndose así a la salida un 1 lógico. Esto ocurre debido a que se esta dejando al vacío el emisor del transistor al que le corresponde esa entrada, por lo tanto dicho transistor se encuentra al corte, lo que hace que a la salida siempre se vea dicho valor. A su vez se procedio a tocar con la mano un cable que hacia contacto con la entrada de la compuerta que se encuentra al vacio y se obtuvo lo siguiente:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.30]{/ImagenesEjercicio5/ari_e4.png}
+    \caption{Señal a la salida de la AND con una entrada en vacio otra a VCC}
+\end{figure}
+
+Analizando la figura anterior se puede notar la mayor resistencia al ruido que presenta la compuerta ya que a pesar de que a la entrada se presenta una oscilación de frecuencia $f=50 Hz$ la salida se mantiene e un valor constante.
+
+
 
 \subsection{Análisis compuerta OR Open Gate}
 
-De forma análoga al caso anterior, se utilizó una de las compuertas lógicas que brinda el integrado \href{http://www.ti.com/lit/ds/symlink/cd4071b.pdf}{CD4071}, pero en este caso, se conecto uno de sus pines de entrada a $GND$, dejando el otro abierto. Es así que el valor que se ve a la salida depende únicamente del valor de la entrada que se dejó abierta. Como esta compuerta es de tecnología MOS, conectándose a su entrada el GATE de un transistor de este mismo tipo, y debido a la gran impedancia de entrada que poseen, actúan como antena, lo que las hace mas susceptibles a cualquier señal de ruido que se encuentre presente. Teóricamente, si dicha señal de ruido llega a poseer una tensión lo suficientemente alta como para superar la $V_{TH}$ del transistor, este se activa y produce una oscilación a la salida de la compuerta. Las distintas pruebas realizadas para poder observar este fenómeno resultaron inconclusas ya que, ni dejando al vacío completamente la entrada, ni tocándola con la mano, se alcanzó una señal de ruido lo suficientemente grande para que ocasionará dicho fenómeno.
+De forma análoga al caso anterior, se utilizó una de las compuertas lógicas que brinda el integrado \href{http://www.ti.com/lit/ds/symlink/cd4071b.pdf}{CD4071}, pero en este caso, se conecto uno de sus pines de entrada a $GND$, dejando el otro abierto. Es así que el valor que se ve a la salida depende únicamente del valor de la entrada que se dejó abierta. Como esta compuerta es de tecnología MOS, conectándose a su entrada el GATE de un transistor de este mismo tipo, y debido a la gran impedancia de entrada que poseen, actúan como antena, lo que las hace mas susceptibles a cualquier señal de ruido que se encuentre presente. Teóricamente, si dicha señal de ruido llega a poseer una tensión lo suficientemente alta como para superar la $V_{TH}$ del transistor, este se activa y produce una oscilación a la salida de la compuerta. Se realizarón distintas pruebas para poder ver este fenómeno, cuando se dejaba la entrada en vacio se llegaba a apreciar una cierta cantidad de ruido pero no la suficiente para obtener alguna señal a la salida por lo tanto se tocó con la mano un cable que estaba en contacto con dicha entrada y con esto se pudo apreciar una oscilación a la salida que se puede observar en la siguiente figura:
 
-\begin{center}
-	\huge{\textcolor{red}{\textbf{Alta impedancia...}}}
-\end{center}
 
-\subsection{Análisis ambas compuertas conectadas entre si}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.30]{/ImagenesEjercicio5/ari_e3.png}
+    \caption{Señal a la salida de la OR con una entrada en vacio otra a ground}
+    
+\end{figure}
+
+Como se puede observar de la figura anterior la salida oscila a una frecuencia de $50 Hz$ que corresponden a la frecuencia del ruido de linea.
+
 
 Luego, se conecto los circuitos de la siguienta manera:
 \begin{figure}[H]

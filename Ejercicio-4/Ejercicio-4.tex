@@ -1,0 +1,34 @@
+\input{../Informe/Header.tex}
+
+\begin{document}
+\subsection{Introducción}
+
+En el presente ejercicio se procedio a medir los tiempos de propagación, rise y fall de una compuerta NOR del IC 74HC02 primero al vacio y luego implementando el siguiente circuito y distintas modificaciones a este último:
+
+\begin{figure}[h]
+    \centering
+    \includegraphics{ImagenesEjercicio4/pend.jpg}
+    \caption{Circuito a implementar}
+\end{figure}
+
+\subsection{Mediciones}
+
+Se realizaron las mediciones con sus distintas cargas y a distintas frecuencias obteniendose los siguientes resultados:
+
+\begin{table}[]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Caso & $tpd_{L-H}(ns)$ & $tpd_{H-L}(ns)$ & trise$(ns)$ & tfall$(ns)$ \\ \hline
+Sin carga & 11.10 & 8.75 & 21.0 & 19.0 \\ \hline
+Con carga & 12.30 & 9.45 & 22 & 19.8 \\ \hline
+Sin carga (100 kHz) & 8.35 & 9.85 & 19.6 & 19.1 \\ \hline
+Con carga (100 kHz) & 12.15 & 9.25 & 20 & 19.4 \\ \hline
+Con carga y capacitores (100 kHz) & 15.85 & 12.60 & 25 & 25.1 \\ \hline
+\end{tabular}
+\end{table}
+
+
+
+
+\end{document}

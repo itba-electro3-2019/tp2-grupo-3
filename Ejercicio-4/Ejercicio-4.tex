@@ -31,10 +31,23 @@ Con carga & 12.30 & 9.45 & 22 & 19.8 \\ \hline
 Tomando en cuenta las limitaciones presentadas por el osciloscopio disponible en el laboratorio se puede apreciar que los tiempos medidos se asemejan bastante a los de sus análogos establecidos en la hoja de datos provista por el fabricante. En frecuencias bajas al conectar la carga  ya establecida se puede apreciar que sus tiempos de operación se incrementan levemente alrededor de $1 ns$. 
 
 \subsection{Mediciones a alta frecuencia}
+Acontinuación se procedio a aumentar la frecuencia de la señal de entrada a $f=100 kHz$ y se repetieron las mediciones previamente dichas obteniendo el siguiente resultado:
 
 
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
 
+Caso & $tpd_{L-H}(ns)$ & $tpd_{H-L}(ns)$ & trise$(ns)$ & tfall$(ns)$ \\ \hline
+Sin carga (100 kHz) & 8.35 & 9.85 & 19.6 & 19.1 \\ \hline
+Con carga (100 kHz) & 12.15 & 9.25 & 20 & 19.4 \\ \hline
+\end{tabular}
+\end{table}
 
+En donde se puede observar que vuelve a ocurrir que la compuerta tarda mas en actuar si se encuentra conectada a una carga, además a mayor frecuencia se puede notar que el integrado tuvo un leve aumento en su temperatura, esto se debe a que al tener transisionar con mayor velocidad entre estado alto y bajo, lo que implica un mayor número de transiciones entre ambos estados por periodo de tiempo lo que significa que permanece mas tiempo en la zona activa por lo que consumen mayor potencia que se manifiesta en el aumento de temperatura previamente enunciado.
+
+\subsection{Mediciones a la tensión de alimentación}
 
 
 \end{document}

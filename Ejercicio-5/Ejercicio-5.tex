@@ -1,6 +1,3 @@
-\input{../Informe/Header.tex}
-
-\begin{document}
 \subsection{Introducción}
 
 En esta sección se procedió a realizar el análisis de dos compuertas lógicas de distintas tecnologías, las cuales que consisten en una compuerta AND de tecnología TTL y una compuerta OR CMOS, conectadas de la siguiente forma
@@ -24,34 +21,27 @@ En esta sección se procedió a realizar el análisis de dos compuertas lógicas
 
 \subsection{Análisis compuerta AND Open Gate}
 
-Para realizar este análisis se utilizó una de las 4 compuertas que brinda el integrado \href{http://www.ti.com/lit/ds/symlink/sn74s08.pdf}{SN74S08}. Como es una compuerta AND, y una de sus entradas ya esta conectada a $V_{CC}$, la señal de salida dependerá solo del valor que tenga la señal en esa sola entrada. Ahora, dejando al vacío esa entrada, se puede observar una tensión continua de valor aproximado $1.45 \ V$, que corresponde al rango de valores que la compuerta considera como indeterminados, obteniéndose así a la salida un 1 lógico. Esto ocurre debido a que se esta dejando al vacío el emisor del transistor al que le corresponde esa entrada, por lo tanto dicho transistor se encuentra al corte, lo que hace que a la salida siempre se vea dicho valor. A su vez se procedio a tocar con la mano un cable que hacia contacto con la entrada de la compuerta que se encuentra al vacio y se obtuvo lo siguiente:
-
+Para realizar este análisis se utilizó una de las 4 compuertas que brinda el integrado \href{http://www.ti.com/lit/ds/symlink/sn74s08.pdf}{SN74S08}. Como es una compuerta AND, y una de sus entradas ya esta conectada a $V_{CC}$, la señal de salida dependerá solo del valor que tenga la señal en esa sola entrada. Ahora, dejando al vacío esa entrada, se puede observar una tensión continua de valor aproximado $1.45 \ V$, que corresponde al rango de valores que la compuerta considera como indeterminados, obteniéndose así a la salida un 1 lógico. Esto ocurre debido a que se esta dejando al vacío el emisor del transistor al que le corresponde esa entrada, por lo tanto dicho transistor se encuentra al corte, lo que hace que a la salida siempre se vea dicho valor. A su vez se procedió a tocar con la mano un cable que hacia contacto con la entrada de la compuerta que se encuentra al vacío, generando así variaciones de ruido. De esta forma se obtuvo lo siguiente:
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.30]{/ImagenesEjercicio5/ari_e4.png}
+    \includegraphics[scale=0.30, trim={0 2.2cm 0.1cm 1.75cm},clip]{/ImagenesEjercicio5/ari_e4.png}
     \caption{Señal a la salida de la AND con una entrada en vacio otra a VCC}
 \end{figure}
 
-Analizando la figura anterior se puede notar la mayor resistencia al ruido que presenta la compuerta ya que a pesar de que a la entrada se presenta una oscilación de frecuencia $f=50 Hz$ la salida se mantiene e un valor constante.
-
-
+Analizando la figura anterior se puede notar  mayor resistencia al ruido que presenta la compuerta, ya que, a pesar de que a la entrada existe una oscilación de una frecuencia de $50 \ Hz$, la salida se mantiene en un valor constante.
 
 \subsection{Análisis compuerta OR Open Gate}
 
-De forma análoga al caso anterior, se utilizó una de las compuertas lógicas que brinda el integrado \href{http://www.ti.com/lit/ds/symlink/cd4071b.pdf}{CD4071}, pero en este caso, se conecto uno de sus pines de entrada a $GND$, dejando el otro abierto. Es así que el valor que se ve a la salida depende únicamente del valor de la entrada que se dejó abierta. Como esta compuerta es de tecnología MOS, conectándose a su entrada el GATE de un transistor de este mismo tipo, y debido a la gran impedancia de entrada que poseen, actúan como antena, lo que las hace mas susceptibles a cualquier señal de ruido que se encuentre presente. Teóricamente, si dicha señal de ruido llega a poseer una tensión lo suficientemente alta como para superar la $V_{TH}$ del transistor, este se activa y produce una oscilación a la salida de la compuerta. Se realizarón distintas pruebas para poder ver este fenómeno, cuando se dejaba la entrada en vacio se llegaba a apreciar una cierta cantidad de ruido pero no la suficiente para obtener alguna señal a la salida por lo tanto se tocó con la mano un cable que estaba en contacto con dicha entrada y con esto se pudo apreciar una oscilación a la salida que se puede observar en la siguiente figura:
-
-
+De forma análoga al caso anterior, se utilizó una de las compuertas lógicas que brinda el integrado \href{http://www.ti.com/lit/ds/symlink/cd4071b.pdf}{CD4071}, pero en esta ocasión, se conectó uno de sus pines de entrada a $GND$, dejando el otro abierto. Es así que el valor que se ve a la salida depende únicamente del valor de la entrada que se dejó abierta. Como esta compuerta es de tecnología MOS, conectándose a su entrada el GATE de un transistor de este mismo tipo, y debido a la gran impedancia de entrada que poseen, actúan como antena, lo que las hace mas susceptibles a cualquier señal de ruido que se encuentre presente. Teóricamente, si dicha señal de ruido llega a poseer una tensión lo suficientemente alta como para superar la $V_{TH}$ del transistor, este se activa y produce una oscilación a la salida de la compuerta. Se realizaron distintas pruebas para poder ver este fenómeno, como por ejemplo, cuando se dejaba la entrada en vacío, se llegaba a apreciar una cierta cantidad de ruido pero no la suficiente para obtener alguna señal a la salida, por lo tanto se movió el circuito, de de la misma forma que en el caso anterior, llegando así a obtener la siguiente medición:
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.30]{/ImagenesEjercicio5/ari_e3.png}
+    \includegraphics[scale=0.30,trim={0 2.2cm 0.1cm 1.75cm},clip]{/ImagenesEjercicio5/ari_e3.png}
     \caption{Señal a la salida de la OR con una entrada en vacio otra a ground}
-    
 \end{figure}
 
-Como se puede observar de la figura anterior la salida oscila a una frecuencia de $50 Hz$ que corresponden a la frecuencia del ruido de linea.
+Como se puede observar de la figura anterior, nuevamente la salida oscila a una frecuencia de $50 Hz$, correspondiendo a la frecuencia del ruido de linea.
 
-
-Luego, se conecto los circuitos de la siguienta manera:
+Por otro lado, se conecto los circuitos de la siguienta manera:
 \begin{figure}[H]
 \begin{center}
 \begin{circuitikz}
@@ -85,5 +75,3 @@ Una solución al problema mencionado anteriormente se basa en utilizar un circui
 \label{fig:levelshifter}
 \end{center}
 \end{figure}
-
-\end{document}

@@ -1,15 +1,15 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%BORRAR
 \input{../Informe/Header.tex}
 \begin{document}
-\section{auxiliar}
-\tableofcontents
 %%%%%%%%%%%%%%%%%%%%%%%%%BORRAR
 
 \subsection{Introducción}
 \subsubsection{Contadores}
 		Los contadores son dispositivos digitales capaces de almacenar la cantidad de pulsos que este recibe. Como todo almacenamiento digital requiere de memoria, los contadores están generalmente constituidos por varias celdas de almacenamiento de 1 bit, comúnmente usados los JK flip-flops. Se puede contemplar la implementación de un JK flip-flop en la Figura (\ref{circ:fkflipflop}) utilizando solamente compuertas lógicas discretas. 
-		
+
 		\begin{figure}[H]
+		\centering
+\begin{subfigure}[t]{0.49\textwidth}
 	\hspace*{-1cm}
 	\centering
 	\scalebox{0.7}{
@@ -78,13 +78,32 @@
 				|- ++ (5.5, 0.6)
 				-| (feedback1.center)
 				
-			(enable) to[short] ++ (-0.5, 0)
-				to[twoport, -o, l_=Edge Det] ++ (-3, 0)
+			(enable) to[short, -o] ++ (-1.5, 0)
 				node[label=west:$CLK$]{}
 	
 		;
 	\end{circuitikz}
 	}
+\end{subfigure}
+\centering
+\begin{subfigure}[t]{0.3\textwidth}
+\centering
+\vspace*{-2.8cm}
+\scalebox{0.6}{
+\begin{tabular}{@{}ccccc@{}}
+\toprule
+C & J & K & Q & $\overline{Q}$ \\ \midrule
+$\uparrow$ & 0 & 0 & Q & $\overline{Q}$ \\
+$\uparrow$ & 0 & 1 & 0 & 1 \\
+$\uparrow$ & 1 & 0 & 1 & 0 \\
+$\uparrow$ & 1 & 1 & Toggle & Toggle \\
+x & 0 & 0 & Q & $\overline{Q}$ \\
+x & 0 & 1 & Q & $\overline{Q}$ \\
+x & 1 & 0 & Q & $\overline{Q}$ \\
+x & 1 & 1 & Q & $\overline{Q}$ \\ \bottomrule
+\end{tabular}
+}
+\end{subfigure}
 	\caption{Implementación de un JK flip-flop con una totalidad de 8 compuertas lógicas discretas (teniendo en cuenta la implementación de las compuertas AND de tres entradas junto a la corrección de delay.}
 	\label{circ:fkflipflop}
 \end{figure}
@@ -178,11 +197,10 @@ Los contadores síncronos poseen todos sus flip-flops conectados al generador de
 	\label{circ:sync_counter_connection}		
 \end{figure}
 
-Es por esta razón que no solo los contadores síncronos son una implementación segura para contar, sino que también son más rápidos que su contraparte asíncrona. No obstante, la complejidad de estos dispositivos aumenta considerablemente.
+Es por esta razón que no solo los contadores síncronos son una implementación segura para contar, sino que también son más rápidos que su contraparte asíncrona. No obstante, la complejidad de estos dispositivos aumenta.
 
 \subsection{Implementaciones y Mediciones}
-\subsubsection{Contador Asíncrono}
-En la Figura (\ref{fig:async_circ}) se puede observar la implementación realizada en PCB.
+En las Figuras (\ref{fig:async_circ}) y (\ref{fig:sync_circ}) se pueden observar las implementaciones realizadas. Caben aclarar dos cosas. La primera y la más importante es que la implementación de estos contadores fue realizada en una primera instancia \textbf{con compuertas lógicas discretas tal cual era solicitado}. Para esto, se utilizaron los integrados \href{https://www.ti.com/lit/ds/symlink/cd4073b.pdf}{CD4073BM} (Triple 3-Input AND gate) y \href{http://www.ti.com/lit/ds/symlink/sn74hc02.pdf}{SN74HC02N} (Quadruple 2-Input NOR gate). La segunda aclaración es que por un problema de espacio y simplicidad en las Figuras (\ref{fig:async_circ}) y (\ref{fig:sync_circ}) no se observan las compuertas lógicas discretas, no obstante la implementación realizada consta de que cada flip flop fue realizado acorde a la Figura (\ref{circ:fkflipflop}).
 
 \begin{figure}[H]
 	\centering
@@ -291,12 +309,9 @@ En la Figura (\ref{fig:async_circ}) se puede observar la implementación realiza
 			(sw2.out 2) to[short] ++ (0, -0.11)
 		;
 	\end{circuitikz}
-	\caption{Implementación de contador asíncrono.}
+	\caption{Implementación de contador asíncrono UP/DOWN.}
 	\label{fig:async_circ}
 \end{figure}
-
-\subsubsection{Contador Síncrono}
-En la Figura (\ref{fig:sync_circ}) se puede observar la implementación realizada en PCB.
 
 \begin{figure}[H]
 	\centering
@@ -414,12 +429,27 @@ En la Figura (\ref{fig:sync_circ}) se puede observar la implementación realizad
 			
 		;
 	\end{circuitikz}
-	\caption{Implementación de contador síncrono.}
+	\caption{Implementación de contador síncrono UP/DOWN.}
 	\label{fig:sync_circ}
 \end{figure}
 
-\subsubsection{Máxima Velocidad de Operación}
+Sin embargo, tanto para la simulación realizada con el software \textit{Proteus 8} como con el software \textit{LTSpiceXVII} no se logró el correcto funcionamiento del circuito por más que en el papel tanto la implementación de la Figura (\ref{circ:fkflipflop}) como las implementaciones vistas anteriormente funcionaran. Se intentó utilizar tanto resistencias de pull-up/pull-down de distintos valores como capacitores de desacople sin caso. No obstante, se decidió realizar la placa. No se logró un correcto funcionamiento en esta, por lo que se decidió realizar un solo contador en un protoboard, tampoco obteniendo resultados coherentes.
 
-Se midió en una primera instancia el tiempo de propagación al realizar la acción de \textit{toggle} de un solo JK flip-flop, obteniéndose un valor de $191.21 ns$ para el establecimiento de $Q$ al valor previo de $\overline{Q}$. Luego, se midió la cantidad de tiempo entre un flanco ascendente de la señal de clock proporcionada al contador asíncrono y sincrónico, y el cambio del bit $Q_2$ de ambos contadores para el caso presentado en la Figura (\ref{async_ripple}). Los tiempos obtenidos fueron de $223.51 ns$ para el contador sincrónico y $738.32 ns$ para el contador asíncrono, poniendo en evidencia no sólo lo mucho más lento que es el contador asíncrono sino cuánto más rápido es un JK flip-flop integrado a uno implementado con compuertas lógicas discretas, ya que los integrados poseen un tiempo de propagación típico menor a $10ns$. 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.55\textwidth]{Imagenes/placa.png}
+	\caption{PCB realizado con compuertas lógicas discretas.}
+	\label{placa}
+\end{figure}
 
+Es por esta razón que se decidió calcular la máxima velocidad de operación de manera teórica dada la implementación propuesta, para luego en una segunda instancia realizar los circuitos de las Figuras (\ref{fig:async_circ}) y (\ref{fig:sync_circ}) utilizando JK flip-flops integrados y medir tanto la velocidad de propagación en el contador por propagación como la máxima velocidad de operación de ambos contadores.
+
+\subsubsection{Máxima Velocidad de Operación Teórica}
+
+Los tiempos de propagación teóricos fueron extraídos de las hojas de datos de los integrados utilizados y tomado siempre el peor caso, siendo estos de $27ns$ para una compuerta NOR y de $250ns$ para una compuerta AND de tres entradas. Se calculó en una primera instancia el tiempo de propagación al realizar la acción de \textit{toggle} de un solo JK flip-flop, obteniéndose un valor de $277 ns$ para el establecimiento de $Q$ al valor previo de $\overline{Q}$. Luego, se calculó la cantidad de tiempo entre un flanco ascendente de la señal de clock proporcionada al contador asíncrono y sincrónico, y el teórico cambio del bit $Q_2$ de ambos contadores para el caso presentado en la Figura (\ref{async_ripple}). Los tiempos obtenidos fueron de $304 ns$ para el contador sincrónico y $831 ns$ para el contador asíncrono, poniendo en evidencia no sólo lo mucho más lento que es el contador asíncrono sino cuánto más rápido es un JK flip-flop integrado a uno implementado con compuertas lógicas discretas, ya que los integrados poseen un tiempo de propagación típico menor a $100ns$. 
+
+\subsubsection{Segunda Implementación y Mediciones}
+Para la implementación con flip-flops integrados se utilizó el integrado \href{http://www.sycelectronica.com.ar/semiconductores/CD4027.pdf}{CD4027}. Esta implementación funcionó correctamente y se lograron medir los siguientes tiempos de propagación
+
+Además, se midió la máxima velocidad en los que estos integrados operaban correctamente, siendo esta
 \end{document}

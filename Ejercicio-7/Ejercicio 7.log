@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.12)  13 OCT 2019 15:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.12)  16 OCT 2019 02:09
 entering extended mode
 **"./Ejercicio 7.tex"
 ("Ejercicio 7.tex"
@@ -630,6 +630,27 @@ Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
 \multirow@dima=\skip52
 \bigstrutjot=\dimen191
 )
+("C:\Users\Acer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/booktabs\booktabs.s
+ty"
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen192
+\lightrulewidth=\dimen193
+\cmidrulewidth=\dimen194
+\belowrulesep=\dimen195
+\belowbottomsep=\dimen196
+\aboverulesep=\dimen197
+\abovetopsep=\dimen198
+\cmidrulesep=\dimen199
+\cmidrulekern=\dimen256
+\defaultaddspace=\dimen257
+\@cmidla=\count143
+\@cmidlb=\count144
+\@aboverulesep=\dimen258
+\@belowrulesep=\dimen259
+\@thisruleclass=\count145
+\@lastruleclass=\count146
+\@thisrulewidth=\dimen260
+)
 ("C:\Users\Acer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hyperref.s
 ty"
 Package: hyperref 2019/06/12 v6.88h Hypertext links for LaTeX
@@ -683,9 +704,9 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 sty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
-\@linkdim=\dimen192
-\Hy@linkcounter=\count143
-\Hy@pagecounter=\count144
+\@linkdim=\dimen261
+\Hy@linkcounter=\count147
+\Hy@pagecounter=\count148
 
 ("C:\Users\Acer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\pd1enc.def
 "
@@ -693,7 +714,7 @@ File: pd1enc.def 2019/06/12 v6.88h Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count145
+\Hy@SavedSpaceFactor=\count149
 
 ("C:\Users\Acer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/00miktex\hyperref.c
 fg"
@@ -706,16 +727,16 @@ Package hyperref Info: Plain pages OFF on input line 4565.
 Package hyperref Info: Backreferencing OFF on input line 4570.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4803.
-\c@Hy@tempcnt=\count146
+\c@Hy@tempcnt=\count150
  ("C:\Users\Acer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/url\url.sty"
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5156.
-\XeTeXLinkMargin=\dimen193
-\Fld@menulength=\count147
-\Field@Width=\dimen194
-\Fld@charsize=\dimen195
+\XeTeXLinkMargin=\dimen262
+\Fld@menulength=\count151
+\Field@Width=\dimen263
+\Fld@charsize=\dimen264
 Package hyperref Info: Hyper figures OFF on input line 6411.
 Package hyperref Info: Link nesting OFF on input line 6416.
 Package hyperref Info: Hyper index ON on input line 6419.
@@ -725,17 +746,17 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6436.
 Package hyperref Info: PDF/A mode OFF on input line 6441.
 LaTeX Info: Redefining \ref on input line 6481.
 LaTeX Info: Redefining \pageref on input line 6485.
-\Hy@abspage=\count148
-\c@Item=\count149
-\c@Hfootnote=\count150
+\Hy@abspage=\count152
+\c@Item=\count153
+\c@Hfootnote=\count154
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 ("C:\Users\Acer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hpdftex.de
 f"
 File: hpdftex.def 2019/06/12 v6.88h Hyperref driver for pdfTeX
-\Fld@listcount=\count151
-\c@bookmark@seq@number=\count152
+\Fld@listcount=\count155
+\c@bookmark@seq@number=\count156
 
 ("C:\Users\Acer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\rerunfilec
 heck.sty"
@@ -745,7 +766,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip53
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 27.
+Package hyperref Info: Option `colorlinks' set `true' on input line 28.
 
 ("C:\Users\Acer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/circuitikz\circuiti
 kz.sty"
@@ -759,10 +780,10 @@ File: tikzlibrarycalc.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 ("C:\Users\Acer\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries\pgf
 libraryarrows.meta.code.tex"
 File: pgflibraryarrows.meta.code.tex 2019/08/03 v3.1.4b (3.1.4b)
-\pgfarrowinset=\dimen196
-\pgfarrowlength=\dimen197
-\pgfarrowwidth=\dimen198
-\pgfarrowlinewidth=\dimen199
+\pgfarrowinset=\dimen265
+\pgfarrowlength=\dimen266
+\pgfarrowwidth=\dimen267
+\pgfarrowlinewidth=\dimen268
 )
 ("C:\Users\Acer\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlayer
 /tikz/libraries\tikzlibrarybending.code.tex"
@@ -775,34 +796,34 @@ File: pgfmodulebending.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 ("C:\Users\Acer\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/modules\pgfmo
 dulenonlineartransformations.code.tex"
 File: pgfmodulenonlineartransformations.code.tex 2019/08/03 v3.1.4b (3.1.4b)
-\pgftransformnonlinearflatness=\dimen256
+\pgftransformnonlinearflatness=\dimen269
 )
 ("C:\Users\Acer\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries\pgf
 librarycurvilinear.code.tex"
 File: pgflibrarycurvilinear.code.tex 2019/08/03 v3.1.4b (3.1.4b)
-\pgf@curvilinear@time@a=\dimen257
-\pgf@curvilinear@length@a=\dimen258
-\pgf@curvilinear@length@b=\dimen259
-\pgf@curvilinear@length@c=\dimen260
-\pgf@curvilinear@length@d=\dimen261
+\pgf@curvilinear@time@a=\dimen270
+\pgf@curvilinear@length@a=\dimen271
+\pgf@curvilinear@length@b=\dimen272
+\pgf@curvilinear@length@c=\dimen273
+\pgf@curvilinear@length@d=\dimen274
 )
-\pgf@arrows@the@rigidity=\dimen262
+\pgf@arrows@the@rigidity=\dimen275
 ))
 ("C:\Users\Acer\AppData\Local\Programs\MiKTeX 2.9\tex/generic/circuitikz\pgfcir
 c.defines.tex"
-\pgf@circ@count@a=\count153
-\pgf@circ@count@b=\count154
-\pgf@circ@count@c=\count155
-\pgf@circ@res@up=\dimen263
-\pgf@circ@res@down=\dimen264
-\pgf@circ@res@zero=\dimen265
-\pgf@circ@res@left=\dimen266
-\pgf@circ@res@right=\dimen267
-\pgf@circ@res@other=\dimen268
-\pgf@circ@res@step=\dimen269
-\pgf@circ@res@temp=\dimen270
-\pgfstartlinewidth=\dimen271
-\pgf@circ@Rlen=\dimen272
+\pgf@circ@count@a=\count157
+\pgf@circ@count@b=\count158
+\pgf@circ@count@c=\count159
+\pgf@circ@res@up=\dimen276
+\pgf@circ@res@down=\dimen277
+\pgf@circ@res@zero=\dimen278
+\pgf@circ@res@left=\dimen279
+\pgf@circ@res@right=\dimen280
+\pgf@circ@res@other=\dimen281
+\pgf@circ@res@step=\dimen282
+\pgf@circ@res@temp=\dimen283
+\pgfstartlinewidth=\dimen284
+\pgf@circ@Rlen=\dimen285
 )
 ("C:\Users\Acer\AppData\Local\Programs\MiKTeX 2.9\tex/generic/circuitikz\pgfcir
 cutils.tex")
@@ -814,7 +835,7 @@ cmonopoles.tex")
 cbipoles.tex")
 ("C:\Users\Acer\AppData\Local\Programs\MiKTeX 2.9\tex/generic/circuitikz\pgfcir
 ctripoles.tex"
-\pgf@circ@res@count=\count156
+\pgf@circ@res@count=\count160
 )
 ("C:\Users\Acer\AppData\Local\Programs\MiKTeX 2.9\tex/generic/circuitikz\pgfcir
 cquadpoles.tex")
@@ -887,16 +908,16 @@ LaTeX Info: Redefining \% on input line 3.
 ("C:\Users\Acer\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-pd
 f.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count157
-\scratchdimen=\dimen273
+\scratchcounter=\count161
+\scratchdimen=\dimen286
 \scratchbox=\box70
-\nofMPsegments=\count158
-\nofMParguments=\count159
+\nofMPsegments=\count162
+\nofMParguments=\count163
 \everyMPshowfont=\toks40
-\MPscratchCnt=\count160
-\MPscratchDim=\dimen274
-\MPnumerator=\count161
-\makeMPintoPDFobject=\count162
+\MPscratchCnt=\count164
+\MPscratchDim=\dimen287
+\MPnumerator=\count165
+\makeMPintoPDFobject=\count166
 \everyMPtoPDFconversion=\toks41
 )
 ("C:\Users\Acer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-b
@@ -963,7 +984,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 string.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count163
+\c@section@level=\count167
 )
 LaTeX Info: Redefining \ref on input line 3.
 LaTeX Info: Redefining \pageref on input line 3.
@@ -972,51 +993,51 @@ LaTeX Info: Redefining \nameref on input line 3.
 \@outlinefile=\write4
 \openout4 = `"Ejercicio 7.out"'.
 
- ("Ejercicio 7.toc"
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
-LaTeX Font Info:    Try loading font information for U+msa on input line 3.
+LaTeX Font Info:    Try loading font information for U+msa on input line 86.
 
 ("C:\Users\Acer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 3.
+LaTeX Font Info:    Try loading font information for U+msb on input line 86.
 
 ("C:\Users\Acer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
-\tf@toc=\write5
-\openout5 = `"Ejercicio 7.toc"'.
-
-\realshift=\dimen275
-<Imagenes/async_ripple.png, id=53, 758.835pt x 333.8874pt>
+)
+<Imagenes/async_ripple.png, id=36, 758.835pt x 333.8874pt>
 File: Imagenes/async_ripple.png Graphic file (type png)
 <use Imagenes/async_ripple.png>
-Package pdftex.def Info: Imagenes/async_ripple.png  used on input line 131.
+Package pdftex.def Info: Imagenes/async_ripple.png  used on input line 150.
 (pdftex.def)             Requested size: 358.50314pt x 157.74225pt.
+
 [1{C:/Users/Acer/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
-] [2 <./Imagenes/async_ripple.png>] [3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 425.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 425.
+ <./Imagenes/async_ripple.png>] [2]
+<Imagenes/placa.png, id=69, 414.79968pt x 340.27126pt>
+File: Imagenes/placa.png Graphic file (type png)
+<use Imagenes/placa.png>
+Package pdftex.def Info: Imagenes/placa.png  used on input line 440.
+(pdftex.def)             Requested size: 281.68384pt x 231.08025pt.
+ [3 <./Imagenes/placa.png>] [4]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 455.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 455.
  ("Ejercicio 7.aux"
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 425.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 425.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 455.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 455.
 Package rerunfilecheck Info: File `"Ejercicio 7".out' has not changed.
-(rerunfilecheck)             Checksum: 5FB659C5ADFB453B9BBB5F9D091F3740;681.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 425.
+(rerunfilecheck)             Checksum: A239C21FED47B3FAA6FF3219C4D8F870;567.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 455.
  ) 
 Here is how much of TeX's memory you used:
- 32675 strings out of 492895
- 752424 string characters out of 3124202
- 1020092 words of memory out of 3000000
- 36168 multiletter control sequences out of 15000+200000
- 7203 words of font info for 28 fonts, out of 3000000 for 9000
+ 32621 strings out of 492895
+ 750539 string characters out of 3124202
+ 1038911 words of memory out of 3000000
+ 36113 multiletter control sequences out of 15000+200000
+ 6598 words of font info for 26 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,12n,69p,904b,970s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 57i,14n,69p,1145b,1052s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Acer/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
 cm/cmbx10.pfb><C:/Users/Acer/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmbx12.pfb><C:/Users/Acer/AppData/Local/Programs/MiKTeX 2.9/font
@@ -1026,9 +1047,9 @@ rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Acer/AppDa
 ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/User
 s/Acer/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.
 pfb>
-Output written on "Ejercicio 7.pdf" (3 pages, 121937 bytes).
+Output written on "Ejercicio 7.pdf" (4 pages, 160135 bytes).
 PDF statistics:
- 115 PDF objects out of 1000 (max. 8388607)
- 20 named destinations out of 1000 (max. 500000)
- 90 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 113 PDF objects out of 1000 (max. 8388607)
+ 19 named destinations out of 1000 (max. 500000)
+ 79 words of extra memory for PDF output out of 10000 (max. 10000000)
 

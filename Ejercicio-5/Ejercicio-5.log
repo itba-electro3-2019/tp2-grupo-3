@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210) (preloaded format=pdflatex 2019.10.3)  15 OCT 2019 18:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210) (preloaded format=pdflatex 2019.10.3)  15 OCT 2019 18:18
 entering extended mode
 **./Ejercicio-5.tex
 (Ejercicio-5.tex
@@ -977,10 +977,6 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 89.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 89.
 Package rerunfilecheck Info: File `Ejercicio-5.out' has not changed.
 (rerunfilecheck)             Checksum: 0C2E1DDBC482EBBAC2D83D5495918867;271.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 89.
  ) 
 Here is how much of TeX's memory you used:

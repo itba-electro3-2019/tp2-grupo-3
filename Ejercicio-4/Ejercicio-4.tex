@@ -11,22 +11,28 @@ En el presente ejercicio se procedio a medir los tiempos de propagación, rise y
     \caption{Circuito a implementar}
 \end{figure}
 
-\subsection{Mediciones}
+\subsection{Mediciones a baja frecuencia}
 
-Se realizaron las mediciones con sus distintas cargas y a distintas frecuencias obteniendose los siguientes resultados:
+Primero se realizaron las mediciones utilizando un escalón de amplitud $V_{pp}=5V$ con una frecuencia $f=5 Hz$ y se obtuvo los siguientes resultados:
 
-\begin{table}[]
+\begin{table}[H]
 \centering
 \begin{tabular}{|c|c|c|c|c|}
 \hline
 Caso & $tpd_{L-H}(ns)$ & $tpd_{H-L}(ns)$ & trise$(ns)$ & tfall$(ns)$ \\ \hline
 Sin carga & 11.10 & 8.75 & 21.0 & 19.0 \\ \hline
 Con carga & 12.30 & 9.45 & 22 & 19.8 \\ \hline
-Sin carga (100 kHz) & 8.35 & 9.85 & 19.6 & 19.1 \\ \hline
-Con carga (100 kHz) & 12.15 & 9.25 & 20 & 19.4 \\ \hline
-Con carga y capacitores (100 kHz) & 15.85 & 12.60 & 25 & 25.1 \\ \hline
+%Sin carga (100 kHz) & 8.35 & 9.85 & 19.6 & 19.1 \\ \hline
+%Con carga (100 kHz) & 12.15 & 9.25 & 20 & 19.4 \\ \hline
+%Con carga y capacitores (100 kHz) & 15.85 & 12.60 & 25 & 25.1 \\ \hline
 \end{tabular}
 \end{table}
+
+Tomando en cuenta las limitaciones presentadas por el osciloscopio disponible en el laboratorio se puede apreciar que los tiempos medidos se asemejan bastante a los de sus análogos establecidos en la hoja de datos provista por el fabricante. En frecuencias bajas al conectar la carga  ya establecida se puede apreciar que sus tiempos de operación se incrementan levemente alrededor de $1 ns$. 
+
+\subsection{Mediciones a alta frecuencia}
+
+
 
 
 

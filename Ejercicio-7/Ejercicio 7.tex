@@ -96,7 +96,7 @@ C & J & K & Q & $\overline{Q}$ \\ \midrule
 $\uparrow$ & 0 & 0 & Q & $\overline{Q}$ \\
 $\uparrow$ & 0 & 1 & 0 & 1 \\
 $\uparrow$ & 1 & 0 & 1 & 0 \\
-$\uparrow$ & 1 & 1 & Toggle & Toggle \\
+$\uparrow$ & 1 & 1 & $\overline{Q}$ & Q \\
 x & 0 & 0 & Q & $\overline{Q}$ \\
 x & 0 & 1 & Q & $\overline{Q}$ \\
 x & 1 & 0 & Q & $\overline{Q}$ \\
@@ -451,5 +451,10 @@ Los tiempos de propagación teóricos fueron extraídos de las hojas de datos de
 \subsubsection{Segunda Implementación y Mediciones}
 Para la implementación con flip-flops integrados se utilizó el integrado \href{http://www.sycelectronica.com.ar/semiconductores/CD4027.pdf}{CD4027}. Esta implementación funcionó correctamente y se lograron medir los siguientes tiempos de propagación
 
-Además, se midió la máxima velocidad en los que estos integrados operaban correctamente, siendo esta
+$$tp_{jk}=81ns$$
+$$tp_{async}=196ns$$
+$$tp_{sync}=94ns$$
+
+Por lo que la máxima velocidad de operación será de $5MHz$.
+
 \end{document}

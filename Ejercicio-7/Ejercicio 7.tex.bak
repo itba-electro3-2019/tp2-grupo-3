@@ -78,8 +78,7 @@
 				|- ++ (5.5, 0.6)
 				-| (feedback1.center)
 				
-			(enable) to[short] ++ (-0.5, 0)
-				to[twoport, -o, l_=Edge Det] ++ (-3, 0)
+			(enable) to[short, -o] ++ (-1.5, 0)
 				node[label=west:$CLK$]{}
 	
 		;
@@ -89,7 +88,7 @@
 \centering
 \begin{subfigure}[t]{0.3\textwidth}
 \centering
-\vspace*{-3cm}
+\vspace*{-2.8cm}
 \scalebox{0.6}{
 \begin{tabular}{@{}ccccc@{}}
 \toprule
@@ -452,5 +451,10 @@ Los tiempos de propagación teóricos fueron extraídos de las hojas de datos de
 \subsubsection{Segunda Implementación y Mediciones}
 Para la implementación con flip-flops integrados se utilizó el integrado \href{http://www.sycelectronica.com.ar/semiconductores/CD4027.pdf}{CD4027}. Esta implementación funcionó correctamente y se lograron medir los siguientes tiempos de propagación
 
-Además, se midió la máxima velocidad en los que estos integrados operaban correctamente, siendo esta
+$$tp_{jk}=81ns$$
+$$tp_{async}=196ns$$
+$$tp_{sync}=94ns$$
+
+Por lo que la máxima velocidad de operación será de $5MHz$.
+
 \end{document}

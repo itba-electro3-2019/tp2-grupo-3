@@ -1,46 +1,77 @@
-\input{../Informe/Header.tex}
-
-\begin{document}
 \subsection{Introducción}
 
 En esta sección se procedió a realizar el análisis de dos compuertas lógicas de distintas tecnologías, las cuales que consisten en una compuerta AND de tecnología TTL y una compuerta OR CMOS, conectadas de la siguiente forma
-
+\begin{figure}[H]
 \begin{center}
-	\huge{\textcolor{red}{\textbf{De qué forma?}}}
+\begin{circuitikz}
+	\node [american and port](A){TTL};
+	\draw (A.out) to[short, -o] ++(1,0) node[label=right:$Port$](){};
+	\draw (A.in 1) to[short, -o] ++(-1,0) node[label=left:$V_{CC}$](){};
+	\draw (A.in 2) to[short, -*] ++(-0.5,0);
+	
+	\draw (A) to[open] ++(0,-2) node[american or port](O){\footnotesize{MOS}};
+	\draw (O.out) to[short, -o] ++(1,0) node[label=right:$Port$](){};
+	\draw (O.in 2) to[short] ++(-1,0) node[ground](){};
+	\draw (O.in 1) to[short, -*] ++(-0.5,0);
+\end{circuitikz}
+\caption{Circuitos en vacío.}
+\label{fig:circ-vacio}
 \end{center}
+\end{figure}
 
 \subsection{Análisis compuerta AND Open Gate}
 
-Para realizar este análisis se utilizó una de las 4 compuertas que brinda el integrado \href{http://www.ti.com/lit/ds/symlink/sn74s08.pdf}{SN74S08}. Como es una compuerta AND, y una de sus entradas ya esta conectada a $V_{CC}$, la señal de salida dependerá solo del valor que tenga la señal en esa sola entrada. Ahora, dejando al vació esa entrada, se puede observar que el valor que se obtiene a la salida corresponde a un 1 lógico. Esto ocurre debido a que se esta dejando al vacío el emisor del transistor al que le corresponde esa entrada, por lo tanto dicho transistor se encuentra al corte, lo que hace que a la salida siempre se vea dicho valor.
+Para realizar este análisis se utilizó una de las 4 compuertas que brinda el integrado \href{http://www.ti.com/lit/ds/symlink/sn74s08.pdf}{SN74S08}. Como es una compuerta AND, y una de sus entradas ya esta conectada a $V_{CC}$, la señal de salida dependerá solo del valor que tenga la señal en esa sola entrada. Ahora, dejando al vacío esa entrada, se puede observar una tensión continua de valor aproximado $1.45 \ V$, que corresponde al rango de valores que la compuerta considera como indeterminados, obteniéndose así a la salida un 1 lógico. Esto ocurre debido a que se esta dejando al vacío el emisor del transistor al que le corresponde esa entrada, por lo tanto dicho transistor se encuentra al corte, lo que hace que a la salida siempre se vea dicho valor. A su vez se procedió a tocar con la mano un cable que hacia contacto con la entrada de la compuerta que se encuentra al vacío, generando así variaciones de ruido. De esta forma se obtuvo lo siguiente:
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.30, trim={0 2.2cm 0.1cm 1.75cm},clip]{/ImagenesEjercicio5/ari_e4.png}
+    \caption{Señal a la salida de la AND con una entrada en vacio otra a VCC}
+\end{figure}
+
+Analizando la figura anterior se puede notar  mayor resistencia al ruido que presenta la compuerta, ya que, a pesar de que a la entrada existe una oscilación de una frecuencia de $50 \ Hz$, la salida se mantiene en un valor constante.
 
 \subsection{Análisis compuerta OR Open Gate}
 
-De forma análoga al caso anterior, se utilizó una de las compuertas lógicas que brinda el integrado \href{http://www.ti.com/lit/ds/symlink/cd4071b.pdf}{CD4071}, pero en este cas,o se conecto uno de sus pines de entrada a $GND$, dejando el otro abierto. Es así que el valor que se ve a la salida depende únicamente del valor de la entrada que se dejó abierta. Como la alta impedancia de
-
-\begin{center}
-	\huge{\textcolor{red}{\textbf{Alta impedancia...}}}
-\end{center}
-
-
-\subsection{Análisis ambas compuertas conectadas entre si}
-
-Luego, se conecto los circuitos de la siguienta manera:
-\begin{figure}[h]
+De forma análoga al caso anterior, se utilizó una de las compuertas lógicas que brinda el integrado \href{http://www.ti.com/lit/ds/symlink/cd4071b.pdf}{CD4071}, pero en esta ocasión, se conectó uno de sus pines de entrada a $GND$, dejando el otro abierto. Es así que el valor que se ve a la salida depende únicamente del valor de la entrada que se dejó abierta. Como esta compuerta es de tecnología MOS, conectándose a su entrada el GATE de un transistor de este mismo tipo, y debido a la gran impedancia de entrada que poseen, actúan como antena, lo que las hace mas susceptibles a cualquier señal de ruido que se encuentre presente. Teóricamente, si dicha señal de ruido llega a poseer una tensión lo suficientemente alta como para superar la $V_{TH}$ del transistor, este se activa y produce una oscilación a la salida de la compuerta. Se realizaron distintas pruebas para poder ver este fenómeno, como por ejemplo, cuando se dejaba la entrada en vacío, se llegaba a apreciar una cierta cantidad de ruido pero no la suficiente para obtener alguna señal a la salida, por lo tanto se movió el circuito, de de la misma forma que en el caso anterior, llegando así a obtener la siguiente medición:
+\begin{figure}[H]
     \centering
-    \includegraphics{ImagenesEjercicio5/pend.jpg}
-    \caption{Conexión de la AND con la OR.}
+    \includegraphics[scale=0.30,trim={0 2.2cm 0.1cm 1.75cm},clip]{/ImagenesEjercicio5/ari_e3.png}
+    \caption{Señal a la salida de la OR con una entrada en vacio otra a ground}
+\end{figure}
+
+Como se puede observar de la figura anterior, nuevamente la salida oscila a una frecuencia de $50 Hz$, correspondiendo a la frecuencia del ruido de linea.
+
+Por otro lado, se conecto los circuitos de la siguienta manera:
+\begin{figure}[H]
+\begin{center}
+\begin{circuitikz}
+	\node [american and port](A){};
+	\draw (A.in 1) to[short, -o] ++(-1,0) node[label=left:$V_{CC}$](){};
+	\draw (A.in 2) to[short, -o] ++(-1,0) node[label=left:$Input$](){};
+	
+	\draw (A.out) |- ++(0,-1) node[american or port, anchor=in 1](O){};
+	\draw (O.out) to[short, -o] ++(1,0) node[label=right:$Port$](){};
+	\draw (O.in 2) to[short] ++(-0.5,0) node[ground](){};
+\end{circuitikz}
+\caption{Conexión AND a la entrada de la OR.}
+\label{fig:circ-andor}
+\end{center}
 \end{figure}
 
 La salida de este, por lo analizado en los anteriormente, solo depende de la señal de entrada que se utiliza. Analizando las hojas de datos de ambos integrados y utilizando una alimentación $V_{DD}= 4.5 \ V$, se obtiene que la tensión mínima de la salida en estado alto es $V_{OH}=2.5 \ V$, la cual cae en el rango de valores indeterminados para la OR, siendo esta $V_{IL}= 3.15 \ V$ en el peor de los casos. Es así que se puede ocasionar que, a pesar de que la salida de la AND sea HIGH, en la salida total del circuito se vea un 0 lógico.
 
 \subsection{Solución al problema}
 
-Una solución al problema mencionado anteriormente se basa en utilizar un circuito llamado Level Shifter, el cual se puede fabricar utilizando un transistor PNP y un par de resistencias. Este circuito toma la salida de la primer compuerta y, en el caso de que está sea HIGH, lleva dicho valor a un nivel de tensión más alto para que así la compuerta siguiente pueda tomar correctamente el valor que debe recibir.
-
-\begin{figure}[h]
-    \centering
-    \includegraphics{ImagenesEjercicio5/pend.jpg}
-    \caption{Implementación del level shifter}
+Una solución al problema mencionado anteriormente se basa en utilizar un circuito llamado Level Shifter, el cual se puede fabricar utilizando un transistor PNP y un par de resistencias. Este circuito toma la salida de la primer compuerta y, en el caso de que está sea HIGH, lleva dicho valor a un nivel de tensión más alto para que así la compuerta siguiente pueda tomar correctamente el valor que debe recibir. Dicha solución se implemento al circuito anterior y se pudo solucionar el problema.
+\begin{figure}[H]
+\begin{center}
+\begin{circuitikz}
+	\node [pnp](pnp){};
+	\draw (pnp.E) to[R, -o] ++(0,2) node[label=left:$V_{CC}$](){};
+	\draw (pnp.C) to[short] ++(0,-0.5) node[ground](){};
+	\draw (pnp.B) to[R, -o] ++(-2,0) node[label=left:$Input$](){};
+\end{circuitikz}
+\caption{Implementación del level shifter.}
+\label{fig:levelshifter}
+\end{center}
 \end{figure}
-
-\end{document}

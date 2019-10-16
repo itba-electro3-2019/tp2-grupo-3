@@ -33,18 +33,15 @@
 	\input{../Ejercicio-3/Ejercicio-3.tex}
 \newpage
 \section{Ejercicio 4}
-%	\input{../Ejercicio-4/Ejercicio-4.tex}
+	\input{../Ejercicio-4/Ejercicio-4.tex}
 \newpage	
 \section{Ejercicio 5}
-%	\input{../Ejercicio-5/Ejercicio-5.tex}
+	\input{../Ejercicio-5/Ejercicio-5.tex}
 \newpage
 \section{Ejercicio 6}
 	\input{../Ejercicio-6/Ejercicio-6.tex}
 \newpage
 \section{Ejercicio 7}
 %	\input{../Ejercicio-7/Ejercicio-7.tex}
-\newpage
-\section{Ejercicio 8}
-%	\input{../Ejercicio-8/Ejercicio-8.tex}
 
 \end{document}

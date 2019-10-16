@@ -449,6 +449,22 @@ Es por esta razón que se decidió calcular la máxima velocidad de operación d
 Los tiempos de propagación teóricos fueron extraídos de las hojas de datos de los integrados utilizados y tomado siempre el peor caso, siendo estos de $27ns$ para una compuerta NOR y de $250ns$ para una compuerta AND de tres entradas. Se calculó en una primera instancia el tiempo de propagación al realizar la acción de \textit{toggle} de un solo JK flip-flop, obteniéndose un valor de $277 ns$ para el establecimiento de $Q$ al valor previo de $\overline{Q}$. Luego, se calculó la cantidad de tiempo entre un flanco ascendente de la señal de clock proporcionada al contador asíncrono y sincrónico, y el teórico cambio del bit $Q_2$ de ambos contadores para el caso presentado en la Figura (\ref{async_ripple}). Los tiempos obtenidos fueron de $304 ns$ para el contador sincrónico y $831 ns$ para el contador asíncrono, poniendo en evidencia no sólo lo mucho más lento que es el contador asíncrono sino cuánto más rápido es un JK flip-flop integrado a uno implementado con compuertas lógicas discretas, ya que los integrados poseen un tiempo de propagación típico menor a $100ns$. 
 
 \subsubsection{Segunda Implementación y Mediciones}
+
+\begin{figure}[H]
+\begin{subfigure}{0.49\textwidth}
+	\centering
+	\includegraphics[width=0.95\textwidth,trim={0 2.2cm 0.1cm 1.75cm},clip]{Imagenes/counter.png}
+	\caption{Implementación de contador medida.}
+	\label{counterr}
+\end{subfigure}
+\begin{subfigure}{0.49\textwidth}
+	\centering
+	\includegraphics[width=0.95\textwidth,trim={0 2.2cm 0.1cm 1.75cm},clip]{Imagenes/counter1.png}
+	\caption{Tiempo de propagación para el contador asíncrono.}
+	\label{countersadr}
+\end{subfigure}
+\end{figure}
+
 Para la implementación con flip-flops integrados se utilizó el integrado \href{http://www.sycelectronica.com.ar/semiconductores/CD4027.pdf}{CD4027}. Esta implementación funcionó correctamente y se lograron medir los siguientes tiempos de propagación
 
 $$tp_{jk}=81ns$$

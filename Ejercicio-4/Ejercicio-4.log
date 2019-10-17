@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210) (preloaded format=pdflatex 2019.10.3)  16 OCT 2019 01:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210) (preloaded format=pdflatex 2019.10.3)  16 OCT 2019 17:45
 entering extended mode
 **./Ejercicio-4.tex
 (Ejercicio-4.tex
@@ -589,6 +589,25 @@ Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
 \multirow@cntb=\count139
 \multirow@dima=\skip52
 \bigstrutjot=\dimen187
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\booktabs\booktabs.sty"
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen188
+\lightrulewidth=\dimen189
+\cmidrulewidth=\dimen190
+\belowrulesep=\dimen191
+\belowbottomsep=\dimen192
+\aboverulesep=\dimen193
+\abovetopsep=\dimen194
+\cmidrulesep=\dimen195
+\cmidrulekern=\dimen196
+\defaultaddspace=\dimen197
+\@cmidla=\count140
+\@cmidlb=\count141
+\@aboverulesep=\dimen198
+\@belowrulesep=\dimen199
+\@thisruleclass=\count142
+\@lastruleclass=\count143
+\@thisrulewidth=\dimen256
 )
 ("C:\Users\marth\AppData\Local\Programs\MiKTeX 2.9\tex/latex\hyperref\hyperref.
 sty"
@@ -647,9 +666,9 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 .sty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
-\@linkdim=\dimen188
-\Hy@linkcounter=\count140
-\Hy@pagecounter=\count141
+\@linkdim=\dimen257
+\Hy@linkcounter=\count144
+\Hy@pagecounter=\count145
 
 ("C:\Users\marth\AppData\Local\Programs\MiKTeX 2.9\tex/latex\hyperref\pd1enc.de
 f"
@@ -657,7 +676,7 @@ File: pd1enc.def 2019/09/12 v6.88i Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count142
+\Hy@SavedSpaceFactor=\count146
 
 ("C:\Users\marth\AppData\Local\Programs\MiKTeX 2.9\tex/latex\00miktex\hyperref.
 cfg"
@@ -670,16 +689,16 @@ Package hyperref Info: Plain pages OFF on input line 4565.
 Package hyperref Info: Backreferencing OFF on input line 4570.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4803.
-\c@Hy@tempcnt=\count143
+\c@Hy@tempcnt=\count147
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5156.
-\XeTeXLinkMargin=\dimen189
-\Fld@menulength=\count144
-\Field@Width=\dimen190
-\Fld@charsize=\dimen191
+\XeTeXLinkMargin=\dimen258
+\Fld@menulength=\count148
+\Field@Width=\dimen259
+\Fld@charsize=\dimen260
 Package hyperref Info: Hyper figures OFF on input line 6411.
 Package hyperref Info: Link nesting OFF on input line 6416.
 Package hyperref Info: Hyper index ON on input line 6419.
@@ -689,17 +708,17 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6436.
 Package hyperref Info: PDF/A mode OFF on input line 6441.
 LaTeX Info: Redefining \ref on input line 6481.
 LaTeX Info: Redefining \pageref on input line 6485.
-\Hy@abspage=\count145
-\c@Item=\count146
-\c@Hfootnote=\count147
+\Hy@abspage=\count149
+\c@Item=\count150
+\c@Hfootnote=\count151
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 ("C:\Users\marth\AppData\Local\Programs\MiKTeX 2.9\tex/latex\hyperref\hpdftex.d
 ef"
 File: hpdftex.def 2019/09/12 v6.88i Hyperref driver for pdfTeX
-\Fld@listcount=\count148
-\c@bookmark@seq@number=\count149
+\Fld@listcount=\count152
+\c@bookmark@seq@number=\count153
 
 ("C:\Users\marth\AppData\Local\Programs\MiKTeX 2.9\tex/latex\oberdiek\rerunfile
 check.sty"
@@ -709,7 +728,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip53
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 27.
+Package hyperref Info: Option `colorlinks' set `true' on input line 28.
 
 ("C:\Users\marth\AppData\Local\Programs\MiKTeX 2.9\tex/latex\circuitikz\circuit
 ikz.sty"
@@ -723,10 +742,10 @@ File: tikzlibrarycalc.code.tex 2013/07/15 v3.0.1a (rcs-revision 1.9)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryarrows.
 meta.code.tex"
 File: pgflibraryarrows.meta.code.tex 2015/05/13 v3.0.1a (rcs-revision 1.13)
-\pgfarrowinset=\dimen192
-\pgfarrowlength=\dimen193
-\pgfarrowwidth=\dimen194
-\pgfarrowlinewidth=\dimen195
+\pgfarrowinset=\dimen261
+\pgfarrowlength=\dimen262
+\pgfarrowwidth=\dimen263
+\pgfarrowlinewidth=\dimen264
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
 s\tikzlibrarybending.code.tex"
@@ -740,35 +759,35 @@ File: pgfmodulebending.code.tex 2013/09/30 v3.0.1a (rcs-revision 1.18)
 ransformations.code.tex"
 File: pgfmodulenonlineartransformations.code.tex 2013/10/09 v3.0.1a (rcs-revisi
 on 1.4)
-\pgftransformnonlinearflatness=\dimen196
+\pgftransformnonlinearflatness=\dimen265
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibrarycurvili
 near.code.tex"
 File: pgflibrarycurvilinear.code.tex 2015/05/14 v3.0.1a (rcs-revision 1.4)
-\pgf@curvilinear@time@a=\dimen197
-\pgf@curvilinear@length@a=\dimen198
-\pgf@curvilinear@length@b=\dimen199
-\pgf@curvilinear@length@c=\dimen256
-\pgf@curvilinear@length@d=\dimen257
+\pgf@curvilinear@time@a=\dimen266
+\pgf@curvilinear@length@a=\dimen267
+\pgf@curvilinear@length@b=\dimen268
+\pgf@curvilinear@length@c=\dimen269
+\pgf@curvilinear@length@d=\dimen270
 )
-\pgf@arrows@the@rigidity=\dimen258
+\pgf@arrows@the@rigidity=\dimen271
 ))
 ("C:\Users\marth\AppData\Local\Programs\MiKTeX 2.9\tex/generic\circuitikz\pgfci
 rc.defines.tex"
-\pgf@circ@count@a=\count150
-\pgf@circ@count@b=\count151
-\pgf@circ@count@c=\count152
-\pgf@circ@res@up=\dimen259
-\pgf@circ@res@down=\dimen260
-\pgf@circ@res@zero=\dimen261
-\pgf@circ@res@left=\dimen262
-\pgf@circ@res@right=\dimen263
-\pgf@circ@res@other=\dimen264
-\pgf@circ@res@step=\dimen265
-\pgf@circ@res@temp=\dimen266
-\pgfstartlinewidth=\dimen267
-\pgf@circ@Rlen=\dimen268
-\pgf@circ@scaled@Rlen=\dimen269
+\pgf@circ@count@a=\count154
+\pgf@circ@count@b=\count155
+\pgf@circ@count@c=\count156
+\pgf@circ@res@up=\dimen272
+\pgf@circ@res@down=\dimen273
+\pgf@circ@res@zero=\dimen274
+\pgf@circ@res@left=\dimen275
+\pgf@circ@res@right=\dimen276
+\pgf@circ@res@other=\dimen277
+\pgf@circ@res@step=\dimen278
+\pgf@circ@res@temp=\dimen279
+\pgfstartlinewidth=\dimen280
+\pgf@circ@Rlen=\dimen281
+\pgf@circ@scaled@Rlen=\dimen282
 )
 ("C:\Users\marth\AppData\Local\Programs\MiKTeX 2.9\tex/generic\circuitikz\pgfci
 rcutils.tex")
@@ -780,7 +799,7 @@ rcmonopoles.tex")
 rcbipoles.tex")
 ("C:\Users\marth\AppData\Local\Programs\MiKTeX 2.9\tex/generic\circuitikz\pgfci
 rctripoles.tex"
-\pgf@circ@res@count=\count153
+\pgf@circ@res@count=\count157
 )
 ("C:\Users\marth\AppData\Local\Programs\MiKTeX 2.9\tex/generic\circuitikz\pgfci
 rcquadpoles.tex")
@@ -853,16 +872,16 @@ LaTeX Info: Redefining \% on input line 3.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count154
-\scratchdimen=\dimen270
+\scratchcounter=\count158
+\scratchdimen=\dimen283
 \scratchbox=\box70
-\nofMPsegments=\count155
-\nofMParguments=\count156
+\nofMPsegments=\count159
+\nofMParguments=\count160
 \everyMPshowfont=\toks40
-\MPscratchCnt=\count157
-\MPscratchDim=\dimen271
-\MPnumerator=\count158
-\makeMPintoPDFobject=\count159
+\MPscratchCnt=\count161
+\MPscratchDim=\dimen284
+\MPnumerator=\count162
+\makeMPintoPDFobject=\count163
 \everyMPtoPDFconversion=\toks41
 )
 ("C:\Users\marth\AppData\Local\Programs\MiKTeX 2.9\tex/latex\oberdiek\epstopdf-
@@ -929,7 +948,7 @@ Package: nameref 2019/09/12 v2.45 Cross-referencing by name of section
 estring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count160
+\c@section@level=\count164
 )
 LaTeX Info: Redefining \ref on input line 3.
 LaTeX Info: Redefining \pageref on input line 3.
@@ -938,7 +957,7 @@ LaTeX Info: Redefining \nameref on input line 3.
 \@outlinefile=\write4
 \openout4 = `Ejercicio-4.out'.
 
-<ImagenesEjercicio4/pend.jpg, id=18, 313.17pt x 208.6194pt>
+<ImagenesEjercicio4/pend.jpg, id=22, 313.17pt x 208.6194pt>
 File: ImagenesEjercicio4/pend.jpg Graphic file (type jpg)
 <use ImagenesEjercicio4/pend.jpg>
 Package pdftex.def Info: ImagenesEjercicio4/pend.jpg  used on input line 10.
@@ -954,42 +973,49 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
  <./ImagenesEjercicio4/pend.jpg>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 53.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 53.
+<ImagenesEjercicio4/overshoot.png, id=36, 1027.84pt x 825.0825pt>
+File: ImagenesEjercicio4/overshoot.png Graphic file (type png)
+<use ImagenesEjercicio4/overshoot.png>
+Package pdftex.def Info: ImagenesEjercicio4/overshoot.png  used on input line 5
+9.
+(pdftex.def)             Requested size: 204.8567pt x 164.43445pt.
+<ImagenesEjercicio4/overshoot_c.png, id=37, 1027.84pt x 825.0825pt>
+File: ImagenesEjercicio4/overshoot_c.png Graphic file (type png)
+<use ImagenesEjercicio4/overshoot_c.png>
+Package pdftex.def Info: ImagenesEjercicio4/overshoot_c.png  used on input line
+ 60.
+(pdftex.def)             Requested size: 204.8567pt x 164.43445pt.
+ [2 <./ImagenesEjercicio4/overshoot.png (PNG copy)> <./ImagenesEjercicio4/overs
+hoot_c.png (PNG copy)>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 68.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 68.
  (Ejercicio-4.aux
 LaTeX Info: Redefining \. on input line 20.
 LaTeX Info: Redefining \% on input line 20.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 53.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 53.
-
-
-Package rerunfilecheck Warning: File `Ejercicio-4.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Ejercicio-4.out':
-(rerunfilecheck)             Before: 08118F9E7AA8C0D5BA8F7F8ED9FF8985;194
-(rerunfilecheck)             After:  9FA523E598B66739D34F1360EAA64A87;280.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 53.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 68.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 68.
+Package rerunfilecheck Info: File `Ejercicio-4.out' has not changed.
+(rerunfilecheck)             Checksum: 9FA523E598B66739D34F1360EAA64A87;280.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 68.
  ) 
 Here is how much of TeX's memory you used:
- 28738 strings out of 492947
- 654527 string characters out of 3126483
- 851741 words of memory out of 3000000
- 32247 multiletter control sequences out of 15000+200000
+ 28808 strings out of 492947
+ 655666 string characters out of 3126483
+ 854481 words of memory out of 3000000
+ 32308 multiletter control sequences out of 15000+200000
  5944 words of font info for 24 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,12n,69p,593b,361s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 57i,13n,69p,556b,361s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/marth/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmbx12.pfb><C:/Users/marth/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/cm/cmmi10.pfb><C:/Users/marth/AppData/Local/Programs/MiKTeX 2.9/f
 onts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/marth/AppData/Local/Programs/
 MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/marth/AppData/Loc
 al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on Ejercicio-4.pdf (1 page, 180439 bytes).
+Output written on Ejercicio-4.pdf (2 pages, 255577 bytes).
 PDF statistics:
- 54 PDF objects out of 1000 (max. 8388607)
- 9 named destinations out of 1000 (max. 500000)
- 42 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 64 PDF objects out of 1000 (max. 8388607)
+ 11 named destinations out of 1000 (max. 500000)
+ 60 words of extra memory for PDF output out of 10000 (max. 10000000)
 

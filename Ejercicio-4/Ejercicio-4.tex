@@ -1,5 +1,5 @@
 \input{../Informe/Header.tex}
-
+ 
 \begin{document}
 \subsection{Introducción}
 
@@ -31,7 +31,7 @@ Con carga & 12.30 & 9.45 & 22 & 19.8 \\ \hline
 Tomando en cuenta las limitaciones presentadas por el osciloscopio disponible en el laboratorio se puede apreciar que los tiempos medidos se asemejan bastante a los de sus análogos establecidos en la hoja de datos provista por el fabricante. En frecuencias bajas al conectar la carga  ya establecida se puede apreciar que sus tiempos de operación se incrementan levemente alrededor de $1 ns$. 
 
 \subsection{Mediciones a alta frecuencia}
-Acontinuación se procedio a aumentar la frecuencia de la señal de entrada a $f=100 kHz$ y se repetieron las mediciones previamente dichas obteniendo el siguiente resultado:
+Acontinuación se procedio a aumentar la frecuencia de la señal de entrada a $f=100 kHz$ y se repetieron las mediciones previamente obteniendo los siguientes resultados:
 
 
 \begin{table}[H]
@@ -45,9 +45,24 @@ Con carga (100 kHz) & 12.15 & 9.25 & 20 & 19.4 \\ \hline
 \end{tabular}
 \end{table}
 
-En donde se puede observar que vuelve a ocurrir que la compuerta tarda mas en actuar si se encuentra conectada a una carga, además a mayor frecuencia se puede notar que el integrado tuvo un leve aumento en su temperatura, esto se debe a que al tener transisionar con mayor velocidad entre estado alto y bajo, lo que implica un mayor número de transiciones entre ambos estados por periodo de tiempo lo que significa que permanece mas tiempo en la zona activa por lo que consumen mayor potencia que se manifiesta en el aumento de temperatura previamente enunciado.
+En donde otra vez se puede observar que la compuerta tarda mas en actuar si se encuentra conectada a una carga, además a mayor frecuencia se puede notar que el integrado tuvo un leve aumento en su temperatura, esto se debe a que al tener transicionar con mayor velocidad entre estado alto y bajo los transistores permanecen mas tiempo en la zona activa por lo que consumen mayor potencia que se manifiesta como el aumento de temperatura previamente mencionado.
 
 \subsection{Mediciones a la tensión de alimentación}
+Con el circuito trabajando con una señal de entrada de frecuencia $f=100 kHz$ se ve se puede notar que al realizarse una transción de estados la alimentación experimenta un sobrepico seguido de un régimen subamortiguado hasta que vuelve a establecerse despues de cierto tiempo. Se puede notar que antes de dicho sobrepico la tensión decae por debajo de los $4V$ y aumenta hasta llegar al rededor de los $5.5V$ esto fenómeno ocurre debido a la compuerta que le pide mas corriente a la alimentación en dichas transiciones.
+Para solucionar este problema el fabricante recomienda poner capacitores de desacople de $100 nf$ entre las terminales de alimentación del integrado y la alimentación del circuito tratando de que esten lo mas cercanos posibles dichas terminales. Una vez colacado dichos capacitores se puede observar en la siguiente figura una considerable reducción tanto al sobrepico como al tiempo de establecimiento que se observaban anteriormente.
+
+
+
+\begin{figure}[H]
+    \centering
+    \begin{tabular}{c c}
+        \includegraphics[width=0.4\textwidth]{ImagenesEjercicio4/overshoot.png} &
+        \includegraphics[width=0.4\textwidth]{ImagenesEjercicio4/overshoot_c.png}
+    \end{tabular}
+    \caption{Medición de alimentación primero sin y despues con compensación, en amarillo la señal de entrada, en verde la señal de salida y en azul la alimentación}
+    
+\end{figure}
+
 
 
 \end{document}

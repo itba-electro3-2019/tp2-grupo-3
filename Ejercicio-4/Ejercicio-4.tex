@@ -1,6 +1,6 @@
 \subsection{Introducción}
 
-En el presente ejercicio se procedio a medir los tiempos de propagación, rise y fall de una compuerta NOR del \href{http://www.ti.com/lit/ds/symlink/sn74hc02.pdf}{IC 74HC02}, primero al vacío, luego implementando el siguiente circuito y distintas modificaciones a este último:
+En el presente ejercicio, se procedió a medir los tiempos de propagación, rise y fall de una compuerta NOR \href{http://www.ti.com/lit/ds/symlink/sn74hc02.pdf}{74HC02}, primero en vacío, luego implementando el siguiente circuito y distintas modificaciones a este:
 
 \begin{figure}[H]
 \begin{center}
@@ -65,7 +65,7 @@ A continuación, se procedió a aumentar la frecuencia de la señal de entrada a
 \centering
 \begin{tabular}{ccccc}
 \hline
-Caso & $tpd_{L-H} \ [ns]$ & $tpd_{H-L} \ [ns]$ & trise $[ns]$ & tfall $[ns]$ \\ \hline
+Caso & $tpd_{L-H} \ [ns]$ & $tpd_{H-L} \ [ns]$ & $t_{rise}$ $[ns]$ & $t_{fall}$ $[ns]$ \\ \hline
 Sin carga (100 kHz) & 8.35 & 9.85 & 19.6 & 19.1 \\
 Con carga (100 kHz) & 12.15 & 9.25 & 20 & 19.4 \\ \hline
 \end{tabular}
@@ -80,8 +80,8 @@ Con el circuito trabajando con una señal de entrada de frecuencia $f=100 \ kHz$
 \begin{figure}[H]
     \centering
     \begin{tabular}{c c}
-        \includegraphics[width=0.4\textwidth]{ImagenesEjercicio4/overshoot.png} &
-        \includegraphics[width=0.4\textwidth]{ImagenesEjercicio4/overshoot_c.png}
+        \includegraphics[width=0.4\textwidth,trim={0 2.2cm 0.1cm 1.75cm},clip]{ImagenesEjercicio4/overshoot.png} &
+        \includegraphics[width=0.4\textwidth,trim={0 2.2cm 0.1cm 1.75cm},clip]{ImagenesEjercicio4/overshoot_c.png}
     \end{tabular}
     \caption{Medición de alimentación primero sin y despues con compensación, en amarillo la señal de entrada, en verde la señal de salida y en azul la alimentación}
     \label{fig:figuramistica}

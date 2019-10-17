@@ -79,7 +79,7 @@ Se seleccionaron como observables de interés los siguientes parámetros:
 \item \label{MOC} Maximum output current.
 \end{enumerate}
 
-Las mediciones de estos observables se realizaron de la siguiente manera. Para las mediciones de (\ref{VIH}), (\ref{VIL}), (\ref{VOH}), (\ref{VOL}) y (\ref{NM}) se utilizó una rampa, la cual varía desde un valor ligeramente inferior a $0 \ V$ hasta $5 \ V$. Esto se debe a que, dado que se utilizó una rampa periódica, existe un salto al finalizar cada período, el cual representa altas frecuencias que causan problemas. Es decir, considerando el pequeño intervalo de tiempo en el cual la tensión es menor a $0 \ V$, se observó una serie de oscilaciones hasta alcanza a estabilizar la señal. La figura (\ref{fig:medramp}) es un ejemplo de una de las mediciones.
+Las mediciones de estos observables se realizaron de la siguiente manera. Para las mediciones de (\ref{VIH}), (\ref{VIL}), (\ref{VOH}), (\ref{VOL}) y (\ref{NM}) se utilizó una rampa, la cual varía desde un valor ligeramente inferior a $0 \ V$ hasta $5 \ V$. Esto se debe a que, dado que se utilizó una rampa periódica, existe un salto al finalizar cada período, el cual, al ser una variación tan rápida, es observado como una señal a altas frecuencias, lo cual que causa problemas. Es decir, considerando el pequeño intervalo de tiempo en el cual la tensión es menor a $0 \ V$, se observó una serie de oscilaciones hasta alcanza a estabilizar la señal. La figura (\ref{fig:medramp}) es un ejemplo de una de las mediciones.
 \begin{figure}[H]	
 	\centering
 	\includegraphics[width=0.9\textwidth]{ImagenesEjercicio1/DC-SWEEP/MedicionRampa.PNG}
@@ -108,7 +108,7 @@ Luego para (\ref{PHL}), (\ref{PLH}), (\ref{THL}) y (\ref{TLH}) se midió la sali
 
 Tomando el tiempo de propagación medido al 50\% de la señal y el tiempo de transición medido entre el 10 $\sim$ 90 \%, se buscó obtener el tiempo de propagación existente en una medición. Este resultado dio un valor menor al tiempo de rise del osciloscopio. Dicho valor debe ser interpretado como una cota del tiempo y no el valor exacto. 
 
-Finalmente se colocó un trimmer de $50 \ k\Omega$ utilizándolo como carga, variando su impedancia hasta que el valor de tensión de la salida se encuentre por debajo del High Level Output Voltage. A partir de este valor de tensión y la resistencia del trimmer, se obtiene la corriente máxima de salida.
+Finalmente se colocó un trimmer de $50 \ K\Omega$ utilizándolo como carga, variando su impedancia hasta que el valor de tensión de la salida se encuentre por debajo del High Level Output Voltage. A partir de este valor de tensión y la resistencia del trimmer, se obtiene la corriente máxima de salida.
 \begin{figure}[H]	
 	\centering
 	\includegraphics[width=0.9\textwidth]{ImagenesEjercicio1/DC-SWEEP/OutputCurrent.PNG}
@@ -120,10 +120,9 @@ Finalmente se colocó un trimmer de $50 \ k\Omega$ utilizándolo como carga, var
 Para realizar una comparación entre los modelos propuestos, se utilizarán los observables de interés definidos en la sección (\ref{sec:Obs}), confeccionando la siguiente tabla:
 \begin{table}[H]
 \centering
-\begin{tabular}{c|ccc}
+\begin{tabular}{cccc}
 \hline
-\multicolumn{4}{|c|}{\textit{Sin carga}}                                                                          \\ \hline
-\multicolumn{1}{|c|}{\textbf{Tecnología}} & \textbf{RTL}   & \textbf{RTL-MOS} & \multicolumn{1}{c|}{\textbf{TTL}} \\ \hline
+\multicolumn{1}{c}{\textbf{Tecnología}} & \textbf{RTL}   & \textbf{RTL-MOS} & \multicolumn{1}{c}{\textbf{TTL}} \\ \hline
 High-level input voltage                  & 864 mV         & 2.49 V           & 595 mV                            \\
 Low-level input voltage                   & 454 mV         & 1.95 V           & 413 mV                            \\
 High-level Output voltage                 & 4.96 V         & 4.89 V           & 4.96 V                            \\
@@ -137,14 +136,14 @@ Transition delay Low to High              & 605 ns         & 909 ns           & 
 Maximum output current                    & 184.4  $\mu A$ &    217 $\mu A$              &                                  135.5 $\mu A$ 	\\
 \hline
 \end{tabular}
+\caption{Mediciones obtenidas son carga.}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[H]
 \centering
-\begin{tabular}{c|ccc}
+\begin{tabular}{cccc}
 \hline
-\multicolumn{4}{|c|}{\textit{Con carga}}                                                                         \\ \hline
-\multicolumn{1}{|c|}{\textbf{Tecnología}} & \textbf{RTL}  & \textbf{RTL-MOS} & \multicolumn{1}{c|}{\textbf{TTL}} \\ \hline
+\multicolumn{1}{c}{\textbf{Tecnología}} & \textbf{RTL}  & \textbf{RTL-MOS} & \multicolumn{1}{c}{\textbf{TTL}} \\ \hline
 High-level input voltage                  & 840 mV        & 2.48 V           & 627.5 mV                          \\
 Low-level input voltage                   & 478.7 mV      & 2.01 V         &    490 mV                         \\
 High-level Output voltage                 & 4.98 V        & 4.86 V          & 4.95 V                            \\
@@ -158,6 +157,7 @@ Transition delay Low to High              & 2.691 $\mu s$ & 2.831 $\mu s$    & 2
 Maximum output current                    &  187.2 $\mu A$             &     216 $\mu A$             &   135.2 $\mu A$       \\
 \hline                        
 \end{tabular}
+\caption{Mediciones obtenidas con carga.}
 \end{table}
  
 De dichas tablas se observa que, además de ser compatible cada tecnología con sí misma, cualquier combinación de tecnologías es compatible entre sí, ya que se puede notar que tanto el Noise Margin High como el Noise Margin Low son positivos. Este fenómeno se detalla con mayor profundidad en el Ejercicio (\ref{Ejercicio-2}). Otro detalle de compatibilidad a destacar son los distintos Propagation y Transition delays, tanto High to Low com Low to High, ya que estos, al ser tan diversos para cada tecnología, pueden llegar a generar problemas, como el que se detalla en el Ejercicio (\ref{Ejercicio-3}).

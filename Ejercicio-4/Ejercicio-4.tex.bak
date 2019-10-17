@@ -1,3 +1,6 @@
+\input{../Informe/Header.tex}
+ 
+\begin{document}
 \subsection{Introducción}
 
 En el presente ejercicio se procedio a medir los tiempos de propagación, rise y fall de una compuerta NOR del \href{http://www.ti.com/lit/ds/symlink/sn74hc02.pdf}{IC 74HC02}, primero al vacío, luego implementando el siguiente circuito y distintas modificaciones a este último:
@@ -86,3 +89,4 @@ Con el circuito trabajando con una señal de entrada de frecuencia $f=100 \ kHz$
     \caption{Medición de alimentación primero sin y despues con compensación, en amarillo la señal de entrada, en verde la señal de salida y en azul la alimentación}
     \label{fig:figuramistica}
 \end{figure}
+\end{document}

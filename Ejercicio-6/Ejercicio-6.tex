@@ -56,8 +56,10 @@ Se propusieron dos circuitos de implementación, utilizando para el primero comp
 	
 	\draw (R) node[american nand port, anchor=out](A3){};
 	\draw (S) node[american nand port, anchor=out](A4){};
-	\draw (A3.in 2) to[short, circ] (A3.in 1) to[short] ++(-0.5,0) node[circ, label=left:$D$](){};
-	\draw (A4.in 1) to[short, circ] (A4.in 2) to[short] ++(-0.5,0) node[circ, label=left:$S$](){};
+	\draw (A3.in 2) -- (A3.in 1);
+	\draw ($ (A3.in 2) !.5! (A3.in 1) $) to[short] ++(-0.5,0) node[circ, label=left:$D$](){};
+	\draw (A4.in 1) -- (A4.in 2);
+	\draw ($ (A4.in 2) !.5! (A4.in 1) $) to[short] ++(-0.5,0) node[circ, label=left:$S$](){};
 \end{circuitikz}
 \end{subfigure}
 \caption{Circuito Propuesto SR-Latch.}
@@ -144,7 +146,7 @@ El circuito de implementación propuesto es el siguiente\footnote{Brown, S. and 
 	\draw (S) node[american nand port, anchor=out](A4){};
 	\draw (A3.in 2) -- (A4.in 1);
 	
-	\draw (A3.in 2) to[open] ++(0,-1.5) to[short] ++ (-2,0) node[circ, label=left:$Clk$](){};
+	\draw ($ (A3.in 2) !.5! (A4.in 1) $) to[short] ++ (-2,0) node[circ, label=left:$Clk$](){};
 	
 	\draw (A3.in 1) node[label=north:$S$](){};
 	\draw (A3.in 1) to[short] ++(-2,0) node[circ, label=north:$D$](D){};

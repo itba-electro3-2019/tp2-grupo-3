@@ -1,6 +1,6 @@
 \subsection{Análisis de compatibilidad}
 
-En esta instancia del informe, se procede a comparar compuertas lógicas del tipo NOR de diversas tecnologías. Para ello se vale de las hojas de datos de las compuertas \href{http://www.ti.com/lit/ds/symlink/sn74hc02.pdf}{74HC02}, \href{http://www.ti.com/lit/ds/symlink/sn74hct02.pdf}{74HCT02} y \href{http://www.ti.com/lit/ds/symlink/sn74ls02.pdf}{74LS02}. Previo a dicho análisis, cabe detallar cada una de las tecnologías. Primero, se encuentra el 74HC02, siendo este, como su nombre lo indica, del tipo HC, cuyas siglas significan ``High-speed CMOS'', tecnología caracterizada por ser de baja potencia y alta velocidad. Luego se encuentra el 74HCT02, siendo HCT una variación de las HC. Esta denominación proviene de las mismas siglas previamente mencionadas, solo que ademas posee compatibilidad con la tecnología conocida como ``logica transistor–transistor'' (TTL). En otras palabras, este tipo de compuertas puede operar bajo dicho estándar de tensiones, tanto de alimentación como de input.\footnote{``Logic family'', En.wikipedia.org, 2019. [Online]. Available: \url{https://en.wikipedia.org/wiki/Logic\_family\#HC\_logic}. [Accessed: 21- Sep- 2019].} Finalmente se encuentra el 74LS02, cuyas siglas provienen de ``Low~-power Schottky''. Los integrados de esta familia se caracterizan por estar hechos con tecnología TTL.\footnote{``Serie 7400'', Es.wikipedia.org, 2019. [Online]. Available: \url{https://es.wikipedia.org/wiki/Serie\_7400}. [Accessed: 21- Sep- 2019].} Se destaca que este último, a diferencia de los dos primeros, se caracteriza por ser fabricado mediante el uso de tecnología BJT.
+En esta instancia del informe, se procede a comparar compuertas lógicas del tipo NOR de diversas tecnologías. Para ello se vale de las hojas de datos de las compuertas \href{http://www.ti.com/lit/ds/symlink/sn74hc02.pdf}{74HC02}, \href{http://www.ti.com/lit/ds/symlink/sn74hct02.pdf}{74HCT02} y \href{http://www.ti.com/lit/ds/symlink/sn74ls02.pdf}{74LS02}. Previo a dicho análisis, cabe detallar cada una de las tecnologías. Primero, se encuentra el 74HC02, siendo este, como su nombre lo indica, del tipo HC, cuyas siglas significan ``High-speed CMOS'', tecnología caracterizada por ser de baja potencia y alta velocidad. Luego se encuentra el 74HCT02, siendo HCT una variación de las HC. Esta denominación proviene de las mismas siglas previamente mencionadas, solo que ademas posee compatibilidad con la tecnología conocida como ``logica transistor–transistor'' (TTL). En otras palabras, este tipo de compuertas puede operar bajo dicho estándar de tensiones, tanto de alimentación como de input.\footnote{``Logic family'', En.wikipedia.org, 2019. [Online]. Available: \url{https://en.wikipedia.org/wiki/Logic\_family\#HC\_logic}. [Accessed: 21- Sep- 2019].} Finalmente se encuentra el 74LS02, cuyas siglas provienen de ``Low~-power Schottky''. Los integrados de esta familia se caracterizan por estar hechos con tecnología TTL.\footnote{``Serie 7400'', Es.wikipedia.org, 2019. [Online]. Available: \url{https://es.wikipedia.org/wiki/Serie\_7400}. [Accessed: 21- Sep- 2019].} Se recuerda del Ejercicio (\ref{Ejercicio-1}) que estos últimos dispositivos, a diferencia de los dos primeros, se encuentra fabricado mediante el uso de tecnología BJT.
 
 \subsection{Margen de ruido}
 Analizando las respectivas hojas de datos, se recopila información sobre los  valores aceptables de señal, tanto de entrada como de salida. Es así que se realiza la siguiente tabla:
@@ -24,7 +24,7 @@ Analizando las respectivas hojas de datos, se recopila información sobre los  v
 \multicolumn{1}{|c|}{}         & 6            & -             & 1.8          & -             & -            & -            & -            \\ \hline
 \end{tabular}
 \centering
-\caption{Tabla de valores de entrada y salida.}
+\caption{Tabla de valores de entrada y salida de los tres integrados.}
 \label{tabla:vinout}
 \end{table}
 
@@ -178,7 +178,7 @@ A continuación, se procede a reemplazar la compuerta 74HC02 por la de tecnolog�
 74LS02      & 74HCT02       & 4.5                            & 1.84                              & 0.47                              \\ 
 74HCT02      & 74LS02       & 4.5                            & 0.7                             & 0.3     		                    \\ \hline
 \end{tabular}
-\caption{Margen de ruido para combinaciones de tecnologías HC y LS.}
+\caption{Margen de ruido para combinaciones de tecnologías HCT y LS.}
 \label{tabla:nm2}
 \end{table}
 
@@ -322,7 +322,7 @@ A continuación, se presentan las mediciones que permiten comparar el margen de 
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.8\textwidth]{ImagenesEjercicio2/scope_18_1.png}	
-\caption{Entrada del circuito, salida del 74LS02 y salida del 74HC02.}
+\caption{Entrada del circuito (de 0 a 1 y de 1 a 0), salida del 74LS02 y salida del 74HC02.}
 \label{fig:medicion1}
 \end{figure} 
 
@@ -334,7 +334,7 @@ De la misma forma que se realizó para la conexión 74HC02 - 74LS02, se mide la 
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.8\textwidth]{ImagenesEjercicio2/scope_26_1.png}
-\caption{Entrada del circuito, salida del 74LS02 y salida del 74HC02.}
+\caption{Entrada del circuito (de 0 a 1 y de 1 a 0), salida del 74LS02 y salida del 74HCT02.}
 \label{fig:medicion2}
 \end{figure} 
 

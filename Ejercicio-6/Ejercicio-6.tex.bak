@@ -56,7 +56,8 @@ Se propusieron dos circuitos de implementación, utilizando para el primero comp
 	
 	\draw (R) node[american nand port, anchor=out](A3){};
 	\draw (S) node[american nand port, anchor=out](A4){};
-	\draw (A3.in 2) to[short, circ] (A3.in 1) to[short] ++(-0.5,0) node[circ, label=left:$D$](){};
+	\draw (A3.in 2) to[short, circ] (A3.in 1);
+	\draw ($ (A3.in 2) !.5! (A3.in 1) $) to[short] ++(-0.5,0) node[circ, label=left:$D$](){};
 	\draw (A4.in 1) to[short, circ] (A4.in 2) to[short] ++(-0.5,0) node[circ, label=left:$S$](){};
 \end{circuitikz}
 \end{subfigure}
@@ -192,8 +193,7 @@ Estos tiempos medidos son comparados con un integrado \href{https://pdf1.alldata
 \label{tab:ffd}
 \end{table}
 
-Bajo el mismo criterio que se tomó para el caso del SR, se presenta una de las mediciones realizadas
-%A modo ilustrativo, para no mostrar la totalidad de las mediciones y llenar el informe con estas, se presentan las curvas medidas para el circuito previamente mencionado, en el caso de la propagación de S a Q:
+Bajo el mismo criterio que se tomó para el caso del SR, se presenta una de las mediciones realizadas del último circuito analizado, mostrándose así la variación al colocar un uno lógico en D:
 \begin{figure}[H]	
 	\centering
 	\includegraphics[width=0.8\textwidth]{ImagenesEjercicio6/Medicion-DFF.png}

@@ -1,0 +1,9 @@
+
+INFORME = Caratula.tex fillarea.tex Header.tex Informe.tex karnaugh-map.tex ../Ejercicio-1/Ejercicio-1.tex ../Ejercicio-2/Ejercicio-2.tex ../Ejercicio-3/Ejercicio-3.tex ../Ejercicio-4/Ejercicio-4.tex ../Ejercicio-5/Ejercicio-5.tex ../Ejercicio-6/Ejercicio-6.tex ../Ejercicio-7/Ejercicio-7.tex
+OTHER = *~ *.aux *.dvi *.toc *.bbl *.blg *.gz *.out *.thm *.ps *.idx *.ilg *.ind *.log *.fdb_latexmk *.fls
+
+informe:
+	latexmk -synctex=1 -interaction=nonstopmode -pdf $(INFORME)
+	rm -rf $(OTHER)
+clean:	
+	rm -rf $(OTHER)

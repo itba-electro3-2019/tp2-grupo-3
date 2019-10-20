@@ -1,0 +1,7 @@
+Change Component Footprint: Designator=DCLK1 Old Footprint=1206K New Footprint=DO41
+Change Component Footprint: Designator=DCLK2 Old Footprint=1206K New Footprint=DO41
+Change Component Comment: Designator=CR1 Old Comment=1u New Comment=1uF
+Change Component Comment: Designator=CR2 Old Comment=1u New Comment=1uF
+Change Component Comment: Designator=CR3 Old Comment=1u New Comment=1uF
+Change Component Comment: Designator=CR4 Old Comment=1u New Comment=1uF
+Change Component Comment: Designator=CR5 Old Comment=1u New Comment=1uF

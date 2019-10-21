@@ -1,8 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%BORRAR
 \input{../InformeConMake/Header.tex}
 \begin{document}
-\section{Aux}
-\tableofcontents
 %%%%%%%%%%%%%%%%%%%%%%%%%BORRAR
 
 \subsection{Introducción}
@@ -39,40 +37,27 @@ El mando de control utilizado está compuesto por dos potenciómetros, uno para 
 		(pot-x.wiper) to[short, -o] ++ (0, 0)
 			node[label=north:{\color{blue}\textbf{VRx}}](){}
 
-		(LEFT_POTX_NODE) to[short] ++ (0, -1.6)
+		(LEFT_POTX_NODE) to[short, -*] ++ (0, -2)
 			node[](LEFT_POTY_NODE){}
-			to[pR, name=pot-y] ++ (5, 0)
-			node[](RIGHT_POTY_NODE){}
+			to[pR, -*, name=pot-y] ++ (5, 0)
 	
 		(pot-y.wiper) to[short, -o] ++ (0,0)
 			node[label=north:{\color{blue}\textbf{VRy}}](){}
 	
-		%(LEFT_POTY_NODE) to[short] ++ (0, -1.7)
-			%node[](LEFT_SW_NODE){}
-			%to[push button] ++ (5, 0)
-			%to[short, -o] ++ (2,0)
-			%node[label=east:{\color{blue}\textbf{SW}}](SW){}
+		(LEFT_POTY_NODE) to[short] ++ (0, -1.7)
+			node[](LEFT_SW_NODE){}
+			to[push button] ++ (5, 0)
+			to[short, -o] ++ (2,0)
+			node[label=east:{\color{blue}\textbf{SW}}](SW){}
 	
-		(RIGHT_POTX_NODE) to[short] ++ (0, -1.6)
+		(RIGHT_POTX_NODE) to[short] ++ (0, -2)
 
 		(RIGHT_POTX_NODE) to[short, -o] ++ (2, 0)
 	
-			node[label=east:{\color{blue}\textbf{GND}}](GND){}
+			node[label=east:{\color{blue}\textbf{GND}}]{}
 			
 		to[open] ++ (0, -5.5)
 
-		(GND) ++ (-1.5, 0) to[open] ++ (0, -2.55)
-			to[open] ++ (-5.5, 0)
-			to[open] ++ (0, -0.8)
-			to[open] ++ (1.5,0)
-			node[](a1){}
-			to[push button] ++ (2, 0)
-			node[](a2){}
-		(RIGHT_POTY_NODE) to [short] ++ (0,-1.75)
-			to[short] (a2)
-		(a1) to[short,-o] ++ (-3.5,0)
-		node[label=west:{\color{blue}\textbf{SW}}](SW){}
-		
 		;
 
 		\end{circuitikz}
@@ -84,83 +69,13 @@ El mando de control utilizado está compuesto por dos potenciómetros, uno para 
 
 Como se puede observar en la Figura (\ref{circuit:joytick_eq}), la tensión en los pines $VR_x$ y $VR_y$ será proporcional a la posición del joystick, mientras que el pin $SW$ permanecerá en estado bajo a menos que se presione el mando.
 
-\subsection{Diseño Propuesto}
+\subsection{Diseños Propuestos}
 
-\subsubsection{Breve Descripción}
 
-\begin{figure}[H]
-	\centering
-	\scalebox{0.9}{
-	\centering
-	\begin{circuitikz}
-		\draw	
-	
-			node[fourport](CLK){}
-			node[]{CLK Gen}
-			
-			to[open] ++ (-3, 0) node[fourport, xscale=1.5, yscale=0.7](INPUTDRIVER){}
-			node[]{Input Driver}
-			
-			(CLK) ++ (3, 1.5) node[fourport](CLK/100){}
-			node[]{\LARGE{$\frac{f}{100}$}}
-			
-			++ (3, 0) node[fourport](INTEGRATOR){}
-			node[]{\LARGE{$\int$ + G}}
 
-			++ (3.5, 0) node[fourport, xscale=1.5](COMPARATOR){}
-			node[]{\large{Comparator}}
-			
-			++ (3.5, 0) node[fourport](JOYSTICK){}
-			node[]{\large{Joystick}}
-						
-			(CLK) ++ (3.5, -1.5) node[fourport, xscale=1.5](COUNTER){}
-			node[]{\large{Counter 0-99}}
-			
-			(COMPARATOR) ++ (0, -1.5) node[fourport, xscale=1.5, yscale=0.3](EDGEDETECTOR){}
-			node[]{Edge Detector}
-			
-			(EDGEDETECTOR) ++ (0, -1.5) node[fourport](DISPLAY){}
-			node[]{Display}
-			
-			(CLK/100) to[open] ++ (0.5, -1.5) node[fourport, xscale=1.5, yscale=0.3](EDGEDETECTOR2){}
-			node[]{Edge Detector}
-			
-			(CLK.east) to[short] ++ (0.5, 0)
-				|- (CLK/100.west)
-				
-			(CLK.east) to[open] ++ (0.5,0)
-				|- (COUNTER.west)
-			
-			(CLK/100.east) -- (INTEGRATOR.west) 
-			(INTEGRATOR.east) -- (COMPARATOR.west)
-			(COMPARATOR.east) -- (JOYSTICK.west)
-			(COMPARATOR.south) -- (EDGEDETECTOR.north)
-			(EDGEDETECTOR.south) -- (DISPLAY.north)
-			(COUNTER.east) -- (DISPLAY.west)
-			(EDGEDETECTOR2.north) ++ (-0.5, 0) -- (CLK/100.south)
-			(EDGEDETECTOR2.south) -- (COUNTER.north) 
-			(CLK.west) -- (INPUTDRIVER.east)
-		;
-	\end{circuitikz}
-	}
-	\caption{Diagrama en bloques del diseño propuesto.}
-	\label{circuit:dis}
-\end{figure}
+Se propuso como primer diseño el presentado en la Figura(). Este consta de un generador de clock el cual es provisto a un contador el cual se reinicia al llegar al numero 99. Este contador posee sus salidas conectadas permanentemente a un módulo de display el cual tiene una entrada de aquire, la cual debe estar en un estado alto para que el display muestre y guarde el último número ingresado.
 
-Se propuso como primer diseño el presentado en la Figura (\ref{circuit:dis}). Este consta de un generador de clock que varía entre $100Hz$ y $2KHz$ el cual es provisto a un contador BCD el cual se reinicia al llegar al numero 99. Este contador posee sus salidas conectadas permanentemente a un módulo de display el cual tiene una entrada de acquire, la cual al pasar a estar en un estado alto el display muestra y guarda el último número ingresado aun así este pin pase a un estado bajo.
-
-Por otro lado, el generador de clock está también conectado a otro módulo el cual divide la frecuencia del clock por cien, resultando en un segundo clock sincronizado con el primero de una frecuencia variable entre $1Hz$ y $20Hz$. Esta señal cuadrada de frecuencia cien veces menor a la original es ingresada a un integrador el cual genera a partir de esta una rampa la cual atraviesa posteriormente una etapa de amplificación. El valor de tensión de la rampa es permanentemente comparado con el valor de tensión del pin de posición del joystick de tal manera que apenas sea la tensión de la rampa mayor a la tensión provista por el joystick, el comparador pondrá su salida en un estado alto. Esta salida está conectada a un detector de flancos, y es este flanco el que ingresa al pin de acquire del display, obteniendo en el display siempre la posición del joystick mapeada de 0 a 99.
-
-Por último, la señal del contador de frecuencia dividida por cien, la cual se utiliza para la generación de la rampa, es ingresada también a otro detector de flancos el cual ingresa al pin de reset del contador BCD. Esto genera que siempre que comience la rampa el contador sea reseteado a 00.
-
-\subsubsection{Input Driver}
-\subsubsection{Clock Generator}
-\subsubsection{Frequency Divider}
-\subsubsection{Integrator}
-\subsubsection{Comparator}
-\subsubsection{Counter}
-\subsubsection{Edge Detector}
-\subsubsection{Display}
+A su vez, el generador de clock esta conectado a otro módulo el cual divide la frecuencia del clock por cien. Esta señal cuadrada de frecuencia cien veces menor a la original es ingresada a un integrador el cual genera a partir de esta una rampa. El valor de tensión de la rampa es permanentemente comparado con el valor de tensión del pin de posición del joystick de tal manera que apenas sea la tensión de la rampa mayor a la tensión provista por el joystick, el comparador pondrá su salida a un estado alto. Esta salida está conectada un detector de flancos, y es este flanco el que ingresa al pin de acquire del display, obteniendo en el display siempre la posición del joystick mapeada de 0 a 99.
 
 \subsection{circuitikz que en algun momento vamos ausar saludos}
 

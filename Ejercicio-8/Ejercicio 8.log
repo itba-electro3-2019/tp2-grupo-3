@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.12)  20 OCT 2019 22:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.12)  21 OCT 2019 16:50
 entering extended mode
 **"./Ejercicio 8.tex"
 ("Ejercicio 8.tex"
@@ -1005,7 +1005,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write5
 \openout5 = `"Ejercicio 8.toc"'.
 
-<Imagenes/joystick.jpg, id=76, 378.66469pt x 389.20406pt>
+<Imagenes/joystick.jpg, id=71, 378.66469pt x 389.20406pt>
 File: Imagenes/joystick.jpg Graphic file (type jpg)
 <use Imagenes/joystick.jpg>
 Package pdftex.def Info: Imagenes/joystick.jpg  used on input line 21.
@@ -1015,28 +1015,35 @@ Package pdftex.def Info: Imagenes/joystick.jpg  used on input line 21.
  <./Imagenes/joystick.jpg>]
 \realshift=\dimen288
 \realshift=\dimen289
- [2]
 \realshift=\dimen290
+ [2]
 \realshift=\dimen291
 \realshift=\dimen292
- [3] [4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 313.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 313.
+ [3] [4] [5]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 393.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 393.
  ("Ejercicio 8.aux"
 LaTeX Info: Redefining \. on input line 19.
 LaTeX Info: Redefining \% on input line 19.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 313.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 313.
-Package rerunfilecheck Info: File `"Ejercicio 8".out' has not changed.
-(rerunfilecheck)             Checksum: D9549029D033A42BDB8D9D8BA43C7478;995.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 313.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 393.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 393.
+
+
+Package rerunfilecheck Warning: File `"Ejercicio 8".out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `"Ejercicio 8".out':
+(rerunfilecheck)             Before: 50F4D6C8A688166ECC3DCB48FEE07853;893
+(rerunfilecheck)             After:  E721DB9B24B408D617DEEFC947A079D2;893.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 393.
  ) 
 Here is how much of TeX's memory you used:
- 31398 strings out of 492895
- 718542 string characters out of 3124202
- 958311 words of memory out of 3000000
- 34873 multiletter control sequences out of 15000+200000
+ 31808 strings out of 492895
+ 728932 string characters out of 3124202
+ 964242 words of memory out of 3000000
+ 35279 multiletter control sequences out of 15000+200000
  12398 words of font info for 47 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,12n,69p,929b,1204s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1056,10 +1063,11 @@ iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Acer/AppData/Local/
 Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Acer/AppD
 ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users
 /Acer/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb>
-Output written on "Ejercicio 8.pdf" (4 pages, 235277 bytes).
+fb><C:/Users/Acer/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmsy7.pfb>
+Output written on "Ejercicio 8.pdf" (5 pages, 254731 bytes).
 PDF statistics:
- 165 PDF objects out of 1000 (max. 8388607)
- 24 named destinations out of 1000 (max. 500000)
- 130 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 183 PDF objects out of 1000 (max. 8388607)
+ 28 named destinations out of 1000 (max. 500000)
+ 122 words of extra memory for PDF output out of 10000 (max. 10000000)
 

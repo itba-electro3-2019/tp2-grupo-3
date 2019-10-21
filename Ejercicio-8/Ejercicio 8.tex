@@ -82,7 +82,7 @@ El mando de control utilizado está compuesto por dos potenciómetros, uno para 
 	\end{subfigure}
 \end{figure}
 
-Como se puede observar en la Figura (\ref{circuit:joytick_eq}), la tensión en los pines $VR_x$ y $VR_y$ será proporcional a la posición del joystick, mientras que el pin $SW$ permanecerá en estado bajo a menos que se presione el mando.
+Como se puede observar en la Figura (\ref{circuit:joytick_eq}), la tensión en los pines $VR_x$ y $VR_y$ será proporcional a la posición del joystick, mientras que el pin $SW$ permanecerá en estado alto a menos que se presione el mando. Los potenciómetros del joystick son ambos de $10k\Omega$.
 
 \subsection{Diseño Propuesto}
 
@@ -154,67 +154,16 @@ Por otro lado, el generador de clock está también conectado a otro módulo el 
 Por último, la señal del contador de frecuencia dividida por cien, la cual se utiliza para la generación de la rampa, es ingresada también a otro detector de flancos el cual ingresa al pin de reset del contador BCD. Esto genera que siempre que comience la rampa el contador sea reseteado a 00.
 
 \subsubsection{Input Driver}
+
+Se quiso realizar un diseño autónomo que funcione con dos baterías de $9V$. Para esto, se utilizó una etapa de entrada compuesta por el regulador de tensión \href{https://www.sparkfun.com/datasheets/Components/LM7805.pdf}{LM7805}. Esta etapa de entrada proporcionará los $5V$ que alimentarán todos los integrados digitales del diseño.
+
 \subsubsection{Clock Generator}
-\subsubsection{Frequency Divider}
-\subsubsection{Integrator}
-\subsubsection{Comparator}
-\subsubsection{Counter}
-\subsubsection{Edge Detector}
-\subsubsection{Display}
 
-\subsection{circuitikz que en algun momento vamos ausar saludos}
-
-\begin{figure}[H]
-
-	\centering
-	\begin{circuitikz}
-		\draw	
-	
-			node[op amp](opamp){}
-			
-			(opamp.up) to[short, -*] ++ (0, 2)
-				to[open] ++ (-4, 0)
-				node[label=west:$V_{CC}$]{}
-				to[short, o-] ++ (8, 0)
-			
-			(opamp.down) to[short, -*] ++ (0, -2)
-				to[open] ++ (-4, 0)
-				node[label=west:$GND$]{}
-				to[short, o-] ++ (8, 0)
-				
-			(opamp.-) to[short] ++ (-0.5, 0)
-				node[label=west:$V_{REF}$]{}				
-				to[R, l=$R_1$, *-*] ++ (0, 2)
-				to[open] ++ (0, -2)
-				to[short] ++ (0, -1)
-				to[R, l=$R_2$, -*] ++ (0, -2.03)			
-			
-			(opamp.+) to[short] ++ (-1, 0)
-				to[short, -o] ++ (-2, 0)
-				node[label=west:$V_{in}$]{}
-	
-			(opamp.out) to[short, -o] ++ (2.75, 0)
-				node[label=east:$V_{out}$]{}
-	
-		;
-	\end{circuitikz}
-	\caption{Amplificador operacional en configuración comparador.}
-	\label{circ:comparador}
-\end{figure}
-
-
-\begin{equation*}
-V_{out} = A_0 (V_{in} - V_{REF}) \approx
-\left\{
-\begin{aligned}
-		& V_{CC} \ \ \ \ \ si \ \ V_{in} > V_{REF} \\		
-		& 0 \ \ \ \ \ \ \ \ \ si \ \ V_{in} < V_{REF}\\		
-\end{aligned}
-\right.
-\end{equation*}
+Para el generador de clock se utilizó el famoso integrado \href{http://www.ti.com/lit/ds/symlink/se555.pdf}{NE555}. Este integrado está compuesto por dos comparadores (cuyo funcionamiento se encuentra detallado más adelante), un SR-Latch, un transistor de descarga y finalmente un driver de salida, como se observa en la Figura (\ref{fig:555}).
 
 \begin{figure}[H]
 	\centering
+	\scalebox{0.7}{
 	\begin{circuitikz}
 		\draw	
 		
@@ -305,9 +254,140 @@ V_{out} = A_0 (V_{in} - V_{REF}) \approx
 		
 		;
 	\end{circuitikz}
+	}
 	\caption{Diagrama en bloques del integrado 555.}
 	\label{fig:555}
 \end{figure}
 
+Colocando un capacitor a tierra conectado al pin de trigger y threshold, se puede utilizar la carga y descarga de este para ser comparado con un nivel de tensión de referencia, generalmente $\frac{2}{3} V_{CC}$. Cuando la tensión del capacitor excede este valor, se activa el transistor de descarga del integrado lo cual descarga rápidamente al capacitor y genera que el comparador ponga en un estado bajo a la salida del integrado. Esto genera una señal cuadrada cuyo duty-cycle y frecuencia puede ser modificada mediante resistencias o potenciómetros que causan una carga y descarga mas lenta del capacitor. 
+
+Las ecuaciones que controlan la frecuencia y duty-cycle del generador son detalladas a continuación. Cabe notar que el capacitor C y las resistencias $R_1$ y $R_2$ no se encuentran dibujadas en la Figura (\ref{fig:555}).
+
+\begin{equation}
+t_{on} = 0.639\cdot C \cdot R_1
+\end{equation}
+\begin{equation}
+t_{off} = 0.639 \cdot C \cdot (R_1 + R_2)
+\end{equation}
+\begin{equation}
+f=\frac{1}{t_{off} + t_{on}}
+\end{equation}
+
+Se colocó un potenciómetro en la resistencia $R_2$ de tal manera que cuando este se encuentre en $0\%$ la frecuencia de la señal de salida sea de $2KHz$ mientras que si el potenciómetro se encuentra en su máxima resistencia la frecuencia de la señal de salida sea de $100Hz$. Cabe notar que cuando la frecuencia del generador de clock decrece, lo que sucede es que solamente aumenta el periodo de tiempo en el que la salida se encuentra en un estado bajo.
+
+\subsubsection{Frequency Divider}
+
+Para el divisor de frecuencia se utilizaron los dos contadores en década del integrado \href{http://www.ti.com/lit/ds/symlink/cd4017b.pdf}{CD4017BE}. Conectando el pin de carry out, el cual se enciende una vez cada diez señales de clock, a la entrada de clock del segundo contador se logra obtener a la salida del segundo contador una señal de clock cuya frecuencia es cien veces menor a la original. Una buena característica de este diseño es que no solo el clock original estará completamente sincronizado con esta nueva señal de clock cien veces más lenta, sino que por la naturaleza del funcionamiento interno de estos contadores, el duty-cycle de este nuevo clock será siempre del $50\%$. Esto prueba ser muy beneficioso a la hora de integrar esta señal para conseguir una rampa.
+
+\subsubsection{Integrador}
+
+Para la etapa de generación de rampa se decidió construir un integrador compensado con un amplificador operacional seguido de una etapa de amplificación compuesta por otro operacional en configuración inversora, ya que el integrador invierte la señal que este integra. Como la señal integrada es el segundo clock generado, y este está en sincronía con el primero, se puede efectivamente utilizar el clock original para contar cien pulsos dentro de la duración de la rampa. Los dos operacionales utilizados son los del integrado \href{http://www.ti.com/lit/ds/symlink/tl082.pdf}{TL-082}.
+
+\subsubsection{Comparador}
+
+Se utilizó el integrado \href{http://www.ti.com/lit/ds/symlink/lm211.pdf}{LM311} para comparar la tensión proveniente del joystick con la tensión de la rampa. El comparador más genérico puede ser construido con un solo amplificador operacional a lazo abierto como se observa en la Figura (\ref{circ:comparador}).
+
+\begin{figure}[H]
+
+	\centering
+	\begin{circuitikz}
+		\draw	
+	
+			node[op amp](opamp){}
+			
+			(opamp.up) to[short, -*] ++ (0, 2)
+				to[open] ++ (-4, 0)
+				node[label=west:$V_{CC}$]{}
+				to[short, o-] ++ (8, 0)
+			
+			(opamp.down) to[short, -*] ++ (0, -2)
+				to[open] ++ (-4, 0)
+				node[label=west:$GND$]{}
+				to[short, o-] ++ (8, 0)
+				
+			(opamp.-) to[short] ++ (-0.5, 0)
+				node[label=west:$V_{REF}$]{}				
+				to[R, l=$R_1$, *-*] ++ (0, 2)
+				to[open] ++ (0, -2)
+				to[short] ++ (0, -1)
+				to[R, l=$R_2$, -*] ++ (0, -2.03)			
+			
+			(opamp.+) to[short] ++ (-1, 0)
+				to[short, -o] ++ (-2, 0)
+				node[label=west:$V_{in}$]{}
+	
+			(opamp.out) to[short, -o] ++ (2.75, 0)
+				node[label=east:$V_{out}$]{}
+	
+		;
+	\end{circuitikz}
+	\caption{Amplificador operacional en configuración comparador.}
+	\label{circ:comparador}
+\end{figure}
+
+Las ecuaciones que gobiernan la salida de este son:
+
+\begin{equation*}
+V_{out} = A_0 (V_{in} - V_{REF}) \approx
+\left\{
+\begin{aligned}
+		& V_{CC} \ \ \ \ \ si \ \ V_{in} > V_{REF} \\		
+		& 0 \ \ \ \ \ \ \ \ \ si \ \ V_{in} < V_{REF}\\		
+\end{aligned}
+\right.
+\end{equation*}
+
+
+\subsubsection{Counter}
+
+Se utilizaron por comodidad contadores BCD en cascada, conectando al enable del segundo contador los pines $\quotes{1}$ y $\quotes{8}$ del primero, lo que efectivamente genera que el segundo contador solamente se incremente cuando el primero tenga un valor igual a 9. Se utilizaron los integrados \href{http://www.ti.com/lit/ds/symlink/cd4518b.pdf}{CD4518BE}.
+
+Para sincronizar estos contadores se utilizó el flanco ascendente del clock lento el cual marca el comienzo de la rampa. Este flanco es ingresado al pin de reset de ambos contadores primero siendo invertido ya que estos contadores poseen pin de reset activo bajo.
+
+\subsubsection{Edge Detector}
+
+Para los detectores de flancos se decidio utilizar particularmente un diseño entre varios propuestos. Este se detalla en la Figura (\ref{circ:edge}).
+
+\begin{figure}[H]
+	\centering	
+\begin{circuitikz}
+	\draw
+		node[fourport](FF){}
+			(FF.east) ++ (0, 0.5) to[short] ++ (1, 0)
+			to[open] ++ (0.7,0)
+			node[not port](not){}
+			to[open] ++ (0.7, 0)
+			to[short] ++ (1, 0)
+			to[open] ++ (1.39, 0.28)
+			node[and port](and){}
+			(FF.east) ++ (-0.25,0.5)
+			node[](Q){$Q$}
+			(FF.east) ++ (-0.25, -0.5)
+			node[](-Q){$\overline{Q}$}
+			(FF.west) ++ (0.25, 0.5)
+			node[](D){$D$}
+			(FF.west) ++ (0.1,-0.5)
+			node[](CLK){\scalebox{1.2}{\rotatebox{-90}{$\triangle$}}}
+		(and.in 1) to[short] ++ (0, 0.5)
+			to[short] ++ (-6, 0)
+			to[short, -*] ++ (0, -1.05)
+		(D) ++ (-0.25, 0) to[short, -o] ++ (-2, 0)
+			node[label=west:$PULSE$]{}
+		
+		(and.out) to[short, -o] ++ (0.75, 0)
+		node[label=east:$EDGE$] {}
+		(CLK) ++ (-0.25, 0) to [short, -o] ++ (-2, 0)
+		node[label=west:$CLK$] {}
+	;
+\end{circuitikz}
+\caption{Detector de flancos utilizado.}
+\label{circ:edge}
+\end{figure}
+
+El funcionamiento de este se basa en que el flanco a la salida tendrá siempre una duración menor a la del clock utilizado. Esencialmente, cuando la entrada se mantiene en bajo, el flip-flop tendrá guardado un estado bajo, por lo que al terminal de la compuerta AND le llegará un uno, mientras que a la otra terminal de la AND le llegara un cero. Cuando la señal de entrada pase a alto, la salida será alta hasta el próximo clock el cual pondrá la salida del flip-flop en bajo, poniendo un cero a la salida EDGE.
+
+\subsubsection{Display}
+
+Se utilizaron decoders de BCD a 7 segmentos para realizar el módulo del display. La salida de los contadores es permanentemente ingresada a estos decodificadores. Sin embargo, los decoders poseen un pin que debe estar en bajo para refrescar su salida. Si este pin se encuentra en un estado alto, el decodificador no actualiza su salida, sino que mantiene a esta en el último estado en el que estuvo. Es a este pin al cual le ingresa la señal de acquire, que es la salida del comparador la cual es ingresada a un detector de flancos. Esto genera que el valor que es mostrado en los displays sea el de los contadores solamente cuando la tensión de la rampa sea igual a la del joystick. Cuando esto no se cumple, el display muestra el ultimo valor mostrado.
 
 \end{document}

@@ -7,7 +7,7 @@
 
 \subsection{Introducción}
 
-Los mandos de control o actualmente llamados \quotes{Joysticks} son parte fundamental de varios dispositivos electrónicos utilizados hoy en día. Consolas de videojuegos, sillas de ruedas eléctricas, aeronaves radio-controladas e incluso hasta cohetes de la NASA. En su forma más básica, un potenciómetro, los mandos de control revolucionaron al rededor de finales de la segunda guerra mundial la manera de controlar dispositivos digitales de manera analógica. 
+Los mandos de control o actualmente llamados \quotes{Joysticks} son parte fundamental de varios dispositivos electrónicos utilizados hoy en día. Consolas de videojuegos, sillas de ruedas eléctricas, aeronaves radio-controladas e incluso hasta cohetes de la NASA. En su forma más básica, un potenciómetro, los mandos de control revolucionaron, al rededor de finales de la segunda guerra mundial, la manera de controlar dispositivos digitales de manera analógica. 
 
 Esta sección del informe se centra en la implementación de un convertidor analógico a digital mediante el uso del Joystick HW-504 junto a la investigación realizada.
 
@@ -147,15 +147,15 @@ Como se puede observar en la Figura (\ref{circuit:joytick_eq}), la tensión en l
 	\label{circuit:dis}
 \end{figure}
 
-Se propuso como primer diseño el presentado en la Figura (\ref{circuit:dis}). Este consta de un generador de clock que varía entre $100Hz$ y $2KHz$ el cual es provisto a un contador BCD el cual se reinicia al llegar al numero 99. Este contador posee sus salidas conectadas permanentemente a un módulo de display el cual tiene una entrada de acquire, la cual al pasar a estar en un estado alto el display muestra y guarda el último número ingresado aun así este pin pase a un estado bajo.
+Se propuso como primer diseño el presentado en la Figura (\ref{circuit:dis}). Este consta de un generador de clock que varía entre $100Hz$ y $2KHz$, el cual es provisto a un contador BCD que se reinicia al llegar al numero 99. Este contador posee sus salidas conectadas permanentemente a un módulo de display, el cual tiene una entrada de acquire, la cual, al pasar a estar en un estado alto el display, muestra y guarda el último número ingresado, aun así este pin pase a un estado bajo.
 
-Por otro lado, el generador de clock está también conectado a otro módulo el cual divide la frecuencia del clock por cien, resultando en un segundo clock sincronizado con el primero de una frecuencia variable entre $1Hz$ y $20Hz$. Esta señal cuadrada de frecuencia cien veces menor a la original es ingresada a un integrador el cual genera a partir de esta una rampa la cual atraviesa posteriormente una etapa de amplificación. El valor de tensión de la rampa es permanentemente comparado con el valor de tensión del pin de posición del joystick de tal manera que apenas sea la tensión de la rampa mayor a la tensión provista por el joystick, el comparador pondrá su salida en un estado alto. Esta salida está conectada a un detector de flancos, y es este flanco el que ingresa al pin de acquire del display, obteniendo en el display siempre la posición del joystick mapeada de 0 a 99.
+Por otro lado, el generador de clock está también conectado a otro módulo, el cual divide la frecuencia del clock por cien, resultando en un segundo clock sincronizado con el primero de una frecuencia variable entre $1Hz$ y $20Hz$. Esta señal cuadrada de frecuencia cien veces menor a la original, es ingresada a un integrador. Este último, genera a partir de dicha señal, una rampa la cual atraviesa posteriormente una etapa de amplificación. El valor de tensión de la rampa es permanentemente comparado con el valor de tensión del pin de posición del joystick, de tal manera que, apenas sea la tensión de la rampa mayor a la tensión provista por el joystick, el comparador pondrá su salida en un estado alto. Esta salida está conectada a un detector de flancos, y es este flanco el que ingresa al pin de acquire del display, obteniendo en este siempre la posición del joystick mapeada de 0 a 99.
 
 Por último, la señal del contador de frecuencia dividida por cien, la cual se utiliza para la generación de la rampa, es ingresada también a otro detector de flancos el cual ingresa al pin de reset del contador BCD. Esto genera que siempre que comience la rampa el contador sea reseteado a 00.
 
 \subsubsection{Input Driver}
 
-Se quiso realizar un diseño autónomo que funcione con dos baterías de $9V$. Para esto, se utilizó una etapa de entrada compuesta por el regulador de tensión \href{https://www.sparkfun.com/datasheets/Components/LM7805.pdf}{LM7805}. Esta etapa de entrada proporcionará los $5V$ que alimentarán todos los integrados digitales del diseño.
+Se buscó realizar un diseño autónomo que funcione con dos baterías de $9V$. Para esto, se utilizó una etapa de entrada compuesta por el regulador de tensión \href{https://www.sparkfun.com/datasheets/Components/LM7805.pdf}{LM7805}. Esta etapa de entrada proporcionará los $5V$ que alimentarán todos los integrados digitales del diseño.
 
 \subsubsection{Clock Generator}
 
@@ -259,7 +259,7 @@ Para el generador de clock se utilizó el famoso integrado \href{http://www.ti.c
 	\label{fig:555}
 \end{figure}
 
-Colocando un capacitor a tierra conectado al pin de trigger y threshold, se puede utilizar la carga y descarga de este para ser comparado con un nivel de tensión de referencia, generalmente $\frac{2}{3} V_{CC}$. Cuando la tensión del capacitor excede este valor, se activa el transistor de descarga del integrado lo cual descarga rápidamente al capacitor y genera que el comparador ponga en un estado bajo a la salida del integrado. Esto genera una señal cuadrada cuyo duty-cycle y frecuencia puede ser modificada mediante resistencias o potenciómetros que causan una carga y descarga mas lenta del capacitor. 
+Colocando un capacitor a tierra conectado al pin de trigger y threshold, se puede utilizar la carga y descarga de este para ser comparado con un nivel de tensión de referencia, generalmente $\frac{2}{3} V_{CC}$. Cuando la tensión del capacitor excede este valor, se activa el transistor de descarga del integrado, descargando rápidamente al capacitor y generando que el comparador ponga en un estado bajo a la salida del integrado. Esto provoca una señal cuadrada cuyo duty-cycle y frecuencia puede ser modificada mediante resistencias o potenciómetros que causan una carga y descarga más lenta del capacitor. 
 
 Las ecuaciones que controlan la frecuencia y duty-cycle del generador son detalladas a continuación. Cabe notar que el capacitor C y las resistencias $R_1$ y $R_2$ no se encuentran dibujadas en la Figura (\ref{fig:555}).
 
@@ -277,7 +277,7 @@ Se colocó un potenciómetro en la resistencia $R_2$ de tal manera que cuando es
 
 \subsubsection{Frequency Divider}
 
-Para el divisor de frecuencia se utilizaron los dos contadores en década del integrado \href{http://www.ti.com/lit/ds/symlink/cd4017b.pdf}{CD4017BE}. Conectando el pin de carry out, el cual se enciende una vez cada diez señales de clock, a la entrada de clock del segundo contador se logra obtener a la salida del segundo contador una señal de clock cuya frecuencia es cien veces menor a la original. Una buena característica de este diseño es que no solo el clock original estará completamente sincronizado con esta nueva señal de clock cien veces más lenta, sino que por la naturaleza del funcionamiento interno de estos contadores, el duty-cycle de este nuevo clock será siempre del $50\%$. Esto prueba ser muy beneficioso a la hora de integrar esta señal para conseguir una rampa.
+Para el divisor de frecuencia se utilizaron los dos contadores en década del integrado \href{http://www.ti.com/lit/ds/symlink/cd4017b.pdf}{CD4017BE}. Conectando el pin de carry out, el cual se enciende una vez cada diez señales de clock, a la entrada de clock del segundo contador se logra obtener a la salida del segundo contador una señal de clock cuya frecuencia es cien veces menor a la original. Una buena característica de este diseño es que no solo el clock original esta completamente sincronizado con esta nueva señal de clock cien veces más lenta, sino que por la naturaleza del funcionamiento interno de estos contadores, el duty-cycle de este nuevo clock es siempre del $50\%$. Esto prueba ser muy beneficioso a la hora de integrar esta señal para conseguir una rampa.
 
 \subsubsection{Integrador}
 
@@ -340,13 +340,13 @@ V_{out} = A_0 (V_{in} - V_{REF}) \approx
 
 \subsubsection{Counter}
 
-Se utilizaron por comodidad contadores BCD en cascada, conectando al enable del segundo contador los pines $\quotes{1}$ y $\quotes{8}$ del primero, lo que efectivamente genera que el segundo contador solamente se incremente cuando el primero tenga un valor igual a 9. Se utilizaron los integrados \href{http://www.ti.com/lit/ds/symlink/cd4518b.pdf}{CD4518BE}.
+Se utilizaron por comodidad contadores BCD en cascada, conectando al enable del segundo contador los pines ``1'' y ``8'' del primero, lo que efectivamente genera que el segundo contador solamente se incremente cuando el primero tenga un valor igual a 9. Se utilizaron los integrados \href{http://www.ti.com/lit/ds/symlink/cd4518b.pdf}{CD4518BE}.
 
 Para sincronizar estos contadores se utilizó el flanco ascendente del clock lento el cual marca el comienzo de la rampa. Este flanco es ingresado al pin de reset de ambos contadores primero siendo invertido ya que estos contadores poseen pin de reset activo bajo.
 
 \subsubsection{Edge Detector}
 
-Para los detectores de flancos se decidio utilizar particularmente un diseño entre varios propuestos. Este se detalla en la Figura (\ref{circ:edge}).
+Para los detectores de flancos se decidió utilizar particularmente un diseño entre varios propuestos. Este se detalla en la Figura (\ref{circ:edge}).
 
 \begin{figure}[H]
 	\centering	
@@ -384,7 +384,7 @@ Para los detectores de flancos se decidio utilizar particularmente un diseño en
 \label{circ:edge}
 \end{figure}
 
-El funcionamiento de este se basa en que el flanco a la salida tendrá siempre una duración menor a la del clock utilizado. Esencialmente, cuando la entrada se mantiene en bajo, el flip-flop tendrá guardado un estado bajo, por lo que al terminal de la compuerta AND le llegará un uno, mientras que a la otra terminal de la AND le llegara un cero. Cuando la señal de entrada pase a alto, la salida será alta hasta el próximo clock el cual pondrá la salida del flip-flop en bajo, poniendo un cero a la salida EDGE.
+El funcionamiento de este se basa en que el flanco a la salida tiene siempre una duración menor a la del clock utilizado. Esencialmente, cuando la entrada se mantiene en bajo, el flip-flop tiene guardado un estado bajo, por lo que al terminal de la compuerta AND le llega un uno, mientras que a la otra terminal de la AND le llega un cero. Cuando la señal de entrada pase a alto, la salida es alta hasta el próximo clock el cual pone la salida del flip-flop en bajo, colocando un cero a la salida EDGE.
 
 \subsubsection{Display}
 

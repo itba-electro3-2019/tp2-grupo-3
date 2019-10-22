@@ -147,7 +147,7 @@ Como se puede observar en la Figura (\ref{circuit:joytick_eq}), la tensión en l
 	\label{circuit:dis}
 \end{figure}
 
-Se propuso como primer diseño el presentado en la Figura (\ref{circuit:dis}). Este consta de un generador de clock que varía entre $100Hz$ y $2KHz$ el cual es provisto a un contador BCD el cual se reinicia al llegar al numero 99. Este contador posee sus salidas conectadas permanentemente a un módulo de display el cual tiene una entrada de acquire, la cual al pasar a estar en un estado alto el display muestra y guarda el último número ingresado aun así este pin pase a un estado bajo.
+Se propuso el diseño presentado en la Figura (\ref{circuit:dis}). Este consta de un generador de clock que varía entre $100Hz$ y $2KHz$ el cual es provisto a un contador BCD el cual se reinicia al llegar al numero 99. Este contador posee sus salidas conectadas permanentemente a un módulo de display el cual tiene una entrada de acquire, la cual al pasar a estar en un estado alto el display muestra y guarda el último número ingresado aun así este pin pase a un estado bajo.
 
 Por otro lado, el generador de clock está también conectado a otro módulo el cual divide la frecuencia del clock por cien, resultando en un segundo clock sincronizado con el primero de una frecuencia variable entre $1Hz$ y $20Hz$. Esta señal cuadrada de frecuencia cien veces menor a la original es ingresada a un integrador el cual genera a partir de esta una rampa la cual atraviesa posteriormente una etapa de amplificación. El valor de tensión de la rampa es permanentemente comparado con el valor de tensión del pin de posición del joystick de tal manera que apenas sea la tensión de la rampa mayor a la tensión provista por el joystick, el comparador pondrá su salida en un estado alto. Esta salida está conectada a un detector de flancos, y es este flanco el que ingresa al pin de acquire del display, obteniendo en el display siempre la posición del joystick mapeada de 0 a 99.
 
@@ -279,7 +279,7 @@ Se colocó un potenciómetro en la resistencia $R_2$ de tal manera que cuando es
 
 Para el divisor de frecuencia se utilizaron los dos contadores en década del integrado \href{http://www.ti.com/lit/ds/symlink/cd4017b.pdf}{CD4017BE}. Conectando el pin de carry out, el cual se enciende una vez cada diez señales de clock, a la entrada de clock del segundo contador se logra obtener a la salida del segundo contador una señal de clock cuya frecuencia es cien veces menor a la original. Una buena característica de este diseño es que no solo el clock original estará completamente sincronizado con esta nueva señal de clock cien veces más lenta, sino que por la naturaleza del funcionamiento interno de estos contadores, el duty-cycle de este nuevo clock será siempre del $50\%$. Esto prueba ser muy beneficioso a la hora de integrar esta señal para conseguir una rampa.
 
-\subsubsection{Integrator}
+\subsubsection{Integrador}
 
 Para la etapa de generación de rampa se decidió construir un integrador compensado con un amplificador operacional seguido de una etapa de amplificación compuesta por otro operacional en configuración inversora, ya que el integrador invierte la señal que este integra. Como la señal integrada es el segundo clock generado, y este está en sincronía con el primero, se puede efectivamente utilizar el clock original para contar cien pulsos dentro de la duración de la rampa. Los dos operacionales utilizados son los del integrado \href{http://www.ti.com/lit/ds/symlink/tl082.pdf}{TL-082}.
 
@@ -346,7 +346,7 @@ Para sincronizar estos contadores se utilizó el flanco ascendente del clock len
 
 \subsubsection{Edge Detector}
 
-Para los detectores de flancos se decidio utilizar particularmente un diseño entre varios propuestos. Este se detalla en la Figura (\ref{circ:edge}).
+Para los detectores de flancos se decidió utilizar particularmente un diseño entre varios propuestos. Este se detalla en la Figura (\ref{circ:edge}).
 
 \begin{figure}[H]
 	\centering	
@@ -384,10 +384,54 @@ Para los detectores de flancos se decidio utilizar particularmente un diseño en
 \label{circ:edge}
 \end{figure}
 
-El funcionamiento de este se basa en que el flanco a la salida tendrá siempre una duración menor a la del clock utilizado. Esencialmente, cuando la entrada se mantiene en bajo, el flip-flop tendrá guardado un estado bajo, por lo que al terminal de la compuerta AND le llegará un uno, mientras que a la otra terminal de la AND le llegara un cero. Cuando la señal de entrada pase a alto, la salida será alta hasta el próximo clock el cual pondrá la salida del flip-flop en bajo, poniendo un cero a la salida EDGE.
+El funcionamiento de este se basa en que el flanco a la salida tendrá siempre una duración menor a la del clock utilizado. Esencialmente, cuando la entrada se mantiene en bajo, el flip-flop tendrá guardado un estado bajo, por lo que al terminal de la compuerta AND le llegará un uno, mientras que a la otra terminal de la AND le llegara un cero. Cuando la señal de entrada pase a alto, la salida será alta hasta el próximo clock el cual pondrá la salida del flip-flop en bajo, poniendo un cero a la salida EDGE. El integrado utilizado fue el \href{http://www.ti.com/lit/ds/symlink/cd4013b.pdf}{CD4013BE}.
 
 \subsubsection{Display}
 
 Se utilizaron decoders de BCD a 7 segmentos para realizar el módulo del display. La salida de los contadores es permanentemente ingresada a estos decodificadores. Sin embargo, los decoders poseen un pin que debe estar en bajo para refrescar su salida. Si este pin se encuentra en un estado alto, el decodificador no actualiza su salida, sino que mantiene a esta en el último estado en el que estuvo. Es a este pin al cual le ingresa la señal de acquire, que es la salida del comparador la cual es ingresada a un detector de flancos. Esto genera que el valor que es mostrado en los displays sea el de los contadores solamente cuando la tensión de la rampa sea igual a la del joystick. Cuando esto no se cumple, el display muestra el ultimo valor mostrado.
+El decoder utilizado fue el \href{http://www.ti.com/lit/ds/schs279d/schs279d.pdf}{CD74HC4511E}. Mientras que los displays utilizados fueron los de configuración cátodo común, ya que la corriente proporcionada por los 4511 era la suficiente para encender todos los segmentos.
 
+\subsection{Simulaciones}
+Se simuló a cada módulo por separado. Para esto, se utilizó el software \textit{LTSpice XVII} para lo analógico y \textit{Proteus 8} para lo digital. 
+El generador de rampa si bien no es totalmente lineal, asumimos la imprecisión que esto generaría como despreciable para nuestra aplicación.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{Imagenes/sqare.png}
+\caption{Simulación del generador de rampa.}
+\label{sim:ramp}
+\end{figure}
+Luego, el divisor de frecuencia simulado en Proteus demuestra un correcto funcionamiento. Dado un clock de $100Hz$, se logra obtener otro de $1Hz$.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{Imagenes/freqdiv.png}
+\caption{Simulación del divisor de frecuencia.}
+\label{sim:freqdiv}
+\end{figure}
+Para el generador de clocks se simuló con el preset tanto en su mínima resistencia como en su máxima resistencia. Se logró obtener en estas dos configuraciones una frecuencia ajustable entre $91.44Hz$ y $1993Hz$.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Imagenes/clockgen1.png}
+\caption{Simulación del generador de clock con una frecuencia de $91.44Hz$.}
+\label{sim:gen1}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Imagenes/clockgen2.png}
+\caption{Simulación del generador de clock con una frecuencia de $1993.4Hz$.}
+\label{sim:gen2}
+\end{figure}
+
+No se realizaron simulaciones para el comparador, el contador o el regulador de tensión ya que están constituidos por solamente el integrado que realiza su función.
+
+\subsection{Implementación y Mediciones}
+Se implementó el circuito en un PCB de 10x20. A la placa se le añadieron jumpers para desconectar el generador de rampa del resto para así poder calibrarlo. Se midió este ingresando un clock generado por un generador de funciones obteniendo la siguiente respuesta.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth,trim={0 2.2cm 0.1cm 1.75cm},clip]{Imagenes/ramp.png}
+\caption{Medición y calibración del generador de rampa con un clock provisto por un generador de funciones.}
+\label{med:ramp}
+\end{figure}
+
+Luego, se comprobó el correcto funcionamiento del diseño en su totalidad.
 \end{document}

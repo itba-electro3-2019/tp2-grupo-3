@@ -1,4 +1,4 @@
-Circuit: * C:\Users\Guido\Documents\GitHub\tp2-grupo-3\Ejercicio-8\Spice\Generador de rampa que si funca\gyrator.asc
+Circuit: * C:\Users\Acer\Desktop\GitHub\ElectroIII\tp2-grupo-3\Ejercicio-8\Spice\Generador de rampa que si funca\gyrator.asc
 
 Early termination of direct N-R iteration.
 Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
@@ -30,20 +30,20 @@ Source Step = 93.9394%
 Source stepping succeeded in finding the operating point.
 
 
-Date: Sat Oct 19 18:22:33 2019
-Total elapsed time: 0.470 seconds.
+Date: Tue Oct 22 15:08:49 2019
+Total elapsed time: 5.116 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 26730
-traniter = 25014
-tranpoints = 12508
-accept = 12089
-rejected = 419
+totiter = 205539
+traniter = 203823
+tranpoints = 101912
+accept = 101563
+rejected = 349
 matrix size = 54
-fillins = 144
+fillins = 173
 solver = Normal
-Matrix Compiler1: 10.25 KB object code size  1.5/1.1/[0.6]
-Matrix Compiler2: 7.04 KB object code size  1.0/1.2/[0.5]
+Matrix Compiler1: 14.01 KB object code size  2.9/1.6/[0.9]
+Matrix Compiler2: 7.50 KB object code size  0.6/0.7/[0.3]
 

@@ -1,0 +1,19 @@
+Removed Pin From Net: NetName=GND Pin=RV_OFFSET-2
+Change Component DesignItemId : Designator=RV_GAIN Old DesignItemId=Res Tap New DesignItemId=PRESET
+Change Component DesignItemId : Designator=RV_OFFSET Old DesignItemId=Res Tap New DesignItemId=PRESET
+Change Component Footprint: Designator=RV_GAIN Old Footprint=VR3 New Footprint=PRESET V
+Change Component Footprint: Designator=RV_OFFSET Old Footprint=VR3 New Footprint=PRESET V
+Change Component Comment : Designator=RV_GAIN Old Comment= New Comment=500K
+Change Component Comment : Designator=RV_OFFSET Old Comment= New Comment=500K
+Change Component Description : Designator=RV_GAIN Old Description=Tapped Resistor New Description=
+Change Component Description : Designator=RV_OFFSET Old Description=Tapped Resistor New Description=
+Change Component Library : Designator=RV_GAIN Old Library=Miscellaneous Devices.IntLib New Library=LIBEBAL.IntLib
+Change Component Library : Designator=RV_OFFSET Old Library=Miscellaneous Devices.IntLib New Library=LIBEBAL.IntLib
+Change component parameters: Designator = "RV_GAIN"; Footprint = "PRESET V"; UniqueID = "\LBQVUCKJ\BOTQPSGX"
+Change component parameters. Clean all parameters for all variants
+Change component parameters: Designator = "RV_OFFSET"; Footprint = "PRESET V"; UniqueID = "\LBQVUCKJ\PRSRKIHK"
+Change component parameters. Clean all parameters for all variants
+Added Pin To Net: NetName=GND Pin=RV_OFFSET-3
+Added Pin To Net: NetName=NetRV_OFFSET_2 Pin=RV_OFFSET-2
+Added Pin To Net: NetName=NetRV_OFFSET_2 Pin=UR2-5
+Added Net: Name=NetRV_OFFSET_2

@@ -1,0 +1,55 @@
+Removed Pin From Net: NetName=V_JOY Pin=J2-3
+Removed Pin From Net: NetName=GND Pin=RV_OFFSET-3
+Change Component DesignItemId : Designator=RV_GAIN Old DesignItemId=PRESET New DesignItemId=Res Tap
+Change Component DesignItemId : Designator=RV_OFFSET Old DesignItemId=PRESET New DesignItemId=Res Tap
+Change Component Footprint: Designator=RV_GAIN Old Footprint=PRESET V New Footprint=VR3
+Change Component Footprint: Designator=RV_OFFSET Old Footprint=PRESET V New Footprint=VR3
+Change Component Comment : Designator=RV_GAIN Old Comment=500K New Comment=
+Change Component Comment : Designator=RV_OFFSET Old Comment=500K New Comment=
+Change Component Description : Designator=RV_GAIN Old Description= New Description=Tapped Resistor
+Change Component Description : Designator=RV_OFFSET Old Description= New Description=Tapped Resistor
+Change Component Library : Designator=RV_GAIN Old Library=LIBEBAL.IntLib New Library=Miscellaneous Devices.IntLib
+Change Component Library : Designator=RV_OFFSET Old Library=LIBEBAL.IntLib New Library=Miscellaneous Devices.IntLib
+Change component parameters: Designator = "RV_GAIN"; Footprint = "VR3"; UniqueID = "\LBQVUCKJ\BOTQPSGX"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageDescription"; Value = "Variable Resistor, Thru-Hole; 3 Leads"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageReference"; Value = "VR3"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Published"; Value = "24-Mar-1999"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Set Position"; Value = "0.5"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Sim Note"; Value = "Enter the Resistance value and the set point into parameter fields."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "1K"; VariantName = "[No Variations]"
+Change component parameters: Designator = "RV_OFFSET"; Footprint = "VR3"; UniqueID = "\LBQVUCKJ\PRSRKIHK"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageDescription"; Value = "Variable Resistor, Thru-Hole; 3 Leads"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageReference"; Value = "VR3"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Published"; Value = "24-Mar-1999"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Set Position"; Value = "0.5"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Sim Note"; Value = "Enter the Resistance value and the set point into parameter fields."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "1K"; VariantName = "[No Variations]"
+Added Component: Designator=R666(PRESET V)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=V_JOY Pin=R666-1
+Added Pin To Net: NetName=GND Pin=R666-3
+Added Pin To Net: NetName=GND Pin=RV_OFFSET-2
+Added Pin To Net: NetName=NetJ2_3 Pin=J2-3
+Added Pin To Net: NetName=NetJ2_3 Pin=R666-2
+Added Net: Name=NetJ2_3
+Added Pin To Net: NetName=NetRV_OFFSET_3 Pin=RV_OFFSET-3
+Added Pin To Net: NetName=NetRV_OFFSET_3 Pin=UR2-5
+Added Net: Name=NetRV_OFFSET_3
+Added Member To Class: ClassName=Main Member=Component R666 PRESET
+Added Room: Name=Main
+Added Room: Name=U_99Counter
+Added Room: Name=U_bcd2seven+display
+Added Room: Name=U_ClockGen
+Added Room: Name=U_Comparator
+Added Room: Name=U_EdgeDetector
+Added Room: Name=U_FrequencyDivider
+Added Room: Name=U_InputDriver
+Added Room: Name=U_Rampa

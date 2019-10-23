@@ -1,0 +1,13 @@
+Removed Pin From Net: NetName=V_JOY Pin=R666-1
+Removed Pin From Net: NetName=NetJ2_3 Pin=R666-2
+Added Pin To Net: NetName=NetJ2_3 Pin=R666-1
+Added Pin To Net: NetName=V_JOY Pin=R666-2
+Added Room: Name=Main
+Added Room: Name=U_99Counter
+Added Room: Name=U_bcd2seven+display
+Added Room: Name=U_ClockGen
+Added Room: Name=U_Comparator
+Added Room: Name=U_EdgeDetector
+Added Room: Name=U_FrequencyDivider
+Added Room: Name=U_InputDriver
+Added Room: Name=U_Rampa

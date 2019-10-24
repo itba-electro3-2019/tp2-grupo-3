@@ -1,0 +1,17 @@
+\babel@toc {spanish}{}
+\contentsline {section}{\numberline {1}Dise\IeC {\~n}o e Implementaci\IeC {\'o}n de un Conversor Anal\IeC {\'o}gico-Digital}{1}{section.1}% 
+\contentsline {subsection}{\numberline {1.1}Introducci\IeC {\'o}n}{1}{subsection.1.1}% 
+\contentsline {subsection}{\numberline {1.2}Joystick HW-504}{1}{subsection.1.2}% 
+\contentsline {subsection}{\numberline {1.3}Dise\IeC {\~n}o Propuesto}{2}{subsection.1.3}% 
+\contentsline {subsubsection}{\numberline {1.3.1}Breve Descripci\IeC {\'o}n}{2}{subsubsection.1.3.1}% 
+\contentsline {subsubsection}{\numberline {1.3.2}Input Driver}{2}{subsubsection.1.3.2}% 
+\contentsline {subsubsection}{\numberline {1.3.3}Clock Generator}{2}{subsubsection.1.3.3}% 
+\contentsline {subsubsection}{\numberline {1.3.4}Frequency Divider}{3}{subsubsection.1.3.4}% 
+\contentsline {subsubsection}{\numberline {1.3.5}Integrador}{3}{subsubsection.1.3.5}% 
+\contentsline {subsubsection}{\numberline {1.3.6}Comparador}{4}{subsubsection.1.3.6}% 
+\contentsline {subsubsection}{\numberline {1.3.7}Counter}{4}{subsubsection.1.3.7}% 
+\contentsline {subsubsection}{\numberline {1.3.8}Edge Detector}{4}{subsubsection.1.3.8}% 
+\contentsline {subsubsection}{\numberline {1.3.9}Display}{4}{subsubsection.1.3.9}% 
+\contentsline {subsection}{\numberline {1.4}Simulaciones}{5}{subsection.1.4}% 
+\contentsline {subsection}{\numberline {1.5}Implementaci\IeC {\'o}n y Mediciones}{6}{subsection.1.5}% 
+\contentsline {subsection}{\numberline {1.6}Conclusiones}{7}{subsection.1.6}% 

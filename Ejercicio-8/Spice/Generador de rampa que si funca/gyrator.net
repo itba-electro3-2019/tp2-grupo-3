@@ -1,0 +1,17 @@
+* C:\Users\Acer\Desktop\GitHub\ElectroIII\tp2-grupo-3\Ejercicio-8\Spice\Generador de rampa que si funca\gyrator.asc
+XU1 0 N001 vcc -vcc N002 tl084
+V2 vcc 0 9
+V3 0 -vcc 9
+C1 N002 N001 5µ
+R1 N002 N001 100k
+R2 N001 N004 47k
+XU2 N006 N005 vcc -vcc N003 tl084
+R3 N005 N002 10k
+R4 N003 N005 10k
+V1 N004 0 PULSE(0 5 0.0001m 0.0001m 0.0001m 0.5 1)
+V4 N006 0 -1.25
+.inc "TL084.301"
+;.ac dec 10000 100 2Meg
+.tran 0 10 0 1m
+.backanno
+.end

@@ -1,15 +1,14 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%BORRAR
 \input{../InformeConMake/Header.tex}
 \begin{document}
-\section{Aux}
 \tableofcontents
-%%%%%%%%%%%%%%%%%%%%%%%%%BORRAR
+
+\section{Diseño e Implementación de un Conversor Analógico-Digital}
 
 \subsection{Introducción}
 
 Los mandos de control o actualmente llamados \quotes{Joysticks} son parte fundamental de varios dispositivos electrónicos utilizados hoy en día. Consolas de videojuegos, sillas de ruedas eléctricas, aeronaves radio-controladas e incluso hasta cohetes de la NASA. En su forma más básica, un potenciómetro, los mandos de control revolucionaron, al rededor de finales de la segunda guerra mundial, la manera de controlar dispositivos digitales de manera analógica. 
 
-Esta sección del informe se centra en la implementación de un convertidor analógico a digital mediante el uso del Joystick HW-504 junto a la investigación realizada.
+Esta sección del informe se centra en la implementación de un convertidor analógico a digital mediante el uso del Joystick HW-504.
 
 \subsection{Joystick HW-504}
 
@@ -68,7 +67,7 @@ El mando de control utilizado está compuesto por dos potenciómetros, uno para 
 			node[](a1){}
 			to[push button] ++ (2, 0)
 			node[](a2){}
-		(RIGHT_POTY_NODE) to [short] ++ (0,-1.75)
+		(RIGHT_POTY_NODE) to [short, *-] ++ (0,-1.75)
 			to[short] (a2)
 		(a1) to[short,-o] ++ (-3.5,0)
 		node[label=west:{\color{blue}\textbf{SW}}](SW){}
@@ -147,7 +146,7 @@ Como se puede observar en la Figura (\ref{circuit:joytick_eq}), la tensión en l
 	\label{circuit:dis}
 \end{figure}
 
-Se propuso el diseño presentado en la Figura (\ref{circuit:dis}). Este consta de un generador de clock que varía entre $100Hz$ y $2KHz$ el cual es provisto a un contador BCD el cual se reinicia al llegar al numero 99. Este contador posee sus salidas conectadas permanentemente a un módulo de display el cual tiene una entrada de acquire, la cual al pasar a estar en un estado alto el display muestra y guarda el último número ingresado aun así este pin pase a un estado bajo.
+Se propuso el diseño presentado en la Figura (\ref{circuit:dis}). Este consta de un generador de clock que varía entre $100Hz$ y $2KHz$ el cual es provisto a un contador BCD de dos dígitos. Este contador posee sus salidas conectadas permanentemente a un módulo de display el cual tiene una entrada de acquire, la cual al pasar a estar a un estado bajo el display muestra y guarda el último número ingresado aun así este pin pase a un estado bajo.
 
 Por otro lado, el generador de clock está también conectado a otro módulo, el cual divide la frecuencia del clock por cien, resultando en un segundo clock sincronizado con el primero de una frecuencia variable entre $1Hz$ y $20Hz$. Esta señal cuadrada de frecuencia cien veces menor a la original, es ingresada a un integrador. Este último, genera a partir de dicha señal, una rampa la cual atraviesa posteriormente una etapa de amplificación. El valor de tensión de la rampa es permanentemente comparado con el valor de tensión del pin de posición del joystick, de tal manera que, apenas sea la tensión de la rampa mayor a la tensión provista por el joystick, el comparador pondrá su salida en un estado alto. Esta salida está conectada a un detector de flancos, y es este flanco el que ingresa al pin de acquire del display, obteniendo en este siempre la posición del joystick mapeada de 0 a 99.
 
@@ -259,7 +258,7 @@ Para el generador de clock se utilizó el famoso integrado \href{http://www.ti.c
 	\label{fig:555}
 \end{figure}
 
-Colocando un capacitor a tierra conectado al pin de trigger y threshold, se puede utilizar la carga y descarga de este para ser comparado con un nivel de tensión de referencia, generalmente $\frac{2}{3} V_{CC}$. Cuando la tensión del capacitor excede este valor, se activa el transistor de descarga del integrado, descargando rápidamente al capacitor y generando que el comparador ponga en un estado bajo a la salida del integrado. Esto provoca una señal cuadrada cuyo duty-cycle y frecuencia puede ser modificada mediante resistencias o potenciómetros que causan una carga y descarga más lenta del capacitor. 
+Colocando un capacitor a tierra conectado al pin de trigger y threshold, se puede utilizar la carga y descarga de este para ser comparado con un nivel de tensión de referencia, en este caso $\frac{2}{3} V_{CC}$. Cuando la tensión del capacitor excede este valor, se activa el transistor de descarga del integrado, descargando rápidamente al capacitor y generando que el comparador ponga en un estado bajo a la salida del integrado. Esto provoca una señal cuadrada cuyo duty-cycle y frecuencia puede ser modificada mediante resistencias o potenciómetros que causan una carga y descarga más lenta del capacitor. 
 
 Las ecuaciones que controlan la frecuencia y duty-cycle del generador son detalladas a continuación. Cabe notar que el capacitor C y las resistencias $R_1$ y $R_2$ no se encuentran dibujadas en la Figura (\ref{fig:555}).
 
@@ -425,7 +424,7 @@ Para el generador de clocks se simuló con el preset tanto en su mínima resiste
 No se realizaron simulaciones para el comparador, el contador o el regulador de tensión ya que están constituidos por solamente el integrado que realiza su función.
 
 \subsection{Implementación y Mediciones}
-Se implementó el circuito en un PCB de 10x20. A la placa se le añadieron jumpers para desconectar el generador de rampa del resto para así poder calibrarlo. Se midió este ingresando un clock generado por un generador de funciones obteniendo la siguiente respuesta.
+Se implementó el circuito en un PCB de 10x20. A la placa se le añadieron jumpers para desconectar el generador de rampa del resto para así poder calibrarlo y obtener 0V al comienzo de esta y 5V al final. Se midió este ingresando un clock generado por un generador de funciones obteniendo la siguiente respuesta.
 
 \begin{figure}[H]
 \centering
@@ -434,5 +433,30 @@ Se implementó el circuito en un PCB de 10x20. A la placa se le añadieron jumpe
 \label{med:ramp}
 \end{figure}
 
-Luego, se comprobó el correcto funcionamiento del diseño en su totalidad.
+Luego, se comprobó el funcionamiento de la implementación, con varios resultados a destacar.
+
+\subsection{Conclusiones}
+
+Se logró un correcto funcionamiento a la hora de sincronizar todas las etapas y efectivamente convertir la señal analógica en una digital, no se logró mapear el joystick entre los valores de 0 a 99 sino entre 0 y 33. Este funcionamiento se logró luego de realizar varios ajustes y agregar muchos capacitores para disminuir el ruido.
+
+La razón del mapeo extraño aún no ha podido ser descubierta, ya que se intentó aumentar la amplitud de la rampa, disminuir la amplitud de la rampa, disminuir con un divisor resistivo la salida del joystick, cortar físicamente la conexión del clock de $100-2000Hz$ del detector de flancos y utilizar el clock dividido solo por diez, y muchas cosas más todas sin resultados positivos. Si bien la placa se seguirá debuggeando, se concluye actualmente que se debe a la inmensa cantidad de ruido presente en todas las señales que se observaban en el osciloscopio.
+
+A modo de ejemplo, la señal de posición del joystick poseía un \textit{droop} cuando llegaba la señal de reset del contador. Ambas señales no poseían conexión física. Esto ocasionaba que la señal de acquire (o refresh) del display se dispare varias veces en una misma rampa. Esto se logró solucionar utilizando un capacitor de $100\mu F$ entre tierra y la salida del joystick y añadiendo también $1\mu F$ de capacitancia a tierra conectada a la salida del comparador.
+
+Luego, se observó que las señales de reset y acquire no solo se manifestaban en la tensión del joystick, sino en toda la alimentación de $5V$ del circuito provista por el regulador de tensión, por lo que colocando antes y después de este dos capacitores de $10uF$ a tierra se lograba obtener una tensión mucho más amena. Además, se decidió duplicar la capacitancia de desacople de cada integrado en el circuito.
+
+Todo esto logró que el circuito se comporte mucho mejor, pero por alguna razón que aún no se ha podido descubrir, solo se logra mapear el joystick entre 0 y 33 en el mejor de los casos. 
+
+Tras la implementación de este diseño y su eventual puesta en funcionamiento, como luego de compartir varios descansos y tazas de café dialogando sobre las distintas implementaciones que fueron surgiendo a lo largo de nuestros pares, se concluye que se pueden realizar varias modificaciones al diseño presentado aquí para mejorar el funcionamiento de este.
+
+La primera modificación, más importante y la que surgió por el diseño propio es la de utilizar un plano de masa para todo lo digital y otro para todo lo analógico ambos conectados por una sola vía, ya que esto hubiera reducido considerablemente la inmensa cantidad de ruido presente. Se cometió la equivocación de no haber investigado más sobre la interacción entre analógico y digital y se utilizó un solo plano de masa para estos dos.
+
+Una muy buena forma de implementar el conversor es la de utilizar la salida del comparador conectada al enable del contador. Esto haría que cuando la rampa sea mayor a la tensión del joystick, este deje de contar, pudiendo poner el pin de acquire del display de tal manera para que durante todo este tiempo este refrescando el contador, que ya no estaría cambiando.
+
+Otra interesante propuesta es la de no realizar la variación de la tasa de refresco por medio \quotes{del hardware} como esta realizado aquí, sino mantener siempre una tasa de refresco constante, pero variar cuántas veces por segundo efectivamente se muestra un cambio en el display. Esto facilitaría mucho el trabajo de diseño de cómo sincronizar cada etapa, ya que estas no deben de trabajar con distintas frecuencias.
+
+Continuando con eventuales mejoras al diseño, un grupo utilizó una memoria con latches aparte para minimizar fallas a la hora de mostrar números en el display debido a eventuales tiempos de propagación y se probó ser de utilidad.
+
+A modo de finalizar, se logró con este informe de investigación, análisis y diseño un gran aprendizaje sobre cómo se sincronizan varias etapas digitales, como interactúan etapas analógicas con digitales y poner en práctica todo lo aprendido sobre distintos dispositivos digitales.
+
 \end{document}

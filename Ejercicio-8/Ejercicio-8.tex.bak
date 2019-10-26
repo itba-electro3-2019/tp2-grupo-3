@@ -76,12 +76,12 @@ El mando de control utilizado está compuesto por dos potenciómetros, uno para 
 
 		\end{circuitikz}
 		}
-		\caption{Circuito equivalente del mando HW-504 con mismos nombres que el pin-out del periférico.}
+		\caption[Circuito equivalente del mando HW-504 con mismos nombres que el pin-out del periférico. \protect\footnote{}]{Circuito equivalente del mando HW-504 con mismos nombres que el pin-out del periférico. \protect\footnote{}}
 		\label{circuit:joytick_eq}
 	\end{subfigure}
 \end{figure}
 
-Como se puede observar en la Figura (\ref{circuit:joytick_eq}), la tensión en los pines $VR_x$ y $VR_y$ será proporcional a la posición del joystick, mientras que el pin $SW$ permanecerá en estado alto a menos que se presione el mando. Los potenciómetros del joystick son ambos de $10k\Omega$.
+Como se puede observar\footnote{Esquemático del módulo HW-504 tomado de \href{https://components101.com/modules/joystick-module}{este} sitio web. No es un sitio de fiar por lo que no aferrarse mucho al diseño del circuito y sí a la explicación del funcionamiento de este.} en la Figura (\ref{circuit:joytick_eq}), la tensión en los pines $VR_x$ y $VR_y$ será proporcional a la posición del joystick, mientras que el pin $SW$ permanecerá en estado alto a menos que se presione el mando. Los potenciómetros del joystick son ambos de $10k\Omega$.
 
 \subsection{Diseño Propuesto}
 
